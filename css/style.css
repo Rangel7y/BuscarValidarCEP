@@ -53,10 +53,11 @@ body{
 
     border-radius: 10px;
 
-   /*  gap: 5px; */
+    gap: 5px;
 }
 #form-text-up{
     font-size: 10px;
+    font-weight: 700;
 }
 
 #form-input-content{
@@ -107,9 +108,16 @@ body{
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
-    border: 2px solid var(--color-gray-01);
+    border: 2px solid var(--color-gray-03);
 
     border-radius: 10px;
+
+    transition: all 200ms ease, background 200ms ease-in-out;
+}
+#form-input-content > button:hover{
+    transform: scale(1.08);
+    background-color: var(--color-gray-01);
+    border: 2px solid var(--color-gray2);
 }
 ion-icon {
     color: var(--color-white-01);
