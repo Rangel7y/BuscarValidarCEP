@@ -58,6 +58,8 @@ body{
 #form-text-up{
     font-size: 10px;
     font-weight: 700;
+
+    color: var(--color-gray-01);
 }
 
 #form-input-content{
