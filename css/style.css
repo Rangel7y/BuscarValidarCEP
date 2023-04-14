@@ -9,14 +9,21 @@
 }
 
 :root{
-    --color-01: #222831;
-    --color-02: #393E46;
-
-    --color-03: #00ADB5;
+    --color-gray-01: #313131;
+    --color-gray-02: #414141;
+    --color-gray-03: #525252;
     
-    --color-04: #EEEEEE;
+    --color-purple-01: #393646;
+    --color-purple-02: #4F4557;
+    --color-purple-03: #6D5D6E;
 
-    --dark-background: linear-gradient(to bottom, var(--color-02),var(--color-01));
+    --color-red-01: #CA3E47;
+
+    --color-white-white-01: white;
+    --color-white-02: #EEEEEE;
+    --color-white-03: #F4EEE0;
+
+    --dark-background: linear-gradient(to bottom, var(--color-gray-03),var(--color-gray-02),var(--color-gray-01));
 }
 
 body{
@@ -35,20 +42,57 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 
-    width: 400px;
-    height: 50px;
+    width: 480px;
+    height: 200px;
 
-    background-color: var(--color-04);
+    background-color: var(--color-purple-01);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     border-radius: 10px;
+
+    gap: 5px;
 }
 
 .input-search-cep{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 30%;
 
     background: none;
 
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0);
+
     outline: none;
+
+    font-size: 0.9em;
+
+    background-color: var(--color-white-03);
+
+    padding: 1em;
 }
+.input-search-cep:focus{
+    background-color: var(--color-white-03);
+    border: 2px solid var(--color-white-05);
+    border-radius: 10px;
+}
+.input-search-cep::placeholder{
+    color: var(--color-gray-01);
+}
+#form-search > button{
+    width: 12%;
+    height: 30%;
+
+    background-color: var(--color-purple-03);
+
+    border: 2px solid var(--color-purple-02);
+
+    border-radius: 10px;
+}
+ion-icon {
+    color: var(--color-white-02);
+    width: 100%;
+    height: 100%;
+  }
