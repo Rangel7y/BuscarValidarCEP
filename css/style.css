@@ -22,7 +22,6 @@
     --color-white-01: white;
     --color-white-02: #cacaca;
     --color-white-03: #a8a8a8;
-    --color-white-04: #969696;
 
     --dark-background: linear-gradient(to bottom, var(--color-gray-03),var(--color-gray-02),var(--color-gray-01));
 }
@@ -39,11 +38,11 @@ body{
     background-size: 300% 300%;
 }
 
-#form-search{
+#form-content{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
 
     width: 480px;
     height: 200px;
@@ -54,12 +53,27 @@ body{
 
     border-radius: 10px;
 
-    gap: 5px;
+   /*  gap: 5px; */
+}
+#form-text-up{
+    font-size: 10px;
 }
 
-.input-search-cep{
-    width: 80%;
+#form-input-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 100%;
     height: 30%;
+
+    padding: 0px 24px;
+    gap: 5px;
+}
+.input-search-cep{
+    width: 100%;
+    height: 100%;
 
     background: none;
 
@@ -69,6 +83,7 @@ body{
     outline: none;
 
     font-size: 0.9em;
+    font-weight: 700;
 
     background-color: var(--color-white-02);
 
@@ -84,11 +99,11 @@ body{
 .input-search-cep::placeholder{
     color: var(--color-gray-01);
 }
-#form-search > button{
-    width: 12%;
-    height: 30%;
+#form-input-content > button{
+    width: 15%;
+    height: 100%;
 
-    background-color:var(--color-white-04);
+    background-color: var(--color-gray-02);
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
