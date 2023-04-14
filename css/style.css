@@ -19,9 +19,10 @@
 
     --color-red-01: #CA3E47;
 
-    --color-white-white-01: white;
-    --color-white-02: #EEEEEE;
-    --color-white-03: #F4EEE0;
+    --color-white-01: white;
+    --color-white-02: #cacaca;
+    --color-white-03: #a8a8a8;
+    --color-white-04: #969696;
 
     --dark-background: linear-gradient(to bottom, var(--color-gray-03),var(--color-gray-02),var(--color-gray-01));
 }
@@ -47,7 +48,7 @@ body{
     width: 480px;
     height: 200px;
 
-    background-color: var(--color-purple-01);
+    background-color: var(--color-white-03);
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
@@ -69,13 +70,15 @@ body{
 
     font-size: 0.9em;
 
-    background-color: var(--color-white-03);
+    background-color: var(--color-white-02);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     padding: 1em;
 }
 .input-search-cep:focus{
-    background-color: var(--color-white-03);
-    border: 2px solid var(--color-white-05);
+    background-color: var(--color-white-02);
+    border: 2px solid var(--color-gray-01);
     border-radius: 10px;
 }
 .input-search-cep::placeholder{
@@ -85,14 +88,17 @@ body{
     width: 12%;
     height: 30%;
 
-    background-color: var(--color-purple-03);
+    background-color:var(--color-white-04);
 
-    border: 2px solid var(--color-purple-02);
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+
+    border: 2px solid var(--color-gray-01);
 
     border-radius: 10px;
 }
 ion-icon {
-    color: var(--color-white-02);
+    color: var(--color-white-01);
     width: 100%;
     height: 100%;
+    opacity: 0.7;
   }
