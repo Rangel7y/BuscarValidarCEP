@@ -7,4 +7,35 @@
     box-sizing: border-box;
     font-family: 'Oxanium', cursive;
 }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
+    height: 100vh;
+}
+
+:root{
+    --color-01: #393646;
+    --color-02: #4F4557;
+    --color-03: #6D5D6E;
+    
+    --color-04: #F4EEE0;
+}
+
+#form-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 400px;
+    height: 50px;
+
+    border-radius: 10px;
+}
+
+.input-search-cep{
+    width: 100%;
+    height: 100%;
+}
