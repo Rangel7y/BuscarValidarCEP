@@ -100,7 +100,7 @@ body{
 #input-search-cep:hover{
     transform: scale(1.02);
     background-color: var(--color-white-04);
-    border: 2px solid var(--color-gray-01);  
+    border: 2px solid var(--color-gray-01);
 }
 #input-search-cep:focus{
     background-color: var(--color-white-04);

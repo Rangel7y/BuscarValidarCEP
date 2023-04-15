@@ -31,13 +31,19 @@ const getCEP = async(cepId) =>{
 //
 
 //-- BUTTON INPUT FORM --//
+inputSearchCep.addEventListener('input', (event) => {
+    // Remove any non-numeric characters from the input
+    event.target.value = event.target.value.replace(/\D/g, '');
+});
 formContent.addEventListener('submit',(event) =>{
     event.preventDefault();
-    if(inputSearchCep.value.length != 0){
+
+    let searchInput = inputSearchCep.value.trim();
+    if(/^\d{9}$/.test(searchInput)){
         getCEP(inputSearchCep.value);
     }
     else{
         console.error("Digite o número do CEP para buscar!");
     }
 });
-//
+
