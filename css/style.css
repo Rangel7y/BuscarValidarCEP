@@ -75,7 +75,7 @@ body{
     padding: 0px 24px;
     gap: 5px;
 }
-.input-search-cep{
+#input-search-cep{
     width: 100%;
     height: 100%;
 
@@ -97,17 +97,17 @@ body{
 
     transition: all 200ms ease, background 200ms ease-in-out;
 }
-.input-search-cep:hover{
+#input-search-cep:hover{
     transform: scale(1.02);
     background-color: var(--color-white-04);
     border: 2px solid var(--color-gray-01);  
 }
-.input-search-cep:focus{
+#input-search-cep:focus{
     background-color: var(--color-white-04);
     border: 2px solid var(--color-gray-01);
     border-radius: 10px;
 }
-.input-search-cep::placeholder{
+#input-search-cep::placeholder{
     color: var(--color-gray-01);
 }
 #form-input-content > button{
@@ -134,4 +134,4 @@ ion-icon {
     width: 100%;
     height: 100%;
     opacity: 0.7;
-  }
+}
