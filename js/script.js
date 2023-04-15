@@ -24,7 +24,6 @@ const findCEP = async(cepId) =>{
 const getCEP = async(cepId) =>{
     const dataCep = await findCEP(cepId);
 
-    /* console.log(dataCep); */
     if(dataCep){
         console.log(dataCep);
     }
@@ -41,3 +40,4 @@ formContent.addEventListener('submit',(event) =>{
         console.error("Digite o número do CEP para buscar!");
     }
 });
+//
