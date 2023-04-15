@@ -48,7 +48,7 @@ body{
     width: 100%;
     height: 100%;
 
-    gap: 5px;
+    gap: 10px;
 }
 
 /* PANEL CONTENT FORM*/
@@ -171,6 +171,5 @@ ion-icon {
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     border-radius: 10px;
-
 }
 /**/
