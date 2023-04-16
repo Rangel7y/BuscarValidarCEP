@@ -52,7 +52,7 @@ body{
 }
 
 /* PANEL CONTENT FORM*/
-#form-panel-content{
+#form-box-content{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +83,7 @@ body{
     
 }
 
-#input-content{
+#input-box-content{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +130,7 @@ body{
 #input-validate-cep::placeholder{
     color: var(--color-gray-01);
 }
-#input-content > button{
+#input-box-content > button{
     width: 15%;
     height: 100%;
 
@@ -144,7 +144,7 @@ body{
 
     transition: all 200ms ease, background 200ms ease-in-out;
 }
-#input-content > button:hover{
+#input-box-content > button:hover{
     transform: scale(1.08);
     background-color: var(--color-gray-01);
     border: 2px solid var(--color-gray2);
