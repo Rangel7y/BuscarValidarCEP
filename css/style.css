@@ -51,7 +51,7 @@ body{
     gap: 10px;
 }
 
-/* PANEL CONTENT FORM*/
+/* FORM BOX CONTENT */
 #form-box-content{
     display: flex;
     align-items: center;
@@ -157,11 +157,14 @@ ion-icon {
 }
 /**/
 
-/* PANEL CEP INFORMATIONS */
+/* BOX RESULT CEP */
 #box-result-cep{
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
     width: 400px;
     height: 150px;
