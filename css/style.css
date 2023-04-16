@@ -158,7 +158,7 @@ ion-icon {
 /**/
 
 /* PANEL CEP INFORMATIONS */
-#cep-info-content{
+#box-result-cep{
     display: flex;
     align-items: center;
     justify-content: center;
