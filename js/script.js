@@ -32,8 +32,11 @@ const findCEP = async(cepId) =>{
 const getCEP = async(cepId) =>{
     const dataCep = await findCEP(cepId);
 
-    if(dataCep){
+    if(!dataCep){
         console.log(dataCep);
+    }
+    else{
+        console.log("Ocorreu algum erro ao procurar pelo cep fornecido");
     }
 }
 //
@@ -47,7 +50,7 @@ formContent.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     let searchInput = inputSearchCep.value.trim();
-    if(/^\d{9}$/.test(searchInput)){
+    if(/^\d{8}$/.test(searchInput)){
         getCEP(inputSearchCep.value);
     }
     else{
