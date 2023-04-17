@@ -32,7 +32,10 @@ const findCEP = async(cepId) =>{
 const getCEP = async(cepId) =>{
     const dataCep = await findCEP(cepId);
 
-    if(!dataCep){
+    if(!("erro" in dataCep)){
+
+        /* resultCep01.innerHTML = dataCep['cep']; */
+
         console.log(dataCep);
     }
     else{
