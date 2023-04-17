@@ -4,6 +4,14 @@
 const formContent = document.getElementById("form-box-content");
 const inputSearchCep = document.getElementById("input-validate-cep");
 //
+//-- RESULT CEP --//
+const resultCep01 = document.getElementById("resultCep-01"); 
+const resultCep02 = document.getElementById("resultCep-02");
+const resultCep03 = document.getElementById("resultCep-03");
+const resultCep04 = document.getElementById("resultCep-04");
+const resultCep05 = document.getElementById("resultCep-05");
+const resultCep06 = document.getElementById("resultCep-06");
+
 
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
