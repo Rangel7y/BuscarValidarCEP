@@ -174,16 +174,30 @@ ion-icon {
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     border-radius: 10px;
+
+    padding: 10px;
 }
 .box-result{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
+
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
+
+    border-radius: 10px;
 }
 .box-card-title{
-    font-size: 14px;
+
+    font-size: 12px;
     font-weight: 700;
+
+    background-color: white;
+
+    width: auto;
+    height: auto;
+
+    border-radius: 50px 12px 10px 4px;
 }
 .result-card-title{
     border: 2px solid red;

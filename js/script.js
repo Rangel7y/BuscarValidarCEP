@@ -33,17 +33,17 @@ const getCEP = async(cepId) =>{
 
     if(!("erro" in dataCep)){
 
-        resultCep01.innerHTML = dataCep['cep'];
+        resultCep01.textContent = dataCep['cep'];
         //
-        resultCep02.innerHTML = dataCep['ddd'];
+        resultCep02.textContent = dataCep['ddd'];
         //
-        resultCep03.innerHTML = dataCep['localidade'];
+        resultCep03.textContent = dataCep['localidade'];
         //
-        resultCep04.innerHTML = dataCep['uf'];
+        resultCep04.textContent = dataCep['uf'];
         //
-        resultCep05.innerHTML = dataCep['bairro'];
+        resultCep05.textContent = dataCep['bairro'];
         //
-        resultCep06.innerHTML = dataCep['logradouro'];
+        resultCep06.textContent = dataCep['logradouro'];
         //
 
 
