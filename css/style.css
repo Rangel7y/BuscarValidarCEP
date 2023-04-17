@@ -159,12 +159,11 @@ ion-icon {
 
 /* BOX RESULTS CEP */
 #box-result-cep{
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
 
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
+    /* grid-template-columns: 1fr 1fr; */
 
     width: 400px;
     height: 190px;
@@ -190,7 +189,7 @@ ion-icon {
 .box-card-title{
 
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 710;
 
     background-color: white;
 
