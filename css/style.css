@@ -157,7 +157,7 @@ ion-icon {
 }
 /**/
 
-/* BOX RESULT CEP */
+/* BOX RESULTS CEP */
 #box-result-cep{
     display: grid;
     align-items: center;
@@ -175,6 +175,11 @@ ion-icon {
 
     border-radius: 10px;
 }
-
+.box-result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 /**/
