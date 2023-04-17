@@ -36,7 +36,7 @@ const getCEP = async(cepId) =>{
         console.log(dataCep);
     }
     else{
-        console.log("Ocorreu algum erro ao procurar pelo cep fornecido");
+        console.error("Erro ao procurar pelo CEP fornecido!");
     }
 }
 //
