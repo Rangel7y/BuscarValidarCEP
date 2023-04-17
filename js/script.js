@@ -12,7 +12,6 @@ const resultCep04 = document.getElementById("resultCep-04");
 const resultCep05 = document.getElementById("resultCep-05");
 const resultCep06 = document.getElementById("resultCep-06");
 
-
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
 //
@@ -34,7 +33,19 @@ const getCEP = async(cepId) =>{
 
     if(!("erro" in dataCep)){
 
-        /* resultCep01.innerHTML = dataCep['cep']; */
+        resultCep01.innerHTML = dataCep['cep'];
+        //
+        resultCep02.innerHTML = dataCep['ddd'];
+        //
+        resultCep03.innerHTML = dataCep['localidade'];
+        //
+        resultCep04.innerHTML = dataCep['uf'];
+        //
+        resultCep05.innerHTML = dataCep['bairro'];
+        //
+        resultCep06.innerHTML = dataCep['logradouro'];
+        //
+
 
         console.log(dataCep);
     }
