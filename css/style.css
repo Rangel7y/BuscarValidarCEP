@@ -189,11 +189,24 @@ ion-icon {
 
     border-radius: 10px;
 }
-.box-card-title{
-    font-size: 12px;
-    font-weight: 710;
+.box-result > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    border-radius: 50px 12px 10px 4px;
+    width: 70px;
+    height: 13px;
+
+    background-color: white;
+
+    border-radius: 20px 2px 20px 2px;
+}
+.box-card-title{
+    /* width: auto;
+    height: auto; */
+
+    font-size: 10px;
+    font-weight: 710;
 }
 .result-card-title{
     border: 2px solid red;
