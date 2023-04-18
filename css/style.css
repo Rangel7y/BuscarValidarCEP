@@ -192,8 +192,16 @@ ion-icon {
 .box-card-title{
     position: relative;
     top: -30%;
+
     font-size: 10px;
     font-weight: 710;
+    text-align: center;
+
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
+
+    width: 70px;
+    border-radius: 21px 12px;
+    border: 2px solid red;
 }
 .result-card-title{
     font-size: 15px;
