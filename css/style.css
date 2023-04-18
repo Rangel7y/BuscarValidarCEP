@@ -189,17 +189,9 @@ ion-icon {
 
     list-style: none;
 }
-.box-result > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 70px;
-    height: 12px;
-
-    background-color: white;
-}
 .box-card-title{
+    position: relative;
+    top: -30%;
     font-size: 10px;
     font-weight: 710;
 }
