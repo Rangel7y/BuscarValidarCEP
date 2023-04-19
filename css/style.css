@@ -23,6 +23,7 @@
     --color-white-02: #cacaca;
     --color-white-03: #a8a8a8;
     --color-white-04: #868686;
+    --color-white-05: #F4EEE0;
 
     --dark-background: linear-gradient(to bottom, var(--color-gray-03),var(--color-gray-02),var(--color-gray-01));
 }
