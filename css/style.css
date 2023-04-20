@@ -180,6 +180,19 @@ ion-icon {
 
     border-radius: 10px;
 }
+
+.result-side-box{
+    position: absolute;
+    width: 40px;
+    height: 190px;
+    
+    border-radius: 0.5rem 0px 0px 0.5rem;
+    
+    background-color: var(--color-purple-02);
+}
+/* .result-card-title{
+    text-align: center;
+} */
 #box-result-cep > ul{
     display: flex;
     align-items: center;
@@ -188,13 +201,7 @@ ion-icon {
 
     padding: 10px;
 }
-#box-result-cep > h3{
-    position: absolute;
-    text-align: center;
 
-    right: 43.4%;
-
-}
 .box-result{
     display: flex;
     align-items: center;
