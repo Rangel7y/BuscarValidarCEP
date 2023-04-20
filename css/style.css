@@ -170,7 +170,7 @@ ion-icon {
 /* BOX RESULTS CEP */
 #box-result-content{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
     width: 450px;
     height: 190px;
@@ -182,8 +182,12 @@ ion-icon {
     border-radius: 10px;
 }
 .result-side-box{
+    position: relative;
+
     width: 40px;
     height: 190px;
+
+    right: 25px;
     
     border-radius: 0.5rem 0px 0px 0.5rem;
     
