@@ -171,9 +171,8 @@ ion-icon {
 #box-result-cep{
     display: flex;
     align-items: center;
-    justify-content: center;
 
-    width: 400px;
+    width: 450px;
     height: 190px;
 
     background-color: var(--color-white-03);
@@ -182,7 +181,7 @@ ion-icon {
 
     border-radius: 10px;
 
-    padding: 10px;
+    /* padding: 10px; */
 }
 .box-result{
     display: flex;
