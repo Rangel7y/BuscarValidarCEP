@@ -1,7 +1,7 @@
 
 //-- GET DOCUMENT ELEMENTS  --//
 //-- FORM CONTENT --//
-const formContent = document.getElementById("form-content");
+const buttonValidateCep = document.getElementById("button-validate-cep");
 const inputSearchCep = document.getElementById("input-validate-cep");
 //
 //-- RESULT CEP --//
@@ -60,7 +60,7 @@ inputSearchCep.addEventListener('input', (event) => {
     // Remove any non-numeric characters from the input
     event.target.value = event.target.value.replace(/\D/g, '');
 });
-formContent.addEventListener('submit',(event) =>{
+buttonValidateCep.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     let searchInput = inputSearchCep.value.trim();
