@@ -170,7 +170,6 @@ ion-icon {
 /* BOX RESULTS CEP */
 #box-result-cep{
     display: flex;
-    align-items: center;
 
     width: 450px;
     height: 190px;
@@ -180,8 +179,14 @@ ion-icon {
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     border-radius: 10px;
+}
+#box-result-cep > ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    /* padding: 10px; */
+    padding: 10px;
 }
 .box-result{
     display: flex;
