@@ -1,7 +1,7 @@
 
 //-- GET DOCUMENT ELEMENTS  --//
 //-- FORM CONTENT --//
-const formContent = document.getElementById("form-box-content");
+const formContent = document.getElementById("form-content");
 const inputSearchCep = document.getElementById("input-validate-cep");
 //
 //-- RESULT CEP --//

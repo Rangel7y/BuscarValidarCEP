@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="./assets/icon-locMundi.png">
+
     <link rel="stylesheet" href="./css/style.css">
     <script defer src="./js/script.js"></script>
 
@@ -12,17 +14,20 @@
 </head>
 <body>
     <main id="main-container">
-        <form id="form-box-content">
-            <section id="form-card-title">
-                <h1>Buscar/Validar CEP<br>Digite ou cole o número do CEP que deseja buscar/validar.</h1>
-            </section>
-            <section id="input-box-content">
-                <input id="input-validate-cep" type="search" maxlength="8" placeholder="Digite o número do CEP para buscar" required>
-                <button>
-                    <ion-icon name="search-circle-outline"></ion-icon>
-                </button>
-            </section>                 
-        </form>
+        <section id="form-box-content">
+            <div class="form-side-box"></div>
+            <form id="form-content">             
+                <section id="form-card-title">
+                    <h1>Buscar/Validar CEP<br>Digite ou cole o número do CEP que deseja buscar/validar.</h1>
+                </section>
+                <section id="input-box-content">
+                    <input id="input-validate-cep" type="search" maxlength="8" placeholder="Digite o número do CEP para buscar" required>
+                    <button>
+                        <ion-icon name="search-circle-outline"></ion-icon>
+                    </button>
+                </section>                 
+            </form>
+        </section>      
         
         <section id="box-result-cep">
             <ul>
