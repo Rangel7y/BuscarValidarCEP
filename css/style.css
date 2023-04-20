@@ -98,6 +98,7 @@ body{
     
 }
 
+/* INPUT SEARCH */
 #input-box-content{
     display: flex;
     align-items: center;
@@ -113,7 +114,6 @@ body{
 
     border: none;
     outline: none;
-    /* background: none; */
 
     font-size: 0.9em;
     font-weight: 700;
@@ -137,6 +137,7 @@ body{
 #input-validate-cep::placeholder{
     color: var(--color-gray-01);
 }
+/* BUTTON INPUT */
 #input-box-content > button{
     width: 15%;
     height: 100%;
