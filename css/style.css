@@ -71,7 +71,7 @@ body{
 
     border-radius: 0.5rem 0px 0px 0.5rem;
 
-    background-color: red;
+    background-color: var(--color-purple-02);
 }
 #form-content{
     display: flex;
