@@ -1,7 +1,7 @@
 
 //-- GET DOCUMENT ELEMENTS  --//
 //-- FORM CONTENT --//
-const buttonValidateCep = document.getElementById("button-validate-cep");
+const formContent = document.getElementById("form-content");
 const inputSearchCep = document.getElementById("input-validate-cep");
 //
 //-- RESULT CEP --//
@@ -11,6 +11,8 @@ const resultCep03 = document.getElementById("resultCep-03");
 const resultCep04 = document.getElementById("resultCep-04");
 const resultCep05 = document.getElementById("resultCep-05");
 const resultCep06 = document.getElementById("resultCep-06");
+
+const boxResultCep = document.getElementById("box-result-cep");
 
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
@@ -60,7 +62,7 @@ inputSearchCep.addEventListener('input', (event) => {
     // Remove any non-numeric characters from the input
     event.target.value = event.target.value.replace(/\D/g, '');
 });
-buttonValidateCep.addEventListener('submit',(event) =>{
+formContent.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     let searchInput = inputSearchCep.value.trim();
@@ -68,6 +70,8 @@ buttonValidateCep.addEventListener('submit',(event) =>{
         getCEP(inputSearchCep.value);
     }
     else{
+        boxResultCep.remove();
+
         console.error("Digite o número do CEP para buscar!");
     }
 });
