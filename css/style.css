@@ -188,6 +188,13 @@ ion-icon {
 
     padding: 10px;
 }
+#box-result-cep > h3{
+    position: absolute;
+    text-align: center;
+
+    right: 43.4%;
+
+}
 .box-result{
     display: flex;
     align-items: center;
