@@ -12,7 +12,7 @@ const resultCep04 = document.getElementById("resultCep-04");
 const resultCep05 = document.getElementById("resultCep-05");
 const resultCep06 = document.getElementById("resultCep-06");
 
-const boxResultCep = document.getElementById("box-result-cep");
+const boxResultCep = document.getElementById("box-result-content");
 
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
