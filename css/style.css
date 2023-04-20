@@ -136,6 +136,7 @@ body{
 }
 #input-validate-cep::placeholder{
     color: var(--color-gray-01);
+    opacity: 0.7;
 }
 /* BUTTON INPUT */
 #input-box-content > button{
