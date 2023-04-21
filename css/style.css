@@ -162,11 +162,11 @@ ion-icon {
 /* BOX RESULT CONTAINER */
 #result-cep-container{
     display: grid;
-    grid-template-columns: 40px 1fr 1fr;
+    grid-template-columns: 40px 1fr;
     grid-template-rows: 40px 1fr;
     grid-template-areas: 
-        "title title title"
-        "sidebox ul ul";
+        ". title"
+        "sidebox ul";
 
     width: 450px;
     height: 190px;
@@ -177,15 +177,19 @@ ion-icon {
 
     border-radius: 10px;
 }
+/* RESULT TITLE TEXT */
+.result-title-text{
+    grid-area: title;
+}
 /* RESULT SIDE BOX */
 .result-side-box{
     grid-area: sidebox;
 }
 /* BOX RESULT CEP*/
-/* #box-result-cep{
-
-    height: 100px;
-} */
+#box-result-cep{
+    display: flex;
+    grid-area: ul;
+}
 /* RESULT CARD TITLE */
 .cep-title-text{
 
@@ -198,14 +202,14 @@ ion-icon {
     width: 70px;
 }
 /* UL */
-/* #box-result-cep > ul{
+#box-result-cep > ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; */
+    flex-direction: column;
 
-    /* padding: 5px;
-} */
+    /* padding: 5px; */
+}
 
 /* SIDE BOX */
 .side-box{
