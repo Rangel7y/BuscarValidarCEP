@@ -192,10 +192,11 @@ ion-icon {
     align-items: center;
     justify-content: center;
     
-    width: 350px;
+    width: 400px;
     height: 150px;
 
     grid-area: ul;
+
 }
 /* UL */
 #box-result-cep > ul{
@@ -208,7 +209,7 @@ ion-icon {
 
     border-radius: 10px;
 
-    /* padding: 5px; */
+    /* gap: 3px; */
 }
 /* BOX RESULT */
 .box-result{
