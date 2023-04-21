@@ -46,8 +46,8 @@ body{
     justify-content: center;
     flex-direction: column;
 
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 
     gap: 10px;
 }
@@ -79,8 +79,6 @@ body{
 }
 #form-title-text{
     display: flex;
-    
-    width: 100%;
 
     font-size: 13px;
     font-weight: 700;
@@ -97,10 +95,10 @@ body{
     flex-direction: row;
 
     width: 100%;
-    height: 30%;
+    height: 50px;
 }
 #input-validate-cep{
-    width: 320px;
+    width: 100%;
     height: 45px;
 
     border: none;
@@ -218,7 +216,7 @@ ion-icon {
 .box-result{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
 
     width: 180px;
@@ -233,7 +231,7 @@ ion-icon {
 }
 /* CEP TITLE TEXT */
 .cep-title-text{
-    position: relative;
+    /* position: relative; */
     
     width: 70px;
 
@@ -243,12 +241,13 @@ ion-icon {
 
     text-align: center;
     right: 53px;
-    top: -5px;
+    /* top: -2px; */
 
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
 
-    border: 1px solid var(--color-purple-01);
-    border-radius: 0.5rem 0px 0px 0.5rem;
+    /* border: 1px solid var(--color-purple-01); */
+    border-radius: 10px;
+    /* border-radius: 0.5rem 0px 0px 0.5rem; */
 
     color: var(--color-purple-01);
 
