@@ -161,7 +161,7 @@ ion-icon {
 /* BOX RESULT CONTAINER */
 #result-cep-container{
     display: grid;
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 50px 1fr;
     grid-template-rows: 40px 1fr;
     grid-template-areas: 
         "sidebox title"
@@ -179,6 +179,8 @@ ion-icon {
 /* RESULT TITLE TEXT */
 .result-title-text{
     grid-area: title;
+
+    text-align: center;
 }
 /* RESULT SIDE BOX */
 .result-side-box{
@@ -187,18 +189,13 @@ ion-icon {
 /* BOX RESULT CEP*/
 #box-result-cep{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 350px;
+    height: 150px;
+
     grid-area: ul;
-}
-/* RESULT CARD TITLE */
-.cep-title-text{
-
-    font-size: 10px;
-    font-weight: 710;
-    text-align: center;
-
-    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
-
-    width: 70px;
 }
 /* UL */
 #box-result-cep > ul{
@@ -207,8 +204,44 @@ ion-icon {
     justify-content: center;
     flex-direction: column;
 
+    list-style: none;
+
+    border-radius: 10px;
+
     /* padding: 5px; */
 }
+/* BOX RESULT */
+.box-result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 180px;
+    height: 50px;
+
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
+
+    border-radius: 10px;
+}
+/* CEP TITLE TEXT */
+.cep-title-text{
+    font-size: 10px;
+    font-weight: 710;
+    text-align: center;
+
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
+
+    width: 70px;
+}
+/* CEP RESULT TEXT */
+.cep-result-text{
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
 
 /* SIDE BOX */
 .side-box{
