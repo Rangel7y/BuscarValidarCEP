@@ -78,7 +78,7 @@ body{
 
     gap: 10px;
 }
-#form-desc-text{
+#form-title-text{
     display: flex;
     
     width: 100%;
@@ -91,7 +91,7 @@ body{
 }
 
 /* INPUT SEARCH */
-#input-box-content{
+#input-content{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +131,7 @@ body{
     opacity: 0.7;
 }
 /* BUTTON INPUT */
-#input-box-content > button{
+#input-content > button{
     width: 60px;
     height: 45px;
 
@@ -147,7 +147,7 @@ body{
 
     cursor: pointer;
 }
-#input-box-content > button:hover{
+#input-content > button:hover{
     background-color: var(--color-gray-01);
 }
 ion-icon {
