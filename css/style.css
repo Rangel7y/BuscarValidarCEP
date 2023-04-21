@@ -181,6 +181,8 @@ ion-icon {
     grid-area: title;
 
     text-align: center;
+
+    font-style: italic;
 }
 /* RESULT SIDE BOX */
 .result-side-box{
@@ -237,6 +239,7 @@ ion-icon {
 
     font-size: 10px;
     font-weight: 710;
+    font-style: italic;
 
     text-align: center;
     right: 53px;
@@ -250,6 +253,7 @@ ion-icon {
     color: var(--color-purple-01);
 
     opacity: 0.9;
+
 }
 /* CEP RESULT TEXT */
 .cep-result-text{
