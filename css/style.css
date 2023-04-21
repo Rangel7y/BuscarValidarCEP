@@ -165,7 +165,8 @@ ion-icon {
     grid-template-columns: 40px 1fr 1fr;
     grid-template-rows: 40px 1fr;
     grid-template-areas: 
-        "";
+        "title title title"
+        "sidebox ul ul";
 
     width: 450px;
     height: 190px;
@@ -176,12 +177,15 @@ ion-icon {
 
     border-radius: 10px;
 }
-
+/* RESULT SIDE BOX */
+.result-side-box{
+    grid-area: sidebox;
+}
 /* BOX RESULT CEP*/
-#box-result-cep{
+/* #box-result-cep{
 
     height: 100px;
-}
+} */
 /* RESULT CARD TITLE */
 .cep-title-text{
 
