@@ -53,7 +53,7 @@ body{
 }
 
 /* FORM BOX CONTENT */
-#form-box-content{
+#form-container{
     display: flex;
 
     width: 450px;
@@ -64,14 +64,6 @@ body{
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     border-radius: 10px;
-}
-.form-side-box{
-    width: 50px;
-    height: 100%;
-
-    border-radius: 0.5rem 0px 0px 0.5rem;
-
-    background-color: var(--color-purple-02);
 }
 #form-content{
     display: flex;
@@ -86,7 +78,7 @@ body{
 
     gap: 10px;
 }
-#form-card-title{
+#form-desc-text{
     display: flex;
     
     width: 100%;
@@ -167,10 +159,13 @@ ion-icon {
 }
 /**/
 
-/* BOX RESULTS CEP */
-#box-result-container{
-    display: flex;
-    justify-content: center;
+/* BOX RESULT CONTAINER */
+#result-cep-container{
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr;
+    grid-template-rows: 40px 1fr;
+    grid-template-areas: 
+        "";
 
     width: 450px;
     height: 190px;
@@ -181,50 +176,14 @@ ion-icon {
 
     border-radius: 10px;
 }
-.result-side-box{
-    position: relative;
 
-    width: 40px;
-    height: 190px;
-
-    right: 25px;
-    
-    border-radius: 0.5rem 0px 0px 0.5rem;
-    
-    background-color: var(--color-purple-02);
-}
+/* BOX RESULT CEP*/
 #box-result-cep{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    height: 100px;
 }
-#box-result-cep > ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    padding: 5px;
-}
-
-.box-result{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    width: 180px;
-    height: 50px;
-
-    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
-
-    border-radius: 10px;
-
-    list-style: none;
-}
+/* RESULT CARD TITLE */
 .box-card-title{
-    position: relative;
-    top: -15%;
 
     font-size: 10px;
     font-weight: 710;
@@ -234,21 +193,22 @@ ion-icon {
 
     width: 70px;
 }
-.result-card-title{
-    font-size: 15px;
-    font-weight: 600;
+/* UL */
+/* #box-result-cep > ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
 
-    text-align: center;
+    /* padding: 5px;
+} */
+
+/* SIDE BOX */
+.side-box{
+    width: 50px;
+    height: 100%;
+
+    border-radius: 0.5rem 0px 0px 0.5rem;
+
+    background-color: var(--color-purple-02);
 }
-/**/
-
-/* FOOTER */
-#footer-content{
-    padding: 24px 0px;
-    
-    user-select: none;
-
-    opacity: 0.5;
-
-}
-/**/
