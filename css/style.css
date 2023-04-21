@@ -193,7 +193,7 @@ ion-icon {
     justify-content: center;
     
     width: 400px;
-    height: 150px;
+    height: 130px;
 
     grid-area: ul;
 
@@ -220,29 +220,45 @@ ion-icon {
     flex-direction: column;
 
     width: 180px;
-    height: 45px;
+    height: 40px;
 
-    border: 1px solid red;
+
+    background-color: var(--color-white-02);
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
-
+    
+    border: 1px solid var(--color-purple-03);
     border-radius: 10px;
 }
 /* CEP TITLE TEXT */
 .cep-title-text{
+    position: relative;
+    
+    width: 70px;
+
     font-size: 10px;
     font-weight: 710;
+
     text-align: center;
+    right: 53px;
+    top: -5px;
 
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
 
-    width: 70px;
+    border: 1px solid var(--color-purple-01);
+    border-radius: 0.5rem 0px 0px 0.5rem;
+
+    color: var(--color-purple-01);
+
+    opacity: 0.9;
 }
 /* CEP RESULT TEXT */
 .cep-result-text{
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 620;
 
     text-align: center;
+
+    color: var(--color-purple-01);
 }
 
 
