@@ -80,11 +80,11 @@ formContent.addEventListener('submit',(event) =>{
 
 //-- REMOVE RESULT PANEL FROM PAGE --//
 function showBoxResult(canShow) {
-    if(canShow){     
-        boxResultCep.add();
+    if(canShow){    
+        boxResultCep.classList.add("visible");
         return;
     }
-    boxResultCep.remove();
+    boxResultCep.classList.remove("visible");
 }
 //
 
