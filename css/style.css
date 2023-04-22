@@ -18,13 +18,12 @@
     --color-purple-03: #6D5D6E;
     --color-purple-04: #b5a6b6;
 
-    --color-red-01: #CA3E47;
 
     --color-white-01: white;
     --color-white-02: #f8f9fa;
     --color-white-03: #cacaca;
     --color-white-04: #a8a8a8;
-    --color-white-05: #868686;
+    --color-white-05: #eeeff0;
 
     --dark-background: linear-gradient(to bottom, var(--color-white-02),var(--color-white-03),var(--color-white-04));
 }
@@ -106,7 +105,7 @@ body{
     font-size: 0.9em;
     font-weight: 700;
 
-    background-color: var(--color-white-03);
+    background-color: var(--color-white-05);
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
@@ -117,10 +116,10 @@ body{
     transition: all 200ms ease, background 200ms ease-in-out;
 }
 #input-validate-cep:hover{
-    background-color: var(--color-white-03);
+    background-color: var(--color-white-04);
 }
 #input-validate-cep:focus{
-    background-color: var(--color-white-03);
+    background-color: var(--color-white-04);
 }
 #input-validate-cep::placeholder{
     color: var(--color-purple-01);
@@ -228,9 +227,6 @@ ion-icon {
     top: 3px;
 
     color: var(--color-purple-01);
-
-    /* opacity: 0.9; */
-
 }
 /* BOX RESULT */
 .box-result{
@@ -242,8 +238,7 @@ ion-icon {
     width: 180px;
     height: 30px;
 
-
-    background-color: var(--color-white-03);
+    background-color: var(--color-white-05);
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
     
     border: 1px solid var(--color-purple-03);
