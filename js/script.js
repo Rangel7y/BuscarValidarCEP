@@ -12,15 +12,10 @@ const resultCep04 = document.getElementById("resultCep-04");
 const resultCep05 = document.getElementById("resultCep-05");
 const resultCep06 = document.getElementById("resultCep-06");
 
-const boxResultCep = document.getElementById("box-result-container");
+const boxResultCep = document.getElementById("result-cep-container");
 
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
-
-function changeBoxResult(params) {
-    
-}
-/* boxResultCep.remove(); */
 //
 
 //-- FUNCTION TO GET API DATA --//
@@ -40,6 +35,8 @@ const getCEP = async(cepId) =>{
 
     if(!("erro" in dataCep)){
 
+        showBoxResult(true);
+        //
         resultCep01.textContent = dataCep['cep'];
         //
         resultCep02.textContent = dataCep['ddd'];
@@ -75,11 +72,20 @@ formContent.addEventListener('submit',(event) =>{
         getCEP(inputSearchCep.value);
     }
     else{
-        boxResultCep.remove();
+        showBoxResult(false);
 
         console.error("Digite o número do CEP para buscar!");
     }
 });
 
+//-- REMOVE RESULT PANEL FROM PAGE --//
+function showBoxResult(canShow) {
+    if(canShow){     
+        boxResultCep.add();
+        return;
+    }
+    boxResultCep.remove();
+}
+//
 
 
