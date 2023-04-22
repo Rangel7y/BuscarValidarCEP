@@ -216,11 +216,11 @@ ion-icon {
 .box-result{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
 
     width: 180px;
-    height: 40px;
+    height: 30px;
 
 
     background-color: var(--color-white-02);
@@ -231,23 +231,19 @@ ion-icon {
 }
 /* CEP TITLE TEXT */
 .cep-title-text{
-    /* position: relative; */
+    position: relative;
     
-    width: 70px;
+    width: 60px;
 
     font-size: 10px;
     font-weight: 710;
     font-style: italic;
 
-    text-align: center;
-    right: 53px;
-    /* top: -2px; */
+    /* text-align: center; */
+    right: 50px;
+    top: 3px;
 
-    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
-
-    /* border: 1px solid var(--color-purple-01); */
-    border-radius: 10px;
-    /* border-radius: 0.5rem 0px 0px 0.5rem; */
+    /* box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px; */
 
     color: var(--color-purple-01);
 
