@@ -16,6 +16,11 @@ const boxResultCep = document.getElementById("box-result-container");
 
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
+
+function changeBoxResult(params) {
+    
+}
+/* boxResultCep.remove(); */
 //
 
 //-- FUNCTION TO GET API DATA --//
