@@ -20,12 +20,12 @@
     --color-red-01: #CA3E47;
 
     --color-white-01: white;
-    --color-white-02: #cacaca;
-    --color-white-03: #a8a8a8;
-    --color-white-04: #868686;
-    --color-white-05: #F4EEE0;
+    --color-white-02: #F4EEE0;
+    --color-white-03: #cacaca;
+    --color-white-04: #a8a8a8;
+    --color-white-05: #868686;
 
-    --dark-background: linear-gradient(to bottom, var(--color-white-05),var(--color-white-02),var(--color-white-03));
+    --dark-background: linear-gradient(to bottom, var(--color-white-02),var(--color-white-03),var(--color-white-04));
 }
 
 body{
@@ -37,7 +37,6 @@ body{
     height: 100vh;
 
     background: var(--dark-background);
-    /* background-size: 300% 300%; */
 }
 
 #main-container{
@@ -83,8 +82,7 @@ body{
     font-size: 13px;
     font-weight: 700;
 
-    color: var(--color-gray-01);
-    
+    color: var(--color-purple-01);
 }
 
 /* INPUT SEARCH */
@@ -107,7 +105,7 @@ body{
     font-size: 0.9em;
     font-weight: 700;
 
-    background-color: var(--color-white-02);
+    background-color: var(--color-white-03);
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
@@ -118,10 +116,10 @@ body{
     transition: all 200ms ease, background 200ms ease-in-out;
 }
 #input-validate-cep:hover{
-    background-color: var(--color-white-04);
+    background-color: var(--color-white-03);
 }
 #input-validate-cep:focus{
-    background-color: var(--color-white-04);
+    background-color: var(--color-white-03);
 }
 #input-validate-cep::placeholder{
     color: var(--color-purple-01);
@@ -145,7 +143,7 @@ body{
     cursor: pointer;
 }
 #input-content > button:hover{
-    background-color: var(--color-gray-01);
+    background-color: var(--color-purple-01);
 }
 ion-icon {
     width: 100%;
@@ -180,7 +178,10 @@ ion-icon {
 
     text-align: center;
 
+    color: var(--color-purple-01);
     font-style: italic;
+
+    padding: 5px;
 }
 /* RESULT SIDE BOX */
 .result-side-box{
@@ -223,7 +224,7 @@ ion-icon {
     height: 30px;
 
 
-    background-color: var(--color-white-02);
+    background-color: var(--color-white-03);
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
     
     border: 1px solid var(--color-purple-03);
@@ -239,11 +240,8 @@ ion-icon {
     font-weight: 710;
     font-style: italic;
 
-    /* text-align: center; */
     right: 50px;
     top: 3px;
-
-    /* box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px; */
 
     color: var(--color-purple-01);
 
