@@ -265,3 +265,15 @@ ion-icon {
 
     background-color: var(--color-purple-02);
 }
+
+/* FOOTER */
+#footer-content{
+    padding: 24px 0px;
+    
+    user-select: none;
+
+    color: var(--color-purple-01);
+    opacity: 0.5;
+
+}
+/**/
