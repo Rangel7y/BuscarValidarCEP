@@ -66,6 +66,14 @@ body{
 
     gap: 10px;
 }
+#switch{
+    display: block;
+    position: relative;
+}
+#switch > button{
+    width: 30px;
+    height: 30px;
+}
 #form-content{
     display: flex;
     align-items: center;
