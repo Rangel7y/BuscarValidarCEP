@@ -67,12 +67,23 @@ body{
     gap: 10px;
 }
 #switch{
-    display: block;
-    position: relative;
+    /* display: flex; */
+    position: absolute;
+
+    width: 50px;
+    height: 30px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 #switch > button{
     width: 30px;
     height: 30px;
+
+    background: none;
+    border-radius: 50%;
+    border: 0;
 }
 #form-content{
     display: flex;
