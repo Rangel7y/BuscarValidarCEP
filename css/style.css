@@ -57,18 +57,16 @@ body{
     gap: 10px;
 }
 #switch{
-    position: relative;
-
-    width: 50px;
-    height: 30px;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-#switch > button{
     position: absolute;
 
+    width: 30px;
+    height: 30px;
+
+    top: 0;
+    left: 0;
+    /* transform: translate(-50%,-50%); */
+}
+#switch > button{
     width: 30px;
     height: 30px;
 
