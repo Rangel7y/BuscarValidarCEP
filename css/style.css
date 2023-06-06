@@ -9,23 +9,13 @@
 }
 
 :root{
-    --color-gray-01: #313131;
-    --color-gray-02: #414141;
-    --color-gray-03: #525252;
-    
-    --color-purple-01: #393646;
-    --color-purple-02: #4F4557;
-    --color-purple-03: #6D5D6E;
-    --color-purple-04: #b5a6b6;
 
+    --cold: #F4EEFF;
+    --light-gray: #DCD6F7;
+    --light-blue: #A6B1E1;
+    --navy: #424874;
 
-    --color-white-01: white;
-    --color-white-02: #f8f9fa;
-    --color-white-03: #cacaca;
-    --color-white-04: #a8a8a8;
-    --color-white-05: #eeeff0;
-
-    --dark-background: linear-gradient(to bottom, var(--color-white-02),var(--color-white-03),var(--color-white-04));
+    --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray));
 }
 
 body{
@@ -36,7 +26,7 @@ body{
     
     height: 100vh;
 
-    background: var(--dark-background);
+    background: var(--background-page);
 }
 
 #main-container{
