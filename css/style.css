@@ -44,6 +44,7 @@ body{
 /* FORM BOX CONTENT */
 #form-container{
     display: flex;
+    position: relative;
 
     width: 450px;
     height: 180px;
@@ -57,13 +58,13 @@ body{
     gap: 10px;
 }
 #switch{
-    position: relative;
+    position: absolute;
 
     width: 30px;
     height: 30px;
 
     top: 0;
-    left: 77%;
+    right: 0;
 }
 #switch > button{
     width: 30px;
