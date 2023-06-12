@@ -68,19 +68,26 @@ body{
     right: 0;
 
     border-radius: 30px;
+    border: 1px solid var(--navy);
 
     background-color: var(--cold);
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+
+    opacity: 0.8;
 }
 .toggle-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: absolute;
 
-    left: 0;    
+    left: -1px;    
     top: 50%;
-    
     transform: translateY(-50%);
 
     z-index: 1;
+    cursor: pointer;
 
     width: 32px;
     height: 32px;
@@ -88,8 +95,8 @@ body{
     /* background: none; */
     background-color: var(--gray-blue);
 
-    border-radius: 50%;
-    border: 0;
+    border: 1px solid var(--navy);
+    border-radius: 30px;
 }
 .toggle-img{
     width: 32px;
