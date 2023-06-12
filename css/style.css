@@ -60,7 +60,7 @@ body{
 #toggle-content{
     position: absolute;
 
-    width: 48px;
+    width: 64px;
     height: 32px;
 
     margin: 5px;
@@ -72,9 +72,9 @@ body{
     background-color: var(--cold);
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 }
-#toggle-content > button{
+.toggle-btn{
     position: absolute;
-    
+
     left: 0;    
     top: 50%;
     
@@ -92,8 +92,8 @@ body{
     border: 0;
 }
 .toggle-img{
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 }
 
 #form-content{
