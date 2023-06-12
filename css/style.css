@@ -57,29 +57,43 @@ body{
 
     gap: 10px;
 }
-#switch{
+#toggle-content{
     position: absolute;
 
-    width: 30px;
-    height: 30px;
+    width: 48px;
+    height: 32px;
 
+    margin: 5px;
     top: 0;
     right: 0;
 
-}
-#switch > button{
-    width: 30px;
-    height: 30px;
+    border-radius: 30px;
 
-    background: none;
+    background-color: var(--cold);
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+}
+#toggle-content > button{
+    position: absolute;
+    
+    left: 0;    
+    top: 50%;
+    
+    transform: translateY(-50%);
+
+    z-index: 1;
+
+    width: 32px;
+    height: 32px;
+
+    /* background: none; */
+    background-color: var(--gray-blue);
+
     border-radius: 50%;
     border: 0;
 }
-#switch > button{
-    width: 10px;
-    height: 10px;
-
-    opacity: 0.7;
+.toggle-img{
+    width: 30px;
+    height: 30px;
 }
 
 #form-content{
