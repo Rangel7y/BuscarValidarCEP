@@ -78,6 +78,12 @@ formContent.addEventListener('submit',(event) =>{
     }
 });
 
+
+/* function toggleMode() {
+    const html = document.documentElement;
+    html.classList.toggle("");
+} */
+
 //-- REMOVE RESULT PANEL FROM PAGE --//
 function showBoxResult(canShow) {
     if(canShow){    
