@@ -63,9 +63,19 @@ body{
     width: 64px;
     height: 32px;
 
-    margin: 5px;
+    margin: 8px auto;
+
     top: 0;
     right: 0;
+
+    opacity: 0.8;
+}
+#toggle-content span{
+    display: block;
+
+    width: 64px;
+    height: 32px;
+
 
     border-radius: 30px;
     border: 1px solid var(--navy);
@@ -73,7 +83,7 @@ body{
     background-color: var(--cold);
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
-    opacity: 0.8;
+    
 }
 .toggle-btn{
     display: flex;
@@ -86,13 +96,11 @@ body{
     top: 50%;
     transform: translateY(-50%);
 
-    z-index: 1;
     cursor: pointer;
 
     width: 32px;
     height: 32px;
 
-    /* background: none; */
     background-color: var(--gray-blue);
 
     border: 1px solid var(--navy);
