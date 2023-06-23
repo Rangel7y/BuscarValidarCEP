@@ -106,8 +106,8 @@ body{
     border: 1px solid var(--navy);
     border-radius: 30px;
 }
-.toggle-btn:hover{
-    
+#toggle-content:hover{
+    transform: scale(1.1);
 }
 .toggle-img{
     width: 32px;
