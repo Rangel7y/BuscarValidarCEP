@@ -130,6 +130,8 @@ body{
     flex-direction: column;
 
     width: 420px;
+
+    gap: 10px;
 }
 #input-group{
     display: flex;
@@ -159,6 +161,23 @@ body{
 .input-find-cel::placeholder{
     color: var(--navy);
     opacity: 0.8;
+}
+#form-to-fill-info > button{
+    width: 150px;
+    height: 45px;
+
+    background-color: var(--navy);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+
+    border: 1px solid var(--gray-blue);
+
+   /*  border-radius: 0px 0.5rem 0.5rem 0px; */
+
+    transition: all 200ms ease, background 200ms ease-in-out;
+
+    cursor: pointer;
+
 }
 /* --- --- */
 
