@@ -72,12 +72,14 @@ body{
 
     cursor: pointer;
 }
+#toggle-content:hover{
+    transform: scale(1.1);
+}
 #toggle-content span{
     display: block;
 
     width: 64px;
     height: 32px;
-
 
     border-radius: 30px;
     border: 1px solid var(--navy);
@@ -86,9 +88,6 @@ body{
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     
-}
-#toggle-content:hover{
-    transform: scale(1.1);
 }
 .toggle-btn{
     display: flex;
@@ -101,7 +100,7 @@ body{
     top: 50%;
     transform: translateY(-50%);
 
-    
+    cursor: pointer;
 
     width: 32px;
     height: 32px;
