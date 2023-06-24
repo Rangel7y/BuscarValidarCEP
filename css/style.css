@@ -71,7 +71,7 @@ body{
     top: 0;
     right: 0;
 
-    opacity: 0.8;
+    opacidade: 0.8;
 
     cursor: pointer;
 }
@@ -141,6 +141,12 @@ body{
 #input-group > ul {
     list-style: none;
 }
+#input-group > ul > li > h3{
+    color: var(--navy);
+
+    font-size: 12px;
+   /*  opacidade: 0.8; */
+}
 .input-find-cep{
     width: 200px;
     height: 35px;
@@ -209,7 +215,7 @@ body{
 }
 #input-validate-cep::placeholder{
     color: var(--navy);
-    opacity: 0.8;
+    opacidade: 0.8;
 }
 /* --- --- */
 
@@ -238,7 +244,7 @@ ion-icon {
     height: 100%;
     
     color: var(--cold);
-    opacity: 0.7;
+    opacidade: 0.7;
 }
 /* --- --- */
 
@@ -343,7 +349,7 @@ ion-icon {
     text-align: center;
 
     color: var(--color-purple-01);
-    opacity: 0.9;
+    opacidade: 0.9;
 }
 
 
@@ -364,7 +370,7 @@ ion-icon {
     user-select: none;
 
     color: var(--gray-blue);
-    opacity: 0.5;
+    opacidade: 0.5;
 
 }
 /**/
