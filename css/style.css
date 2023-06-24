@@ -139,6 +139,10 @@ body{
 
     gap: 2px;
 }
+.input-fill-label{
+    display: flex;
+    flex-direction: column;
+}
 .input-find-cep{
     width: 200px;
     height: 30px;
