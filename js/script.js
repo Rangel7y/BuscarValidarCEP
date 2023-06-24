@@ -1,7 +1,7 @@
 
 //-- GET DOCUMENT ELEMENTS  --//
 //-- FORM CONTENT --//
-const formContent = document.getElementById("form-content");
+const formContent = document.getElementById("form-validate-cep");
 const inputSearchCep = document.getElementById("input-validate-cep");
 //
 //-- RESULT CEP --//
@@ -79,10 +79,10 @@ formContent.addEventListener('submit',(event) =>{
 });
 
 
-/* function toggleMode() {
-    const html = document.documentElement;
-    html.classList.toggle("");
-} */
+function toggleMode() {
+    const panel = document.getElementById('');
+    panel.classList.toggle("");
+}
 
 //-- REMOVE RESULT PANEL FROM PAGE --//
 function showBoxResult(canShow) {

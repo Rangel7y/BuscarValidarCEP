@@ -120,10 +120,10 @@ body{
 /* --- --- */
 
 /* --- VALIDATION PANEL --- */
-#form-content{
+#form-validate-cep{
     display: none;
 }
-#form-content.visible{
+#form-validate-cep.visible{
     display: flex;
     align-items: center;
     justify-content: center;
