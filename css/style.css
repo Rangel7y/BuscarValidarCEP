@@ -119,6 +119,32 @@ body{
 }
 /* --- --- */
 
+/* --- PANEL - TO FILL FIND CEP --- */
+/* #form-to-fill-find{
+    display: none;
+} */
+#form-to-fill-find{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 350px;
+}
+#input-fill-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 2px;
+}
+.input-find-cep{
+    width: 200px;
+    height: 30px;
+}
+/* --- --- */
+
 /* --- VALIDATION PANEL --- */
 #form-validate-cep{
     display: none;
