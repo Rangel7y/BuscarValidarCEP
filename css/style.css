@@ -46,8 +46,8 @@ body{
     display: flex;
     position: relative;
 
-    width: 450px;
-    height: 180px;
+    width: 550px;
+    height: 300px;
 
     background-color: var(--light-gray);
 
@@ -120,28 +120,26 @@ body{
 /* --- --- */
 
 /* --- PANEL - TO FILL FIND CEP --- */
-/* #form-to-fill-find{
+/* #form-to-fill-info{
     display: none;
 } */
-#form-to-fill-find{
+#form-to-fill-info{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    width: 350px;
+    width: 420px;
 }
-#input-fill-group{
+#input-group{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 
-    gap: 2px;
+    gap: 5px;
 }
-.input-fill-label{
-    display: flex;
-    flex-direction: column;
+#input-group > ul {
+    list-style: none;
 }
 .input-find-cep{
     width: 200px;
