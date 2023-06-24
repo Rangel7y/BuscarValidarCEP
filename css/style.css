@@ -81,13 +81,13 @@ body{
 #toggle-content span{
     display: block;
 
-    width: 64px;
-    height: 32px;
+    width: 50px;
+    height: 24px;
 
     border-radius: 30px;
     border: 1px solid var(--navy);
 
-    background-color: var(--cold);
+    background-color: linear-gradient(to bottom,var(--cold), black );
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 }
@@ -99,13 +99,13 @@ body{
     position: absolute;
 
     left: -1px;    
-    top: 50%;
+    top: 38%;
     transform: translateY(-50%);
 
     cursor: pointer;
 
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 
     background-color: var(--gray-blue);
 
@@ -115,8 +115,8 @@ body{
     user-select: none;
 }
 .toggle-img{
-    width: 32px;
-    height: 32px;
+    width: 100%;
+    height: 100%;
 }
 /* --- --- */
 
