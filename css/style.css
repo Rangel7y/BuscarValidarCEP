@@ -41,7 +41,7 @@ body{
     gap: 10px;
 }
 
-/* FORM BOX CONTENT */
+/* --- FORM BOX CONTENT --- */
 #form-container{
     display: flex;
     position: relative;
@@ -57,6 +57,9 @@ body{
 
     gap: 10px;
 }
+/* --- --- */
+
+/* --- BUTTON SWITCH CHANGE BETWEEN TYPES VALIDATION SEARCH OR TO VALIDATE */
 #toggle-content{
     position: absolute;
 
@@ -114,8 +117,13 @@ body{
     width: 32px;
     height: 32px;
 }
+/* --- --- */
 
+/* --- VALIDATION PANEL --- */
 #form-content{
+    display: none;
+}
+#form-content.visible{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,8 +141,9 @@ body{
 
     color: var(--navy);
 }
+/* --- --- */
 
-/* INPUT SEARCH */
+/* --- INPUT SEARCH FROM VALIDATION PANEL --- */
 #input-content{
     display: flex;
     align-items: center;
@@ -174,7 +183,9 @@ body{
     color: var(--navy);
     opacity: 0.8;
 }
-/* BUTTON INPUT */
+/* --- --- */
+
+/* --- BUTTON INPUT FROM VALIDATION PANEL ---*/
 #input-content > button{
     width: 60px;
     height: 45px;
@@ -201,7 +212,7 @@ ion-icon {
     color: var(--cold);
     opacity: 0.7;
 }
-/**/
+/* --- --- */
 
 /* BOX RESULT CONTAINER */
 #result-cep-container{
