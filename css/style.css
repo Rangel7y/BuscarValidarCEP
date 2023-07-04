@@ -188,7 +188,7 @@ body{
 
 .input-find-cep::placeholder{
     color: var(--navy);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #form-to-fill-info > button{
