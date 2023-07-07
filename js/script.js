@@ -24,7 +24,7 @@ const formValidateCep = document.getElementById('form-validate-cep');
 
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
-const toggleHasActived = true;
+let toggleHasActived = true;
 //
 
 //-- FUNCTION TO GET API DATA --//
@@ -89,6 +89,10 @@ formContent.addEventListener('submit',(event) =>{
 //
 
 /* TOGGLE MODE FUNCTION - FIND OR VALIDATE */
+function callToggleMode(){
+    toggleHasActived = !toggleHasActived;
+    toggleMode();
+}
 function toggleMode() {
     if(!toggleHasActived){
         formValidateCep.classList.remove("visible");
@@ -96,9 +100,7 @@ function toggleMode() {
         return;
     }
     formToFillCep.classList.remove("visible");
-    formValidateCep.classList.add("visible");
-
-    toggleHasActived = !toggleHasActived;
+    formValidateCep.classList.add("visible");   
 }
 //
 
@@ -112,7 +114,7 @@ function showBoxResult(canShow) {
 }
 //
 
-console.log(toggleMode());
+toggleMode();
 
 
 

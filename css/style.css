@@ -207,6 +207,10 @@ body{
 
     cursor: pointer;
 }
+
+.tittle1{
+    margin: 5px;
+}
 /* --- --- */
 
 /* --- VALIDATION PANEL --- */
@@ -227,7 +231,7 @@ body{
     margin: 30px;
 }
 
-#form-title-text{
+.form-title-text{
     display: flex;
 
     font-size: 13px;
