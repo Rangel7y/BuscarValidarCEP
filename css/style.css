@@ -164,7 +164,7 @@ body{
     padding: 1em;
 
     color: var(--navy);
-    opacity: 0.8;
+    opacity: 0.85;
 
     border: none;
     outline: none;
@@ -189,7 +189,7 @@ body{
 
 .input-find-cep::placeholder{
     color: var(--navy);
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 #form-to-fill-info > button{
@@ -266,7 +266,6 @@ body{
     background-color: var(--cold);
 
     color: var(--navy);
-    opacity: 0.8;
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
@@ -287,7 +286,7 @@ body{
 
 #input-validate-cep::placeholder{
     color: var(--navy);
-    opacity: 0.9;
+    opacity: 0.85;
 }
 /* --- --- */
 
