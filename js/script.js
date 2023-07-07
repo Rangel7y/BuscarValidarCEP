@@ -88,6 +88,9 @@ formContent.addEventListener('submit',(event) =>{
 });
 //
 
+
+
+
 /* TOGGLE MODE FUNCTION - FIND OR VALIDATE */
 function callToggleMode(){
     toggleHasActived = !toggleHasActived;
