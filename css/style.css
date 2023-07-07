@@ -220,9 +220,11 @@ body{
     justify-content: center;
     flex-direction: column;
 
-    width: 450px;
+    width: 400px;
 
     gap: 10px;
+
+    margin: 30px;
 }
 
 #form-title-text{
