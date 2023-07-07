@@ -121,10 +121,10 @@ body{
 /* --- --- */
 
 /* --- PANEL - TO FILL FIND CEP --- */
-/* #form-to-fill-info{
-    display: none;
-} */
 #form-to-fill-info{
+    display: none;
+}
+#form-to-fill-info.visible{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,7 +220,7 @@ body{
     justify-content: center;
     flex-direction: column;
 
-    width: 350px;
+    width: 450px;
 
     gap: 10px;
 }
