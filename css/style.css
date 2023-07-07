@@ -72,7 +72,7 @@ body{
     top: 0;
     right: 0;
 
-    opacity: 0.8;
+    opacity: 0.85;
 
     cursor: pointer;
 }
@@ -88,7 +88,7 @@ body{
     border-radius: 30px;
     border: 1px solid var(--navy);
 
-    background-color: linear-gradient(to bottom,var(--cold), black );
+    background: linear-gradient(to right,var(--gray-blue),var(--smooth-blue));
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 }
