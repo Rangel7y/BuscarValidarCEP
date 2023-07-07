@@ -13,6 +13,7 @@
     --cold: #F4EEFF;
     --light-gray: #DCD6F7;
     --gray-blue: #A6B1E1;
+    --smooth-blue: #b3bdeb;
     --navy: #424874;
 
     --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray));
@@ -180,10 +181,10 @@ body{
     transition: all 200ms ease, background 200ms ease-in-out;
 }
 .input-find-cep:hover{
-    background-color: var(--light-gray);
+    background-color: var(--smooth-blue);
 }
 .input-find-cep:focus{
-    background-color: var(--light-gray);
+    background-color: var(--smooth-blue);
 }
 
 .input-find-cep::placeholder{
@@ -264,6 +265,9 @@ body{
 
     background-color: var(--cold);
 
+    color: var(--navy);
+    opacity: 0.8;
+
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     border-radius: 0.5rem 0px 0px 0.5rem;
@@ -274,16 +278,16 @@ body{
 }
 
 #input-validate-cep:hover{
-    background-color: var(--light-gray);
+    background-color: var(--smooth-blue);
 }
 
 #input-validate-cep:focus{
-    background-color: var(--light-gray);
+    background-color: var(--smooth-blue);
 }
 
 #input-validate-cep::placeholder{
     color: var(--navy);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 /* --- --- */
 
@@ -343,7 +347,7 @@ ion-icon {
 
     text-align: center;
 
-    color: var(--color-purple-01);
+    color: var(--navy);
     font-style: italic;
 
     padding: 5px;
@@ -391,7 +395,9 @@ ion-icon {
     right: 53px;
     top: 3px;
 
-    color: var(--color-purple-01);
+    color: var(--navy);
+
+    opacity: 0.9;
 }
 /* BOX RESULT */
 .box-result{
@@ -403,10 +409,10 @@ ion-icon {
     width: 180px;
     height: 30px;
 
-    background-color: var(--color-white-05);
+    background-color: var(--cold);
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
     
-    border: 1px solid var(--color-purple-03);
+    border: 1px solid var(--navy);
     border-radius: 10px;
 }
 /* CEP RESULT TEXT */
@@ -416,8 +422,8 @@ ion-icon {
 
     text-align: center;
 
-    color: var(--color-purple-01);
-    opacity: 0.9;
+    color: var(--navy);
+    opacity: 0.8;
 }
 
 
