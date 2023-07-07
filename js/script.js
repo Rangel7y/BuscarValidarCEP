@@ -97,6 +97,8 @@ function toggleMode() {
     }
     formToFillCep.classList.remove("visible");
     formValidateCep.classList.add("visible");
+
+    toggleHasActived = !toggleHasActived;
 }
 //
 
