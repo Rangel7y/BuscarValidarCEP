@@ -78,7 +78,7 @@ formContent.addEventListener('submit',(event) =>{
     }
 });
 
-
+/* TOGGLE MODE FUNCTION - FIND OR VALIDATE */
 function toggleMode() {
     const panel = document.getElementById('');
     panel.classList.toggle("");
