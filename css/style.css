@@ -178,7 +178,7 @@ body{
 
     border-radius: 8px;
 
-    transition: all 200ms ease, background 200ms ease-in-out;
+    transition: 350ms;
 }
 .input-find-cep:hover{
     background-color: var(--smooth-blue);
@@ -204,7 +204,7 @@ body{
 
     border-radius: 8px;
 
-    transition: all 200ms ease, background 200ms ease-in-out;
+    transition: 350ms;
 
     cursor: pointer;
 }
@@ -274,7 +274,7 @@ body{
 
     padding: 1em;
 
-    transition: all 200ms ease, background 200ms ease-in-out;
+    transition: 350ms;
 }
 
 #input-validate-cep:hover{
