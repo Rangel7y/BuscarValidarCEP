@@ -94,13 +94,15 @@ function callToggleMode(){
     toggleMode();
 }
 function toggleMode() {
+    showBoxResult(false);
+
     if(!toggleHasActived){
         formValidateCep.classList.remove("visible");
         formToFillCep.classList.add("visible");
         return;
     }
     formToFillCep.classList.remove("visible");
-    formValidateCep.classList.add("visible");   
+    formValidateCep.classList.add("visible");
 }
 //
 
