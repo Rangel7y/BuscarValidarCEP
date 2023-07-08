@@ -131,13 +131,13 @@ body{
 }
 /* --- --- */
 
-/* --- PANEL FORM 1 INVISIBLE  --- */
+/* --- CONTENT FORM 1 INVISIBLE  --- */
 #form1-content{
     display: none;
 }
 /* --- --- */
 
-/* PANEL FORM 1 VISIBLE */
+/* CONTENT FORM 1 VISIBLE */
 #form1-content.visible{
     display: flex;
     align-items: center;
@@ -239,11 +239,14 @@ ion-icon {
 }
 /* --- --- */
 
-/* --- FORM 2--- */
-#form-to-fill-info{
+/* --- CONTENT FORM 2 INVISIBLE --- */
+#form2-content{
     display: none;
 }
-#form-to-fill-info.visible{
+/* --- --- */
+
+/* CONTENT FORM 2 VISIBLE */
+#form2-content.visible{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,7 +258,9 @@ ion-icon {
 
     margin: 0px 18px;
 }
+/* --- --- */
 
+/* INPUTS/BUTTON CONTENT FORM 2  */
 #inputs-gp2-content{
     display: flex;
     align-items: center;
@@ -263,7 +268,6 @@ ion-icon {
 
     gap: 5px;
 }
-
 #inputs-gp2-content > ul {
     list-style: none;
     height: 50px;
@@ -277,7 +281,9 @@ ion-icon {
     font-size: 12px;
     opacity: 0.9;
 }
+/* --- --- */
 
+/* INPUT(TO FILL) FORM 2 */
 .input-find-cep{
     width: 200px;
     height: 35px;
@@ -307,13 +313,14 @@ ion-icon {
 .input-find-cep:focus{
     background-color: var(--smooth-blue);
 }
-
 .input-find-cep::placeholder{
     color: var(--navy);
     opacity: 0.85;
 }
+/* --- --- */
 
-#form-to-fill-info > button{
+/*  BUTTON(SUBMIT) FORM 2 */
+#form2-content > button{
     width: 150px;
     height: 45px;
 
@@ -329,18 +336,21 @@ ion-icon {
 
     cursor: pointer;
 }
+/* --- --- */
 
+/* TITTLE INFORMATION FORM 2 */
 .tittle2{
     margin: 5px;
 }
 /* --- --- */
 
-
-
-/* BOX RESULT CONTAINER */
+/* PANEL RESULT CONSULT INVISIBLE */
 #result-cep-container{
     display: none;
 }
+/* --- --- */
+
+/* PANEL RESULT CONSULT VISIBLE */
 #result-cep-container.visible{
     display: grid;
     grid-template-columns: 50px 1fr;
@@ -358,7 +368,9 @@ ion-icon {
 
     border-radius: 10px;
 }
-/* RESULT TITLE TEXT */
+/* --- --- */
+
+/* TITLE INFORMATION PANEL RESULT */
 .result-title-text{
     grid-area: title;
 
@@ -369,11 +381,15 @@ ion-icon {
 
     padding: 5px;
 }
-/* RESULT SIDE BOX */
+/* --- --- */
+
+/* SIDEBOX PANEL RESULT */
 .result-side-box{
     grid-area: sidebox;
 }
-/* BOX RESULT CEP*/
+/* --- --- */
+
+/* BOX RESULT CEP */
 #box-result-cep{
     display: flex;
     align-items: center;
