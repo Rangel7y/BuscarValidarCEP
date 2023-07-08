@@ -121,6 +121,113 @@ body{
 }
 /* --- --- */
 
+/* --- PANEL FORM 1 INVISIBLE  --- */
+#form1-content{
+    display: none;
+}
+
+/* PANEL FORM 1 VISIBLE */
+#form1-content.visible{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 400px;
+
+    gap: 10px;
+
+    margin: 30px;
+}
+
+/* PANEL FORM 1 TITTLE INFORMATION */
+.form-title-text{
+    display: flex;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: var(--navy);
+}
+/* --- --- */
+
+/* --- INPUT SEARCH FROM VALIDATION PANEL --- */
+#input-btn-gp1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 100%;
+    height: 50px;
+}
+
+#input-form1{
+    width: 100%;
+    height: 45px;
+
+    border: none;
+    outline: none;
+
+    font-size: 0.9em;
+    font-weight: 700;
+
+    background-color: var(--cold);
+
+    color: var(--navy);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+
+    border-radius: 0.5rem 0px 0px 0.5rem;
+
+    padding: 1em;
+
+    transition: 350ms;
+}
+
+#input-form1:hover{
+    background-color: var(--smooth-blue);
+}
+
+#input-form1:focus{
+    background-color: var(--smooth-blue);
+}
+
+#input-form1::placeholder{
+    color: var(--navy);
+    opacity: 0.85;
+}
+/* --- --- */
+
+/* --- BUTTON INPUT FROM VALIDATION PANEL ---*/
+#input-btn-gp1 > button{
+    width: 60px;
+    height: 45px;
+
+    background-color: var(--navy);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+
+    border: 1px solid var(--gray-blue);
+
+    border-radius: 0px 0.5rem 0.5rem 0px;
+
+    transition: all 200ms ease, background 200ms ease-in-out;
+
+    cursor: pointer;
+}
+#input-btn-gp1 > button:hover{
+    background-color: var(--navy);
+}
+ion-icon {
+    width: 100%;
+    height: 100%;
+    
+    color: var(--cold);
+    opacity: 0.75;
+}
+/* --- --- */
+
 /* --- PANEL - TO FILL FIND CEP --- */
 #form-to-fill-info{
     display: none;
@@ -217,110 +324,7 @@ body{
 }
 /* --- --- */
 
-/* --- VALIDATION PANEL --- */
-#form1-content{
-    display: none;
-}
 
-#form1-content.visible{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    width: 400px;
-
-    gap: 10px;
-
-    margin: 30px;
-}
-
-.form-title-text{
-    display: flex;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    color: var(--navy);
-}
-/* --- --- */
-
-/* --- INPUT SEARCH FROM VALIDATION PANEL --- */
-#input-btn-gp1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-
-    width: 100%;
-    height: 50px;
-}
-
-#input-form1{
-    width: 100%;
-    height: 45px;
-
-    border: none;
-    outline: none;
-
-    font-size: 0.9em;
-    font-weight: 700;
-
-    background-color: var(--cold);
-
-    color: var(--navy);
-
-    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
-
-    border-radius: 0.5rem 0px 0px 0.5rem;
-
-    padding: 1em;
-
-    transition: 350ms;
-}
-
-#input-form1:hover{
-    background-color: var(--smooth-blue);
-}
-
-#input-form1:focus{
-    background-color: var(--smooth-blue);
-}
-
-#input-form1::placeholder{
-    color: var(--navy);
-    opacity: 0.85;
-}
-/* --- --- */
-
-/* --- BUTTON INPUT FROM VALIDATION PANEL ---*/
-#input-btn-gp1 > button{
-    width: 60px;
-    height: 45px;
-
-    background-color: var(--navy);
-
-    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
-
-    border: 1px solid var(--gray-blue);
-
-    border-radius: 0px 0.5rem 0.5rem 0px;
-
-    transition: all 200ms ease, background 200ms ease-in-out;
-
-    cursor: pointer;
-}
-#input-btn-gp1 > button:hover{
-    background-color: var(--navy);
-}
-ion-icon {
-    width: 100%;
-    height: 100%;
-    
-    color: var(--cold);
-    opacity: 0.75;
-}
-/* --- --- */
 
 /* BOX RESULT CONTAINER */
 #result-cep-container{
