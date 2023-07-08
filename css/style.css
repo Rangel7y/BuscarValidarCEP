@@ -43,7 +43,7 @@ body{
 }
 
 /* --- FORM BOX CONTENT --- */
-#form-container{
+#panel-container{
     display: flex;
     position: relative;
 
@@ -138,7 +138,7 @@ body{
     margin: 0px 18px;
 }
 
-#input-group{
+#input-fill-group{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,11 +146,14 @@ body{
     gap: 5px;
 }
 
-#input-group > ul {
+#input-fill-group > ul {
     list-style: none;
+    height: 50px;
 }
-
-#input-group > ul > li > h3{
+#input-fill-group > ul > li{
+    height: 100%;
+}
+#input-fill-group > ul > li > h3{
     color: var(--navy);
 
     font-size: 12px;
@@ -209,17 +212,17 @@ body{
     cursor: pointer;
 }
 
-.tittle1{
+.tittle2{
     margin: 5px;
 }
 /* --- --- */
 
 /* --- VALIDATION PANEL --- */
-#form-validate-cep{
+#form1-content{
     display: none;
 }
 
-#form-validate-cep.visible{
+#form1-content.visible{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,7 +246,7 @@ body{
 /* --- --- */
 
 /* --- INPUT SEARCH FROM VALIDATION PANEL --- */
-#input-content{
+#input-content-form1{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -291,7 +294,7 @@ body{
 /* --- --- */
 
 /* --- BUTTON INPUT FROM VALIDATION PANEL ---*/
-#input-content > button{
+#input-content-form1 > button{
     width: 60px;
     height: 45px;
 
@@ -307,7 +310,7 @@ body{
 
     cursor: pointer;
 }
-#input-content > button:hover{
+#input-content-form1 > button:hover{
     background-color: var(--navy);
 }
 ion-icon {

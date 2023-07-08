@@ -14,7 +14,7 @@
 </head>
 <body>
     <main id="main-container">
-        <div id="form-container">
+        <div id="panel-container">
             <div class="side-box"></div>
             
             <div id="toggle-content" onclick="callToggleMode()">
@@ -24,57 +24,61 @@
                 <span></span>
             </div>
 
-            <form id="form-to-fill-info">
+            <form id="form1-content">             
                 <section class="form-title-text tittle1">
-                    <h1>Buscar/Validar CEP<br>Preencha os campos para encontrar o CEP que deseja buscar/validar.</h1>
-                </section>
-
-                <div id="input-group">
-                    <ul>
-                        <li>
-                            <h3>UF</h3>
-                            <input class="input-fill-uf input-find-cep" type="search" placeholder="Digite a sigla do Estado" required>
-                        </li>
-                        <br>
-                        <!-- <li>
-                            <h3>BAIRRO</h3>
-                            <input class="input-fill-bairro input-find-cep" type="search" placeholder="Digite o Bairro" required>
-                        </li> -->
-                    </ul>
-    
-                    <ul>
-                        <li>
-                            <h3>CIDADE</h3>
-                            <input class="input-fill-cidade input-find-cep" type="search" placeholder="Digite a Cidade" required>
-                        </li>
-                        <br>
-                        <li>
-                            <h3>RUA</h3>
-                            <input class="input-fill-rua input-find-cep" type="search" placeholder="Digite a Rua" required>     
-                        </li>
-                    </ul>
-                </div>  
-                
-                <button>
-                    <!-- <ion-icon name="search-outline" alt="Search"></ion-icon> -->
-                    <ion-icon name="arrow-forward-outline"></ion-icon>
-                </button>
-            </form>
-
-            <form id="form-validate-cep">             
-                <section class="form-title-text tittle2">
                     <h1>Buscar/Validar CEP<br>Digite ou cole o número do CEP que deseja buscar/validar.</h1>
                 </section>
 
-                <div id="input-content">
+                <div id="input-content-form1">
                     <input id="input-validate-cep" type="search" maxlength="8" placeholder="Digite o número do CEP aqui..." required>
                     <button>
                         <ion-icon name="search-circle-outline" alt="Search"></ion-icon>
                     </button>
                 </div> 
             </form>
-        </div>      
+
+            <form id="form2-content">
+                <section class="form-title-text tittle2">
+                    <h1>Buscar/Validar CEP<br>Preencha os campos para encontrar o CEP que deseja buscar/validar.</h1>
+                </section>
+    
+                <div class="inputs-btn-gp-01">
+                    <div id="input-fill-group">
+                        <ul>
+                            <li>
+                                <h3>UF</h3>
+                                <input class="input-fill-uf input-find-cep" type="search" placeholder="Digite a sigla do Estado" required>
+                            </li>
+                            <br>
+                            <!-- <li>
+                                <h3>BAIRRO</h3>
+                                <input class="input-fill-bairro input-find-cep" type="search" placeholder="Digite o Bairro" required>
+                            </li> -->
+                        </ul>
         
+                        <ul>
+                            <li>
+                                <h3>CIDADE</h3>
+                                <input class="input-fill-cidade input-find-cep" type="search" placeholder="Digite a Cidade" required>
+                            </li>
+                            <br>
+                            <li>
+                                <h3>RUA</h3>
+                                <input class="input-fill-rua input-find-cep" type="search" placeholder="Digite a Rua" required>     
+                            </li>
+                        </ul>
+                    </div> 
+    
+                    <button >
+                        <!-- <ion-icon name="search-outline" alt="Search"></ion-icon> -->
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </button>
+                </div>
+            </form>
+        </div>      
+
+
+
         <section id="result-cep-container">
             <div class="side-box result-side-box"></div>
             <h3 class="result-title-text">CEP Encontrado!</h3>
