@@ -345,13 +345,13 @@ ion-icon {
 /* --- --- */
 
 /* PANEL RESULT CONSULT INVISIBLE */
-#result-cep-container{
+#panel-result-container{
     display: none;
 }
 /* --- --- */
 
 /* PANEL RESULT CONSULT VISIBLE */
-#result-cep-container.visible{
+#panel-result-container.visible{
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-rows: 40px 1fr;
@@ -390,7 +390,7 @@ ion-icon {
 /* --- --- */
 
 /* BOX RESULT CEP */
-#box-result-cep{
+#info-result-cep{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -402,8 +402,9 @@ ion-icon {
 
     gap: 3px;
 }
+
 /* UL */
-#box-result-cep > ul{
+#info-result-cep > ul{
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,7 +1,7 @@
 
 //-- GET DOCUMENT ELEMENTS  --//
 //-- FORM CONTENT --//
-const formValidateCep = document.getElementById("form-01-content");
+const form1Content = document.getElementById("form1-content");
 const inputSearchCep = document.getElementById("input-form1");
 //
 //-- RESULT CEP --//
@@ -12,11 +12,11 @@ const resultCep04 = document.getElementById("resultCep-04");
 const resultCep05 = document.getElementById("resultCep-05");
 const resultCep06 = document.getElementById("resultCep-06");
 
-const boxResultCep = document.getElementById("result-cep-container");
+const boxResultCep = document.getElementById("panel-result-container");
 //
 
 /* GET PANEL FORM TO FILL INFOS */
-const formToFillCep = document.getElementById('form-to-fill-info');
+const form2Content = document.getElementById('form2-content');
 const inputFillAll = document.querySelectorAll('.input-find-cep');
 const inputFillUf = document.querySelector('.input-fill-uf');
 const inputFillCidade = document.querySelector('.input-fill-cidade');
@@ -75,7 +75,7 @@ inputSearchCep.addEventListener('input', (event) => {
     // Remove any non-numeric characters from the input
     event.target.value = event.target.value.replace(/\D/g, '');
 });
-formValidateCep.addEventListener('submit',(event) =>{
+form1Content.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     let searchInput = inputSearchCep.value.trim();
@@ -124,7 +124,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
     }
 }
 
-formToFillCep.addEventListener('submit',(event) =>{
+form2Content.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     getInfoFilled(inputFillUf.value,inputFillCidade.value,inputFillRua.value); 
@@ -140,12 +140,12 @@ function toggleMode() {
     showBoxResult(false);
 
     if(!toggleHasActived){
-        formValidateCep.classList.remove("visible");
-        formToFillCep.classList.add("visible");
+        form1Content.classList.remove("visible");
+        form2Content.classList.add("visible");
         return;
     }
-    formToFillCep.classList.remove("visible");
-    formValidateCep.classList.add("visible");
+    form2Content.classList.remove("visible");
+    form1Content.classList.add("visible");
 }
 //
 
