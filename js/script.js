@@ -19,8 +19,8 @@ const boxResultCep = document.getElementById("result-cep-container");
 const formToFillCep = document.getElementById('form-to-fill-info');
 const inputFillAll = document.querySelectorAll('.input-find-cep');
 const inputFillUf = document.querySelector('.input-fill-uf');
-const inputFillBairro = document.querySelector('.input-fill-bairro');
 const inputFillCidade = document.querySelector('.input-fill-cidade');
+const inputFillBairro = document.querySelector('.input-fill-bairro');
 const inputFillRua = document.querySelector('.input-fill-rua');
 //
 
@@ -91,31 +91,33 @@ formValidateCep.addEventListener('submit',(event) =>{
 //
 
 /* GET API FILLED INFOS */
-const getAPIFilled = async(logradouro,cidade,bairro,rua) =>{
-    const APIResponse = await fetch(`https://viacep.com.br/ws/${logradouro}/${cidade}/${bairro}+${rua}/json/`);
+const getAPIFilled = async(uf,cidade,bairro,rua) =>{
+    const APIResponse = await fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${bairro}+${rua}/json/`);
 
     if(APIResponse.status == 200){
         const data = await APIResponse.json();
         return data;
     }
 }
-const getInfoFilled = async(logradouro,cidade,bairro,rua) =>{
-    const data = await getAPIFilled(logradouro,cidade,bairro,rua);
+const getInfoFilled = async(uf,cidade,bairro,rua) =>{
+    const data = await getAPIFilled(uf,cidade,bairro,rua);
 
     if(!("erro" in data)){
         showBoxResult(true);
 
-        resultCep01.textContent = dataCep['cep'];
+        resultCep01.textContent = data['cep'];
         //
-        resultCep02.textContent = dataCep['ddd'];
+        resultCep02.textContent = data['ddd'];
         //
-        resultCep03.textContent = dataCep['localidade'];
+        resultCep03.textContent = data['localidade'];
         //
-        resultCep04.textContent = dataCep['uf'];
+        resultCep04.textContent = data['uf'];
         //
-        resultCep05.textContent = dataCep['bairro'];
+        resultCep05.textContent = data['bairro'];
         //
-        resultCep06.textContent = dataCep['logradouro'];        
+        resultCep06.textContent = data['logradouro'];    
+        
+        console.log(data);
     }
     else{
         console.error("Erro ao procurar pelo CEP fornecido!");
@@ -125,14 +127,10 @@ const getInfoFilled = async(logradouro,cidade,bairro,rua) =>{
 formToFillCep.addEventListener('submit',(event) =>{
     event.preventDefault();
 
-    if(inputFillAll.value > 0){
-        getInfoFilled(inputFillUf.value,inputFillBairro.value,inputFillCidade.value,inputFillRua.value);
-    }
-    else{
-        showBoxResult(false);
 
-        console.error("Erro! Preencha os campos corretamente.");
-    }
+    getInfoFilled(inputFillUf.value,inputFillCidade.value,inputFillBairro.value,inputFillRua.value);
+    console.log(inputFillUf.value,inputFillCidade.value,inputFillBairro.value,inputFillRua.value);
+    
 });
 //
 
