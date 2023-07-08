@@ -121,10 +121,11 @@ const getInfoFilled = async(logradouro,cidade,bairro,rua) =>{
         console.error("Erro ao procurar pelo CEP fornecido!");
     }
 }
+
 formToFillCep.addEventListener('submit',(event) =>{
     event.preventDefault();
 
-    if(inputFillAll.values > 0){
+    if(inputFillAll.value > 0){
         getInfoFilled(inputFillUf.value,inputFillBairro.value,inputFillCidade.value,inputFillRua.value);
     }
     else{
