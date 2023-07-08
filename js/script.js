@@ -91,31 +91,31 @@ formValidateCep.addEventListener('submit',(event) =>{
 //
 
 /* GET API FILLED INFOS */
-const getAPIFilled = async(uf,cidade,bairro,rua) =>{
-    const APIResponse = await fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${bairro}+${rua}/json/`);
+const getAPIFilled = async(uf,cidade,rua) =>{
+    const APIResponse = await fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${rua}/json/`);
 
     if(APIResponse.status == 200){
         const data = await APIResponse.json();
         return data;
     }
 }
-const getInfoFilled = async(uf,cidade,bairro,rua) =>{
-    const data = await getAPIFilled(uf,cidade,bairro,rua);
+const getInfoFilled = async(uf,cidade,rua) =>{
+    const data = await getAPIFilled(uf,cidade,rua);
 
     if(!("erro" in data)){
         showBoxResult(true);
 
-        resultCep01.textContent = data['cep'];
+        resultCep01.textContent = data['0']['cep'];
         //
-        resultCep02.textContent = data['ddd'];
+        resultCep02.textContent = data['0']['ddd'];
         //
-        resultCep03.textContent = data['localidade'];
+        resultCep03.textContent = data['0']['localidade'];
         //
-        resultCep04.textContent = data['uf'];
+        resultCep04.textContent = data['0']['uf'];
         //
-        resultCep05.textContent = data['bairro'];
+        resultCep05.textContent = data['0']['bairro'];
         //
-        resultCep06.textContent = data['logradouro'];    
+        resultCep06.textContent = data['0']['logradouro'];    
         
         console.log(data);
     }
@@ -127,10 +127,7 @@ const getInfoFilled = async(uf,cidade,bairro,rua) =>{
 formToFillCep.addEventListener('submit',(event) =>{
     event.preventDefault();
 
-
-    getInfoFilled(inputFillUf.value,inputFillCidade.value,inputFillBairro.value,inputFillRua.value);
-    console.log(inputFillUf.value,inputFillCidade.value,inputFillBairro.value,inputFillRua.value);
-    
+    getInfoFilled(inputFillUf.value,inputFillCidade.value,inputFillRua.value); 
 });
 //
 
