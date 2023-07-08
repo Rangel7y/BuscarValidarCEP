@@ -1,13 +1,18 @@
 
+/* MAIN FONT */
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');  
+/*  */
 
+/* RESET BODY */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oxanium', cursive;
 }
+/*  */
 
+/* COLORS AND OTHERS GLOBAL VARIABLES */
 :root{
 
     --cold: #F4EEFF;
@@ -18,7 +23,9 @@
 
     --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray));
 }
+/*  */
 
+/* BODY PAGE */
 body{
     display: flex;
     align-items: center;
@@ -29,7 +36,9 @@ body{
 
     background: var(--background-page);
 }
+/*  */
 
+/* MAIN CONTAINER PAGE */
 #main-container{
     display: flex;
     align-items: center;
@@ -41,8 +50,9 @@ body{
 
     gap: 10px;
 }
+/*  */
 
-/* --- FORM BOX CONTENT --- */
+/* --- PANEL CENTER PAGE --- */
 #panel-container{
     display: flex;
     position: relative;
@@ -60,7 +70,7 @@ body{
 }
 /* --- --- */
 
-/* --- BUTTON SWITCH CHANGE BETWEEN TYPES VALIDATION SEARCH OR TO VALIDATE */
+/* --- TOGGLE/SWITCH(ALTERNATION BETWEEN MODE OF FIND/VALIDATE CEP) - BUTTON/IMAGE */
 #toggle-content{
     position: absolute;
 
@@ -125,6 +135,7 @@ body{
 #form1-content{
     display: none;
 }
+/*  */
 
 /* PANEL FORM 1 VISIBLE */
 #form1-content.visible{
@@ -139,6 +150,7 @@ body{
 
     margin: 30px;
 }
+/*  */
 
 /* PANEL FORM 1 TITTLE INFORMATION */
 .form-title-text{
@@ -149,9 +161,9 @@ body{
 
     color: var(--navy);
 }
-/* --- --- */
+/*  */
 
-/* --- INPUT SEARCH FROM VALIDATION PANEL --- */
+/* --- INPUT/BUTTON CONTENT FORM 1 --- */
 #input-btn-gp1{
     display: flex;
     align-items: center;
@@ -161,7 +173,9 @@ body{
     width: 100%;
     height: 50px;
 }
+/*  */
 
+/* INPUT FORM 1 */
 #input-form1{
     width: 100%;
     height: 45px;
@@ -184,22 +198,19 @@ body{
 
     transition: 350ms;
 }
-
 #input-form1:hover{
     background-color: var(--smooth-blue);
 }
-
 #input-form1:focus{
     background-color: var(--smooth-blue);
 }
-
 #input-form1::placeholder{
     color: var(--navy);
     opacity: 0.85;
 }
 /* --- --- */
 
-/* --- BUTTON INPUT FROM VALIDATION PANEL ---*/
+/* --- BUTTON(SUBMIT) FORM 1 ---*/
 #input-btn-gp1 > button{
     width: 60px;
     height: 45px;
