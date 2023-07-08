@@ -1,7 +1,7 @@
 
 //-- GET DOCUMENT ELEMENTS  --//
 //-- FORM CONTENT --//
-const formContent = document.getElementById("form-validate-cep");
+const formValidateCep = document.getElementById("form-validate-cep");
 const inputSearchCep = document.getElementById("input-validate-cep");
 //
 //-- RESULT CEP --//
@@ -17,9 +17,11 @@ const boxResultCep = document.getElementById("result-cep-container");
 
 /* GET PANEL FORM TO FILL INFOS */
 const formToFillCep = document.getElementById('form-to-fill-info');
-//
-/* GET PANEL FORM VALIDATE CEP INFOS */
-const formValidateCep = document.getElementById('form-validate-cep');
+const inputFillAll = document.querySelectorAll('.input-find-cep');
+const inputFillUf = document.querySelector('.input-fill-uf');
+const inputFillBairro = document.querySelector('.input-fill-bairro');
+const inputFillCidade = document.querySelector('.input-fill-cidade');
+const inputFillRua = document.querySelector('.input-fill-rua');
 //
 
 //-- DEFAULT DATA  --//
@@ -73,7 +75,7 @@ inputSearchCep.addEventListener('input', (event) => {
     // Remove any non-numeric characters from the input
     event.target.value = event.target.value.replace(/\D/g, '');
 });
-formContent.addEventListener('submit',(event) =>{
+formValidateCep.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     let searchInput = inputSearchCep.value.trim();
@@ -101,12 +103,36 @@ const getInfoFilled = async(logradouro,cidade,bairro,rua) =>{
     const data = await getAPIFilled(logradouro,cidade,bairro,rua);
 
     if(!("erro" in data)){
+        showBoxResult(true);
 
+        resultCep01.textContent = dataCep['cep'];
+        //
+        resultCep02.textContent = dataCep['ddd'];
+        //
+        resultCep03.textContent = dataCep['localidade'];
+        //
+        resultCep04.textContent = dataCep['uf'];
+        //
+        resultCep05.textContent = dataCep['bairro'];
+        //
+        resultCep06.textContent = dataCep['logradouro'];        
     }
     else{
-
+        console.error("Erro ao procurar pelo CEP fornecido!");
     }
 }
+formToFillCep.addEventListener('submit',(event) =>{
+    event.preventDefault();
+
+    if(inputFillAll.values > 0){
+        getInfoFilled(inputFillUf.value,inputFillBairro.value,inputFillCidade.value,inputFillRua.value);
+    }
+    else{
+        showBoxResult(false);
+
+        console.error("Erro! Preencha os campos corretamente.");
+    }
+});
 //
 
 /* TOGGLE MODE FUNCTION - FIND OR VALIDATE */
