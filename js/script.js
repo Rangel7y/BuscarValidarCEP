@@ -2,7 +2,7 @@
 //-- GET DOCUMENT ELEMENTS  --//
 //-- FORM CONTENT --//
 const formValidateCep = document.getElementById("form-01-content");
-const inputSearchCep = document.getElementById("input-validate-cep");
+const inputSearchCep = document.getElementById("input-form1");
 //
 //-- RESULT CEP --//
 const resultCep01 = document.getElementById("resultCep-01"); 
