@@ -88,8 +88,26 @@ formContent.addEventListener('submit',(event) =>{
 });
 //
 
+/* GET API FILLED INFOS */
+const getAPIFilled = async(logradouro,cidade,bairro,rua) =>{
+    const APIResponse = await fetch(`https://viacep.com.br/ws/${logradouro}/${cidade}/${bairro}+${rua}/json/`);
 
+    if(APIResponse.status == 200){
+        const data = await APIResponse.json();
+        return data;
+    }
+}
+const getInfoFilled = async(logradouro,cidade,bairro,rua) =>{
+    const data = await getAPIFilled(logradouro,cidade,bairro,rua);
 
+    if(!("erro" in data)){
+
+    }
+    else{
+
+    }
+}
+//
 
 /* TOGGLE MODE FUNCTION - FIND OR VALIDATE */
 function callToggleMode(){
