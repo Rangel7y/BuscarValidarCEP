@@ -260,6 +260,27 @@ ion-icon {
 }
 /* --- --- */
 
+/* TITTLE INFORMATION FORM 2 */
+.tittle2{
+    margin: 5px;
+
+    text-align: center;
+}
+/* --- --- */
+
+/*  BUTTON(SUBMIT) FORM 2 */
+.inputs-btn-gp2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 200px;
+
+    gap: 5px;
+}
+/* --- --- */
+
 /* INPUTS/BUTTON CONTENT FORM 2  */
 #inputs-gp2-content{
     display: flex;
@@ -267,14 +288,36 @@ ion-icon {
     justify-content: center;
     flex-direction: column; 
 }
+/* --- --- */
 
-#inputs-gp2-content > h3{
+/* INPUTS/BUTTON(TO FILL) STYLIST */
+#inputs-gp2-content > ul {
+    list-style: none;  
+}
+#inputs-gp2-content > ul > li{
+    height: 50px;
+}
+#inputs-gp2-content > ul > li > h3{
     color: var(--navy);
 
     font-size: 12px;
     opacity: 0.9;
+}
+.inputs-btn-gp2 > button{
+    width: 150px;
+    height: 30px;
 
-    width: 100%;
+    background-color: var(--navy);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+
+    border: 1px solid var(--gray-blue);
+
+    border-radius: 8px;
+
+    transition: 350ms;
+
+    cursor: pointer;
 }
 /* --- --- */
 
@@ -311,41 +354,6 @@ ion-icon {
 .input-find-cep::placeholder{
     color: var(--navy);
     opacity: 0.85;
-}
-/* --- --- */
-
-/*  BUTTON(SUBMIT) FORM 2 */
-.inputs-btn-gp2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    height: 185px;
-
-    gap: 5px;
-}
-.inputs-btn-gp2 > button{
-    width: 150px;
-    height: 45px;
-
-    background-color: var(--navy);
-
-    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
-
-    border: 1px solid var(--gray-blue);
-
-    border-radius: 8px;
-
-    transition: 350ms;
-
-    cursor: pointer;
-}
-/* --- --- */
-
-/* TITTLE INFORMATION FORM 2 */
-.tittle2{
-    margin: 5px;
 }
 /* --- --- */
 
