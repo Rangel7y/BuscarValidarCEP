@@ -265,15 +265,13 @@ ion-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    gap: 5px;
+    flex-direction: column; 
 }
 #inputs-gp2-content > ul {
-    list-style: none;
-    height: 50px;
+    list-style: none;  
 }
 #inputs-gp2-content > ul > li{
-    height: 100%;
+    height: 50px;
 }
 #inputs-gp2-content > ul > li > h3{
     color: var(--navy);
@@ -320,7 +318,15 @@ ion-icon {
 /* --- --- */
 
 /*  BUTTON(SUBMIT) FORM 2 */
-#form2-content > button{
+.inputs-btn-gp2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 150px;
+}
+.inputs-btn-gp2 > button{
     width: 150px;
     height: 45px;
 
