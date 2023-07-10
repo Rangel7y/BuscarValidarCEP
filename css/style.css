@@ -267,17 +267,14 @@ ion-icon {
     justify-content: center;
     flex-direction: column; 
 }
-#inputs-gp2-content > ul {
-    list-style: none;  
-}
-#inputs-gp2-content > ul > li{
-    height: 50px;
-}
-#inputs-gp2-content > ul > li > h3{
+
+#inputs-gp2-content > h3{
     color: var(--navy);
 
     font-size: 12px;
     opacity: 0.9;
+
+    width: 100%;
 }
 /* --- --- */
 
@@ -324,7 +321,9 @@ ion-icon {
     justify-content: center;
     flex-direction: column;
 
-    height: 150px;
+    height: 185px;
+
+    gap: 5px;
 }
 .inputs-btn-gp2 > button{
     width: 150px;
