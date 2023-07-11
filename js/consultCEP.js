@@ -15,11 +15,8 @@ const resultCep06 = document.getElementById("resultCep-06");
 const boxResultCep = document.getElementById("panel-result-container");
 //
 
-
-
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
-let toggleHasActived = true;
 //
 
 //-- FUNCTION TO GET API DATA --//
@@ -83,24 +80,6 @@ form1Content.addEventListener('submit',(event) =>{
 });
 //
 
-/* TOGGLE MODE FUNCTION - FIND OR VALIDATE */
-function callToggleMode(){
-    toggleHasActived = !toggleHasActived;
-    toggleMode();
-}
-function toggleMode() {
-    showBoxResult(false);
-
-    if(!toggleHasActived){
-        form1Content.classList.remove("visible");
-        form2Content.classList.add("visible");
-        return;
-    }
-    form2Content.classList.remove("visible");
-    form1Content.classList.add("visible");
-}
-//
-
 //-- REMOVE RESULT PANEL FROM PAGE --//
 function showBoxResult(canShow) {
     if(canShow){    
@@ -110,8 +89,3 @@ function showBoxResult(canShow) {
     boxResultCep.classList.remove("visible");
 }
 //
-
-toggleMode();
-
-
-

@@ -131,14 +131,8 @@ body{
 }
 /* --- --- */
 
-/* --- CONTENT FORM 1 INVISIBLE  --- */
+/* CONTENT FORM 1*/
 #form1-content{
-    display: none;
-}
-/* --- --- */
-
-/* CONTENT FORM 1 VISIBLE */
-#form1-content.visible{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,14 +233,8 @@ ion-icon {
 }
 /* --- --- */
 
-/* --- CONTENT FORM 2 INVISIBLE --- */
+/* CONTENT FORM 2*/
 #form2-content{
-    display: none;
-}
-/* --- --- */
-
-/* CONTENT FORM 2 VISIBLE */
-#form2-content.visible{
     display: flex;
     align-items: center;
     justify-content: center;
