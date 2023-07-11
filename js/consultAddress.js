@@ -41,6 +41,22 @@ const getInfoFilled = async(uf,cidade,rua) =>{
         //
         resultCep06.textContent = data['0']['logradouro'];    
         
+        data.array.forEach(function(i) {
+            let li = document.createElement('li');
+
+            let anddress = data[i]['cep'] + data[i]['ddd']
+            + data[i]['localidade'] + data[i]['uf'] + data[i]['bairro']
+            + data[i]['logradouro'];
+
+            li.innerHTML = anddress;
+            li.setAttribute('');
+            
+            let section,sidebox; 
+            section = document.createElement('section');
+            sidebox = document.createElement('sidebox');
+
+        });
+
         console.log(data);
     }
     else{
