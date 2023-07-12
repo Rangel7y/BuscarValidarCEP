@@ -51,9 +51,14 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             li.innerHTML = anddress;
             li.setAttribute('');
             
-            let section,sidebox; 
-            section = document.createElement('section');
-            sidebox = document.createElement('sidebox');
+            let sectionContainer,sidebox; 
+            sectionContainer = document.createElementById('section');
+            section.setAttribute('');
+
+            sidebox = document.createElement('div');
+            sidebox.setAttribute('');
+            section.appendChild(sidebox);
+
 
         });
 
