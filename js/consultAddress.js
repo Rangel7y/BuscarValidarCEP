@@ -11,9 +11,6 @@ const inputFillBairro = document.querySelector('.input-fill-bairro');
 const inputFillRua = document.querySelector('.input-fill-rua');
 /* --- --- */
 
-
-
-
 /* GET API FILLED INFOS */
 const getAPIFilled = async(uf,cidade,rua) =>{
     const APIResponse = await fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${rua}/json/`);
@@ -53,7 +50,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             
             let sectionContainer,sidebox; 
             sectionContainer = document.createElementById('section');
-            section.setAttribute('');
+            section.setAttribute('panel-result-container');
 
             sidebox = document.createElement('div');
             sidebox.setAttribute('');
