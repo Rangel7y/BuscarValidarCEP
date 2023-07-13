@@ -48,15 +48,16 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             li.innerHTML = anddress;
             li.setAttribute('');
             
-            let sectionContainer,sidebox; 
+            let sectionContainer,sidebox,resultTitle; 
             sectionContainer = document.createElementById('section');
             section.setAttribute('panel-result-container');
 
             sidebox = document.createElement('div');
-            sidebox.setAttribute('');
+            sidebox.setAttribute('side-box result-side-box');
             section.appendChild(sidebox);
 
-
+            resultTitle = document.createElement('h3');
+            resultTittle.setAttribute('result-title-text');
         });
 
         console.log(data);
