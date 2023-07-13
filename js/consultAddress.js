@@ -80,7 +80,10 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             ul1.appendChild(li1);
     
             resultCepText = document.createElement('h4');
-            resultTitle.setAttribute('resultCep-01 cep-result-text');
+            resultCepText.setAttribute('resultCep-01 cep-result-text');
+            sectionContainer.appendChild(resultCepText);
+
+             
         });
 
         console.log(data);
