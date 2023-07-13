@@ -49,7 +49,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             li.setAttribute('');
             
             let sectionContainer,sidebox,resultTitle
-            infoResultCep,ul1,cepTitle,li1; 
+            infoResultCep,ul1,cepTitle,li1,resultCepId; 
 
             sectionContainer = document.createElementById('section');
             sectionContainer.setAttribute('panel-result-container');
@@ -72,9 +72,14 @@ const getInfoFilled = async(uf,cidade,rua) =>{
 
             cepTitle = document.createElement('h3');
             cepTitle.setAttribute('cep-title-text');
+            cepTitle.textContent = "CEP";
             ul1.appendChild(cepTitle);
 
             li1 = document.createElement('box-result');
+            li1.setAttribute('box-result');
+            ul1.appendChild(li1);
+    
+            
         });
 
         console.log(data);
