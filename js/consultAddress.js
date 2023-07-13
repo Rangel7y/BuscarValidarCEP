@@ -48,16 +48,23 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             li.innerHTML = anddress;
             li.setAttribute('');
             
-            let sectionContainer,sidebox,resultTitle; 
+            let sectionContainer,sidebox,resultTitle
+            infoResultCep; 
+
             sectionContainer = document.createElementById('section');
-            section.setAttribute('panel-result-container');
+            sectionContainer.setAttribute('panel-result-container');
 
             sidebox = document.createElement('div');
             sidebox.setAttribute('side-box result-side-box');
             section.appendChild(sidebox);
 
             resultTitle = document.createElement('h3');
-            resultTittle.setAttribute('result-title-text');
+            resultTitle.setAttribute('result-title-text');
+            resultTitle.textContent = "CEP Encontrado!";
+            sectionContainer.appendChild(resultTitle);
+
+            infoResultCep = document.createElementById('div');
+            infoResultCep.setAttribute()
         });
 
         console.log(data);
