@@ -49,14 +49,14 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             li.setAttribute('');
             
             let sectionContainer,sidebox,resultTitle
-            infoResultCep; 
+            infoResultCep,ul1,cepTitle; 
 
             sectionContainer = document.createElementById('section');
             sectionContainer.setAttribute('panel-result-container');
 
             sidebox = document.createElement('div');
             sidebox.setAttribute('side-box result-side-box');
-            section.appendChild(sidebox);
+            sectionContainer.appendChild(sidebox);
 
             resultTitle = document.createElement('h3');
             resultTitle.setAttribute('result-title-text');
@@ -64,7 +64,17 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             sectionContainer.appendChild(resultTitle);
 
             infoResultCep = document.createElementById('div');
-            infoResultCep.setAttribute()
+            infoResultCep.setAttribute('info-result-cep');
+            sectionContainer.appendChild(infoResultCep);
+
+            ul1 = document.createElement('ul');
+            infoResultCep.appendChild(ul1);
+
+            cepTitle = document.createElement('h3');
+            cepTitle.setAttribute('cep-title-text');
+            ul1.appendChild(cepTitle);
+
+            
         });
 
         console.log(data);
