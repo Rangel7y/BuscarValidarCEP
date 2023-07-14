@@ -25,9 +25,9 @@ const getInfoFilled = async(uf,cidade,rua) =>{
     const data = await getAPIFilled(uf,cidade,rua);
 
     if(!("erro" in data)){
-        showBoxResult(true);
-
-        resultCep01.textContent = data['0']['cep'];
+        /* showBoxResult(true);
+ */
+/*         resultCep01.textContent = data['0']['cep'];
         //
         resultCep02.textContent = data['0']['ddd'];
         //
@@ -37,57 +37,58 @@ const getInfoFilled = async(uf,cidade,rua) =>{
         //
         resultCep05.textContent = data['0']['bairro'];
         //
-        resultCep06.textContent = data['0']['logradouro'];    
+        resultCep06.textContent = data['0']['logradouro']; */    
         
-        data.array.forEach(function(i) {
+        for(var i = 0; i < data.length; i++){
             /* let li = document.createElement('li'); */
 
-            let anddress = data[i]['cep'] + data[i]['ddd']
+            let address = data[i]['cep'] + data[i]['ddd']
             + data[i]['localidade'] + data[i]['uf'] + data[i]['bairro']
             + data[i]['logradouro'];
-
-            /* li.innerHTML = anddress;
+            
+            /* li.innerHTML = address;
             li.setAttribute('box-result'); */
-
+            
             let sectionContainer,sidebox,resultTitle
             infoResultCep,ul1,cepTitle,li1/* ,resultCepHText,resultCepSpan */; 
-
+            
             sectionContainer = document.createElementById('section');
             sectionContainer.setAttribute('panel-result-container');
-
+            
             sidebox = document.createElement('div');
             sidebox.setAttribute('side-box result-side-box');
             sectionContainer.appendChild(sidebox);
-
-            resultTitle = document.createElement('h3');
-            resultTitle.setAttribute('result-title-text');
-            resultTitle.textContent = "CEP Encontrado!";
-            sectionContainer.appendChild(resultTitle);
-
-            infoResultCep = document.createElementById('div');
-            infoResultCep.setAttribute('info-result-cep');
-            sectionContainer.appendChild(infoResultCep);
-
-            ul1 = document.createElement('ul');
-            infoResultCep.appendChild(ul1);
-
-            cepTitle = document.createElement('h3');
-            cepTitle.setAttribute('cep-title-text');
-            cepTitle.textContent = "CEP";
-            ul1.appendChild(cepTitle);
-
-            li1 = document.createElement('li');
-            li1.setAttribute('box-result');
-            ul1.appendChild(li1);
-    
-            /* resultCepHText = document.createElement('h4');
-            li1.appendChild(resultCepHText); */
-
-           /*  resultCepSpan = document.createElement('span');
-            resultCepSpan.setAttribute('resultCep-01 cep-result-text');
-            resultCepSpan.textContent = ;
-            resultCepHText.appendChild(resultCepSpan); */
-        });
+            
+                        resultTitle = document.createElement('h3');
+                        resultTitle.setAttribute('result-title-text');
+                        resultTitle.textContent = "CEP Encontrado!";
+                        sectionContainer.appendChild(resultTitle);
+            
+                        infoResultCep = document.createElementById('div');
+                        infoResultCep.setAttribute('info-result-cep');
+                        sectionContainer.appendChild(infoResultCep);
+            
+                        ul1 = document.createElement('ul');
+                        infoResultCep.appendChild(ul1);
+            
+                        cepTitle = document.createElement('h3');
+                        cepTitle.setAttribute('cep-title-text');
+                        cepTitle.textContent = "CEP";
+                        ul1.appendChild(cepTitle);
+            
+                        li1 = document.createElement('li');
+                        li1.setAttribute('box-result');
+                        li1.innerHTML = address;
+                        ul1.appendChild(li1);
+                
+                        /* resultCepHText = document.createElement('h4');
+                        li1.appendChild(resultCepHText); */
+            
+                       /*  resultCepSpan = document.createElement('span');
+                        resultCepSpan.setAttribute('resultCep-01 cep-result-text');
+                        resultCepSpan.textContent = ;
+                        resultCepHText.appendChild(resultCepSpan); */
+        }
 
         console.log(data);
     }
