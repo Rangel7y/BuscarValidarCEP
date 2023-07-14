@@ -1,7 +1,4 @@
 
-
-
-
 /* GET PANEL FORM TO FILL INFOS */
 const form2Content = document.getElementById('form2-content');
 const inputFillAll = document.querySelectorAll('.input-find-cep');
@@ -9,6 +6,10 @@ const inputFillUf = document.querySelector('.input-fill-uf');
 const inputFillCidade = document.querySelector('.input-fill-cidade');
 const inputFillBairro = document.querySelector('.input-fill-bairro');
 const inputFillRua = document.querySelector('.input-fill-rua');
+/* --- --- */
+
+/* RESULTS CEP CONTAINER */
+/* const resultsContainer = document.getElementById('results-container'); */
 /* --- --- */
 
 /* GET API FILLED INFOS */
@@ -39,17 +40,17 @@ const getInfoFilled = async(uf,cidade,rua) =>{
         resultCep06.textContent = data['0']['logradouro'];    
         
         data.array.forEach(function(i) {
-            let li = document.createElement('li');
+            /* let li = document.createElement('li'); */
 
             let anddress = data[i]['cep'] + data[i]['ddd']
             + data[i]['localidade'] + data[i]['uf'] + data[i]['bairro']
             + data[i]['logradouro'];
 
-            li.innerHTML = anddress;
-            li.setAttribute('');
-            
+            /* li.innerHTML = anddress;
+            li.setAttribute('box-result'); */
+
             let sectionContainer,sidebox,resultTitle
-            infoResultCep,ul1,cepTitle,li1,resultCepText,resultCepSpan; 
+            infoResultCep,ul1,cepTitle,li1/* ,resultCepHText,resultCepSpan */; 
 
             sectionContainer = document.createElementById('section');
             sectionContainer.setAttribute('panel-result-container');
@@ -79,11 +80,13 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             li1.setAttribute('box-result');
             ul1.appendChild(li1);
     
-            resultCepText = document.createElement('h4');
-            sectionContainer.appendChild(resultCepText);
+            /* resultCepHText = document.createElement('h4');
+            li1.appendChild(resultCepHText); */
 
-            resultCepSpan = document.createElement('span');
-            resultCepText.setAttribute('resultCep-01 cep-result-text');
+           /*  resultCepSpan = document.createElement('span');
+            resultCepSpan.setAttribute('resultCep-01 cep-result-text');
+            resultCepSpan.textContent = ;
+            resultCepHText.appendChild(resultCepSpan); */
         });
 
         console.log(data);

@@ -345,6 +345,15 @@ ion-icon {
 }
 /* --- --- */
 
+/* MAIN CONTAIER OF ALL RESULTS FROM CEP SEARCHED */
+#results-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* --- --- */
+
 /* PANEL RESULT CONSULT INVISIBLE */
 #panel-result-container{
     display: none;
