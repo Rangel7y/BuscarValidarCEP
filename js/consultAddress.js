@@ -59,27 +59,27 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             sidebox.setAttribute('side-box result-side-box');
             sectionContainer.appendChild(sidebox);
             
-                        resultTitle = document.createElement('h3');
-                        resultTitle.setAttribute('result-title-text');
-                        resultTitle.textContent = "CEP Encontrado!";
-                        sectionContainer.appendChild(resultTitle);
+            resultTitle = document.createElement('h3');
+            resultTitle.setAttribute('result-title-text');
+            resultTitle.textContent = "CEP Encontrado!";
+            sectionContainer.appendChild(resultTitle);
             
-                        infoResultCep = document.createElementById('div');
-                        infoResultCep.setAttribute('info-result-cep');
-                        sectionContainer.appendChild(infoResultCep);
+            infoResultCep = document.createElementById('div');
+            infoResultCep.setAttribute('info-result-cep');
+            sectionContainer.appendChild(infoResultCep);
             
-                        ul1 = document.createElement('ul');
-                        infoResultCep.appendChild(ul1);
+            ul1 = document.createElement('ul');
+            infoResultCep.appendChild(ul1);
             
-                        cepTitle = document.createElement('h3');
-                        cepTitle.setAttribute('cep-title-text');
-                        cepTitle.textContent = "CEP";
-                        ul1.appendChild(cepTitle);
+            cepTitle = document.createElement('h3');
+            cepTitle.setAttribute('cep-title-text');
+            cepTitle.textContent = "CEP";
+            ul1.appendChild(cepTitle);
             
-                        li1 = document.createElement('li');
-                        li1.setAttribute('box-result');
-                        li1.innerHTML = address;
-                        ul1.appendChild(li1);
+            li1 = document.createElement('li');
+            li1.setAttribute('box-result');
+            li1.innerHTML = address;
+            ul1.appendChild(li1);
                 
                         /* resultCepHText = document.createElement('h4');
                         li1.appendChild(resultCepHText); */
