@@ -26,28 +26,13 @@ const getInfoFilled = async(uf,cidade,rua) =>{
 
     if(!("erro" in data)){
         showBoxResult(true);
-
-/*         resultCep01.textContent = data['0']['cep'];
-        //
-        resultCep02.textContent = data['0']['ddd'];
-        //
-        resultCep03.textContent = data['0']['localidade'];
-        //
-        resultCep04.textContent = data['0']['uf'];
-        //
-        resultCep05.textContent = data['0']['bairro'];
-        //
-        resultCep06.textContent = data['0']['logradouro']; */    
+  
         
         for(var i = 0; i < data.length; i++){
-            /* let li = document.createElement('li'); */
 
             let address = data[i]['cep'] + data[i]['ddd']
             + data[i]['localidade'] + data[i]['uf'] + data[i]['bairro']
             + data[i]['logradouro'];
-            
-            /* li.innerHTML = address;
-            li.setAttribute('box-result'); */
             
             let sectionContainer,sidebox,resultTitle,
             infoResultCep,ul1,cepTitle,li1/* ,resultCepHText,resultCepSpan */; 
