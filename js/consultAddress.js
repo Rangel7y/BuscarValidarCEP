@@ -25,8 +25,8 @@ const getInfoFilled = async(uf,cidade,rua) =>{
     const data = await getAPIFilled(uf,cidade,rua);
 
     if(!("erro" in data)){
-        /* showBoxResult(true);
- */
+        showBoxResult(true);
+
 /*         resultCep01.textContent = data['0']['cep'];
         //
         resultCep02.textContent = data['0']['ddd'];
