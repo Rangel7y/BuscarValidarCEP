@@ -12,7 +12,7 @@ const resultCep04 = document.getElementById("resultCep-04");
 const resultCep05 = document.getElementById("resultCep-05");
 const resultCep06 = document.getElementById("resultCep-06");
 
-const boxResultCep = document.getElementById("panel-result-container");
+const resultsContainer = document.getElementById('results-container');
 //
 
 //-- DEFAULT DATA  --//
@@ -83,9 +83,9 @@ form1Content.addEventListener('submit',(event) =>{
 //-- REMOVE RESULT PANEL FROM PAGE --//
 function showBoxResult(canShow) {
     if(canShow){    
-        boxResultCep.classList.add("visible");
+        resultsContainer.classList.add("visible");
         return;
     }
-    boxResultCep.classList.remove("visible");
+    resultsContainer.classList.remove("visible");
 }
 //

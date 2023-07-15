@@ -355,13 +355,22 @@ ion-icon {
 /* --- --- */
 
 /* PANEL RESULT CONSULT INVISIBLE */
-#panel-result-container{
+#results-container{
     display: none;
 }
 /* --- --- */
 
 /* PANEL RESULT CONSULT VISIBLE */
-#panel-result-container.visible{
+#results-container.visible{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+}
+/* --- --- */
+
+/* --- --- */
+#panel-result-container{
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-rows: 40px 1fr;

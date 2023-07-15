@@ -108,9 +108,9 @@ form2Content.addEventListener('submit',(event) =>{
 /* REMOVE RESULT PANEL FROM PAGE */
 function showBoxResult(canShow) {
     if(canShow){    
-        boxResultCep.classList.add("visible");
+        resultsContainer.classList.add("visible");
         return;
     }
-    boxResultCep.classList.remove("visible");
+    resultsContainer.classList.remove("visible");
 }
 /* --- --- */
