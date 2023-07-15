@@ -4,12 +4,12 @@ const form2Content = document.getElementById('form2-content');
 const inputFillAll = document.querySelectorAll('.input-find-cep');
 const inputFillUf = document.querySelector('.input-fill-uf');
 const inputFillCidade = document.querySelector('.input-fill-cidade');
-const inputFillBairro = document.querySelector('.input-fill-bairro');
+/* const inputFillBairro = document.querySelector('.input-fill-bairro'); */
 const inputFillRua = document.querySelector('.input-fill-rua');
 /* --- --- */
 
 /* RESULTS CEP CONTAINER */
-/* const resultsContainer = document.getElementById('results-container'); */
+const resultsContainer = document.getElementById('results-container');
 /* --- --- */
 
 /* GET API FILLED INFOS */
@@ -49,35 +49,36 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             /* li.innerHTML = address;
             li.setAttribute('box-result'); */
             
-            let sectionContainer,sidebox,resultTitle
+            let sectionContainer,sidebox,resultTitle,
             infoResultCep,ul1,cepTitle,li1/* ,resultCepHText,resultCepSpan */; 
             
-            sectionContainer = document.createElementById('section');
-            sectionContainer.setAttribute('panel-result-container');
+            sectionContainer = document.createElement('section');
+            sectionContainer.setAttribute('id','panel-result-container');
+            resultsContainer.appendChild(sectionContainer);
             
             sidebox = document.createElement('div');
-            sidebox.setAttribute('side-box result-side-box');
+            sidebox.setAttribute('class','side-box result-side-box');
             sectionContainer.appendChild(sidebox);
             
             resultTitle = document.createElement('h3');
-            resultTitle.setAttribute('result-title-text');
+            resultTitle.setAttribute('class','result-title-text');
             resultTitle.textContent = "CEP Encontrado!";
             sectionContainer.appendChild(resultTitle);
             
-            infoResultCep = document.createElementById('div');
-            infoResultCep.setAttribute('info-result-cep');
+            infoResultCep = document.createElement('div');
+            infoResultCep.setAttribute('id','info-result-cep');
             sectionContainer.appendChild(infoResultCep);
             
             ul1 = document.createElement('ul');
             infoResultCep.appendChild(ul1);
             
             cepTitle = document.createElement('h3');
-            cepTitle.setAttribute('cep-title-text');
+            cepTitle.setAttribute('class','cep-title-text');
             cepTitle.textContent = "CEP";
             ul1.appendChild(cepTitle);
             
             li1 = document.createElement('li');
-            li1.setAttribute('box-result');
+            li1.setAttribute('class','box-result');
             li1.innerHTML = address;
             ul1.appendChild(li1);
                 
@@ -102,4 +103,14 @@ form2Content.addEventListener('submit',(event) =>{
 
     getInfoFilled(inputFillUf.value,inputFillCidade.value,inputFillRua.value); 
 });
+/* --- --- */
+
+/* REMOVE RESULT PANEL FROM PAGE */
+function showBoxResult(canShow) {
+    if(canShow){    
+        boxResultCep.classList.add("visible");
+        return;
+    }
+    boxResultCep.classList.remove("visible");
+}
 /* --- --- */
