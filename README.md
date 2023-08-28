@@ -1,7 +1,7 @@
 # BuscarValidarCEP
  
 <h1>Abreviações usadas:</h1>
-<h2>
+<p>
 1. **btn:** Abreviação de "button" (botão). Usada frequentemente para nomes de classes relacionadas a botões.
 
 <br>
@@ -80,4 +80,4 @@ Você pode usar "md" como uma abreviação para "mode" ao criar nomes em seu có
 <br>
 24. **verif:** Abreviação de "verification" (verificação). Usada em nomes de classes, IDs ou elementos relacionados a processos de verificação, autenticação ou validação.
 Você pode usar "verif" como uma abreviação para "verification" ao criar nomes em seu código.
-</h2>
+</p>
