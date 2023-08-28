@@ -351,6 +351,8 @@ ion-icon {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    /* scroll-behavior: auto; */
 }
 /* --- --- */
 
@@ -366,6 +368,9 @@ ion-icon {
     align-items: center;
     justify-self: center;
     flex-direction: column;
+
+    gap: 5px;
+    overflow: auto;
 }
 /* --- --- */
 
@@ -459,8 +464,8 @@ ion-icon {
     justify-content: center;
     flex-direction: column;
 
-    width: 180px;
-    height: 30px;
+    /* width: 180px; */
+    /* height: 30px; */
 
     background-color: var(--cold);
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px, rgb(0 0 0 / 20%) 0px -2px 16px;
