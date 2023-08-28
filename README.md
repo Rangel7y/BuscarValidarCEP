@@ -6,6 +6,7 @@
 
 <br>
 2. **nav:** Abreviação de "navigation" (navegação). Usada em nomes de classes ou IDs relacionados a menus de navegação.
+
 <br>
 3. **hdr:** Abreviação de "header" (cabeçalho). Usada em nomes de IDs ou classes relacionados a cabeçalhos de página.
 
