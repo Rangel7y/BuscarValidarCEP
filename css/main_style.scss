@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');  
 /* --- --- */
 
-/* IMPORT - VARIABLES CSS */
+/* IMPORT - VARIABLES (COLORS ETC...) CSS */
 @import '/css/components/vars.css';
 /* --- --- */
 
@@ -27,25 +27,16 @@ body{
     background: var(--background-page);
 }
 
-/* IMPORT - MAIN CONTENT */
+/* IMPORT - MAIN CONTENT (ALL CONTENT) CSS */
 @import '/css/components/main_con.css';
 /*  */
 
-
-/* STYLE PANEL(CHILD's MAIN CONTENT) CHK AND RES */
-.sty-pnl-chk-res{
-    width: 100%;
-    height: 100%;
-
-    background-color: var(--light-gray);
-
-    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
-
-    border-radius: 10px;
-}
+/* IMPORT - STYLE PANEL (CHECK AND RESULT) CSS */
+@import '/css/components/sty_pnl_chk_res.css';
 /*  */
 
 
-/* IMPORT - SWITCH(TOGGLE MODE) CSS */
+
+/* IMPORT - SWITCH (TOGGLE MODE) CSS */
 @import '/css/components/sw_btn.css';
 /*  */
