@@ -58,6 +58,8 @@ body{
 
 /* STYLE PANEL(CHILD's MAIN CONTENT) CHK AND RES */
 .sty-pnl-chk-res{
+    width: 100%;
+
     background-color: var(--light-gray);
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
