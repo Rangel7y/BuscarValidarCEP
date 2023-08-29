@@ -28,7 +28,7 @@
 /* BODY PAGE */
 body{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
 
@@ -36,3 +36,15 @@ body{
 
     background: var(--background-page);
 }
+
+/* MAIN CONTAINER - ALL CONTENT FROM PAGE */
+#main-con{
+    display: flex;
+    align-items: start;
+    /* justify-content: center; */
+    flex-direction: column;
+
+    width: 900px;
+    height: 800px;
+}
+/*  */
