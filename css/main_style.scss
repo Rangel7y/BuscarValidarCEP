@@ -6,26 +6,9 @@
 @import '/css/components/vars.css';
 /* --- --- */
 
-/* RESET BODY */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Oxanium', cursive;
-}
-/* --- --- */
-
-/* BODY PAGE */
-body{
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    flex-direction: column;
-
-    height: 100vh;
-
-    background: var(--background-page);
-}
+/* IMPORT - BODY PAGE AND BODY RESET (BOTH INCLUDE) CSS */
+@import '/css/components/body_pg.css';
+/*  */
 
 /* IMPORT - MAIN CONTENT (ALL CONTENT) CSS */
 @import '/css/components/main_con.css';
@@ -34,8 +17,6 @@ body{
 /* IMPORT - STYLE PANEL (CHECK AND RESULT) CSS */
 @import '/css/components/sty_pnl_chk_res.css';
 /*  */
-
-
 
 /* IMPORT - SWITCH (TOGGLE MODE) CSS */
 @import '/css/components/sw_btn.css';
