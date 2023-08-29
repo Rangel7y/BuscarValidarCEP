@@ -1,6 +1,6 @@
 
 /* BUTTON SWITCH(TOGGLE BETWEEN MODES, CHECK CEP OR SEARCH ADDRESS...  */
-#sw-cnt{
+#sw-cnt-chk{
     position: absolute;
 
     width: 64px;
