@@ -1,0 +1,81 @@
+/* MAIN FONT */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');  
+/* --- --- */
+
+/* RESET BODY */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+/* --- --- */
+
+/* COLORS AND OTHERS GLOBAL VARIABLES */
+:root{
+
+    --cold: #F4EEFF;
+    --light-gray: #DCD6F7;
+    --gray-blue: #A6B1E1;
+    --smooth-blue: #b3bdeb;
+    --navy: #424874;
+
+    --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray));
+}
+/* --- --- */
+
+/* BODY PAGE */
+body{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
+
+    background: var(--background-page);
+}
+
+/* MAIN CONTAINER - ALL CONTENT FROM PAGE */
+#main-con{
+    display: flex;
+    align-items: start;
+
+    width: 1000px;
+    height: 800px;
+
+    gap: 10px;
+
+    padding: 0px 50px;
+}
+/*  */
+
+
+/* STYLE PANEL(CHILD's MAIN CONTENT) CHK AND RES */
+.sty-pnl-chk-res{
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--light-gray);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
+
+    border-radius: 10px;
+}
+/*  */
+
+
+/* BUTTON SWITCH(TOGGLE BETWEEN MODES, CHECK CEP OR SEARCH ADDRESS...  */
+#sw-cnt{
+    position: absolute;
+
+    width: 64px;
+    height: 32px;
+
+    margin: 8px auto;
+
+    top: 0;
+    right: 0;
+
+}
+/*  */
