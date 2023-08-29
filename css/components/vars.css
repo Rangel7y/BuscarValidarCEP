@@ -1,0 +1,10 @@
+:root{
+
+    --cold: #F4EEFF;
+    --light-gray: #DCD6F7;
+    --gray-blue: #A6B1E1;
+    --smooth-blue: #b3bdeb;
+    --navy: #424874;
+
+    --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray));
+}
