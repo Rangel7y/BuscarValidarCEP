@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');  
 /* --- --- */
 
+/* IMPORT - VARIABLES CSS */
+@import '/css/components/vars.css';
+/* --- --- */
+
 /* RESET BODY */
 *{
     margin: 0;
@@ -9,10 +13,6 @@
     box-sizing: border-box;
     font-family: 'Oxanium', cursive;
 }
-/* --- --- */
-
-/* IMPORT VARIABLES CSS */
-@import '/css/components/vars.css';
 /* --- --- */
 
 /* BODY PAGE */
@@ -27,18 +27,8 @@ body{
     background: var(--background-page);
 }
 
-/* MAIN CONTAINER - ALL CONTENT FROM PAGE */
-#main-con{
-    display: flex;
-    align-items: start;
-
-    width: 1000px;
-    height: 800px;
-
-    gap: 10px;
-
-    padding: 0px 50px;
-}
+/* IMPORT - MAIN CONTENT */
+@import '/css/components/main_con.css';
 /*  */
 
 

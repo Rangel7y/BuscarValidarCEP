@@ -1,0 +1,14 @@
+
+/* MAIN CONTAINER - ALL CONTENT FROM PAGE */
+#main-con{
+    display: flex;
+    align-items: start;
+
+    width: 1000px;
+    height: 800px;
+
+    gap: 10px;
+
+    padding: 0px 50px;
+}
+/*  */
