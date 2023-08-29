@@ -31,5 +31,11 @@
 /* ///// /////*/
 /* ///// ALL CONTENT OF PANEL PNL_RES_CHKD_CEP /////*/
 /* ///// /////*/
+/* IMPORT - PANEL_RESULT_CHECKED_CEP (CONTENT) CSS */
+@import '/css/components/pnl_res_chkd_cep/pnl_res_chkd_cep.css';
+/*  */
+/* IMPORT - HEADER_RESULT_CHECKED_CEP (TITLE) CSS */
+@import '/css/components/pnl_res_chkd_cep/hdr_res_chkd_cep.css';
+/*  */
 /* ///// /////*/
 /* ///// /////*//*# sourceMappingURL=style.css.map */
