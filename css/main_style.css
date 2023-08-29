@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
 /* --- --- */
 /* RESET BODY */
+@import '/css/components/vars.css';
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +11,7 @@
 }
 
 /* --- --- */
-/* COLORS AND OTHERS GLOBAL VARIABLES */
-:root {
-  --cold: #F4EEFF;
-  --light-gray: #DCD6F7;
-  --gray-blue: #A6B1E1;
-  --smooth-blue: #b3bdeb;
-  --navy: #424874;
-  --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray));
-}
-
+/* IMPORT VARIABLES CSS */
 /* --- --- */
 /* BODY PAGE */
 body {
