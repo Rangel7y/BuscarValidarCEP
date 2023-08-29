@@ -41,8 +41,6 @@ body{
 #main-con{
     display: flex;
     align-items: start;
-    /* justify-content: center; */
-    /* flex-direction: column; */
 
     width: 1000px;
     height: 800px;
@@ -50,8 +48,6 @@ body{
     gap: 10px;
 
     padding: 0px 50px;
-
-    
 }
 /*  */
 
@@ -66,5 +62,21 @@ body{
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0 / 10%) 0px 8px 16px;
 
     border-radius: 10px;
+}
+/*  */
+
+
+/* BUTTON SWITCH(TOGGLE BETWEEN MODES, CHECK CEP OR SEARCH ADDRESS...  */
+#sw-cnt{
+    position: absolute;
+
+    width: 64px;
+    height: 32px;
+
+    margin: 8px auto;
+
+    top: 0;
+    right: 0;
+
 }
 /*  */
