@@ -1,0 +1,15 @@
+
+/* BUTTON SWITCH(TOGGLE BETWEEN MODES, CHECK CEP OR SEARCH ADDRESS...  */
+#sw-cnt{
+    position: absolute;
+
+    width: 64px;
+    height: 32px;
+
+    margin: 8px auto;
+
+    top: 0;
+    right: 0;
+
+}
+/*  */
