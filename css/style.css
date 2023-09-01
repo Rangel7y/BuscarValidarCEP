@@ -2,30 +2,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
 /* --- --- */
 /* IMPORT - VARIABLES (COLORS ETC...) CSS */
-@import '/css/components/vars.css';
+@import '/css/components/utils/vars.css';
 /* --- --- */
 /* IMPORT - BODY PAGE AND BODY RESET (BOTH INCLUDE) CSS */
-@import '/css/components/body_pg.css';
+@import '/css/components/core/body_pg.css';
 /*  */
 /* IMPORT - MAIN CONTENT (ALL CONTENT) CSS */
-@import '/css/components/main_con.css';
+@import '/css/components/core/main_con.css';
 /*  */
 /* ///// ALL CONTENT OF PANEL PNL_FRM_CHK_CEP ///// */
 /* ///// /////*/
 /* IMPORT - STYLE PANEL (CHECK AND RESULT) CSS */
-@import '/css/components/sty_pnl_chk_res.css';
+@import '/css/components/pnl_frm_chk_cep/sty_pnl_chk_res.css';
 /*  */
 /* IMPORT - HEADER_FORM_CHECK_CEP  CSS */
-@import '/css/components/hdr_frm_chk_cep.css';
+@import '/css/components/pnl_frm_chk_cep/hdr_frm_chk_cep.css';
 /*  */
 /* IMPORT - SWITCH (TOGGLE MODE) CSS */
-@import '/css/components/sw_cnt.css';
+@import '/css/components/pnl_frm_chk_cep/sw_cnt_chk.css';
 /*  */
 /* IMPORT - FORM_CONTENT_CHECK_CEP (SECTION) CSS */
-@import '/css/components/frm_cnt_chk_cep.css';
+@import '/css/components/pnl_frm_chk_cep/frm_cnt_chk_cep.css';
 /*  */
 /* IMPORT - INPUT_BUTTON_CONTENT_CHECK_CEP (INPUT AND BUTTON) CSS */
-@import '/css/components/inp_btn_cnt_chk_cep.css';
+@import '/css/components/pnl_frm_chk_cep/inp_btn_cnt_chk_cep.css';
 /*  */
 /* ///// /////*/
 /* ///// /////*/
