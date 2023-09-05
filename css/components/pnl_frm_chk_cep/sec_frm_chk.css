@@ -3,5 +3,12 @@
 /* ///// ///// */
 
 /* SECTION_FORM_CHECK_CEP */
+#sec-frm-chk{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
+    height: 500px;
+}
 /* ///// ///// */
