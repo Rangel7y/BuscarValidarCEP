@@ -1,4 +1,21 @@
 
+/* HEADER CONTENT (HDR_FRM_CHK_CEP */
+/* ///// ///// */
+
+/* HEADER_FORM_CHECK_CEP */
 #hdr-frm-chk-cep{
+
     position: relative;
 }
+/* ///// ///// */
+
+/* STYLE H1 (HDR_FRM_CHK_CEP) (TITLE) */
+#hdr-frm-chk-cep > h1{
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: var(--navy);
+}
+/* ///// ///// */
