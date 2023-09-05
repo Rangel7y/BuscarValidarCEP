@@ -1,15 +1,21 @@
 
-/* HEADER CONTENT (HDR_FRM_CHK_CEP */
+/* HEADER_CONTENT (HDR_FRM_CHK_CEP */
 /* ///// ///// */
 
 /* HEADER_FORM_CHECK_CEP */
 #hdr-frm-chk-cep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100px;
 
     position: relative;
 }
 /* ///// ///// */
 
-/* STYLE H1 (HDR_FRM_CHK_CEP) (TITLE) */
+/* STYLE H1 (TITLE PANEL_PAGE) */
 #hdr-frm-chk-cep > h1{
     text-align: center;
 
@@ -17,5 +23,11 @@
     font-weight: 700;
 
     color: var(--navy);
+}
+/* ///// ///// */
+
+/* STYLE HR (TO DIVIDE TITLE FROM CONTENT) */
+#hdr-frm-chk-cep > hr{
+    width: 400px;
 }
 /* ///// ///// */
