@@ -12,6 +12,8 @@
     height: 100px;
 
     position: relative;
+
+    /* margin-top: 20px; */
 }
 /* ///// ///// */
 
@@ -19,10 +21,14 @@
 #hdr-frm-chk-cep > h1{
     text-align: center;
 
+    position: absolute;
+
     font-size: 30px;
     font-weight: 700;
 
     color: var(--navy);
+
+    top: 10px;
 }
 /* ///// ///// */
 
