@@ -76,6 +76,10 @@
 
     cursor: pointer;
 }
+/* ON HOVER */
+#inp-btn-cnt-chk-cep > button:hover{
+    background-color: var(--smooth-navy);
+}
 /* ///// ///// */
 
 
