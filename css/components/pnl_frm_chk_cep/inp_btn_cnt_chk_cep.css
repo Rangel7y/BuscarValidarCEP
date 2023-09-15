@@ -24,4 +24,15 @@
 #inp-btn-cnt-chk-cep > button{
     width: 300px;
     height: 40px;
+
+    background-color: var(--navy);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
+
+    border: 1px solid var(--gray-blue);
+    border-radius: 0px 0.5rem 0px;
+
+    transition: all 200ms ease, backgroud 200ms ease-in-out;
+
+    cursor: pointer;
 }
