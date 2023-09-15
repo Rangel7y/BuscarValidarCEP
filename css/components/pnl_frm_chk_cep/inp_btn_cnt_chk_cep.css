@@ -2,6 +2,7 @@
 /* INPUT_BUTTON_CONTENT_CHECK_CEP (INP_BTN_CNT_CHK_CEP) */
 /* ///// ///// */
 
+
 /* INPUT_BUTTON_CHECK_CEP (DIV) */
 #inp-btn-cnt-chk-cep{
     display: flex;
@@ -16,12 +17,14 @@
 }
 /* ///// ///// */
 
+
 /* INPUT_CHECK_CEP (INPUT) */
 #inp-chk-cep{
     width: 400px;
     height: 50px;
 }
 /* ///// ///// */
+
 
 /* INPUT_BUTTON_CONTENT_CHECK_CEP (GET BUTTON) */
 #inp-btn-cnt-chk-cep > button{
@@ -40,6 +43,7 @@
     cursor: pointer;
 }
 /* ///// ///// */
+
 
 /* ION-ICON (ICON FROM BUTTON SUBMIT) */
 ion-icon{
