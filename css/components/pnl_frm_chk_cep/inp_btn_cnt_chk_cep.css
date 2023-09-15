@@ -39,15 +39,17 @@
 
     padding: 1em;
 
-    transition: 350ms;
+    transition: all 300ms ease, backgroud 200ms ease-in-out;
 }
 /* ON HOVER */
 #inp-chk-cep:hover{
     background-color: var(--smooth-blue);
+    border: 2px solid var(--smooth-navy);
 }
 /* ON FOCUS */
 #inp-chk-cep:focus{
     background-color: var(--smooth-blue);
+    border: 2px solid var(--smooth-navy);
 }
 /* PLACEHOLDER(TEXT) */
 #inp-chk-cep::placeholder{
@@ -75,13 +77,14 @@
     border: 2px solid var(--gray-blue);
     border-radius: 0px 0.5rem 0.5rem 0px;
 
-    transition: all 200ms ease, backgroud 200ms ease-in-out;
+    transition: all 300ms ease, backgroud 200ms ease-in-out;
 
     cursor: pointer;
 }
 /* ON HOVER */
 #inp-btn-cnt-chk-cep > button:hover{
     background-color: var(--smooth-navy);
+    border: 2px solid var(--navy);
 }
 /* ///// ///// */
 
