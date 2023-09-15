@@ -24,8 +24,10 @@
 }
 /* ///// ///// */
 
+/* STYLE HR (TO DIVIDE TITLE FROM CONTENT) */
 #hdr-res-chkd-cep > hr{
     width: 380px;
 
     border: 1px solid var(--smooth-blue);
 }
+/* ///// ///// */
