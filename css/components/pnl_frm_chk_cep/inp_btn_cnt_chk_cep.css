@@ -31,6 +31,9 @@
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
 
+    border: none;
+    outline: none;
+
     border: 2px solid var(--gray-blue);
     border-radius: 0.5rem 0px 0px 0.5rem;
 
