@@ -1,0 +1,31 @@
+
+/* HEADER_RESULT_CHECKED_CEP (ALL CONTENT) */
+/* ///// ///// */
+
+/* HDR_RES_CHKD_CEP (HEADER) */
+#hdr-res-chkd-cep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100px;
+}
+/* ///// ///// */
+
+/* STYLE H1 (TITLE PANEL_PAGE) */
+#hdr-res-chkd-cep > h1{
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: var(--navy);
+}
+/* ///// ///// */
+
+#hdr-res-chkd-cep > hr{
+    width: 380px;
+
+    border: 1px solid var(--smooth-blue);
+}
