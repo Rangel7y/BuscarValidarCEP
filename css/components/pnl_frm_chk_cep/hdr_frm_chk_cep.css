@@ -34,7 +34,7 @@
 
 /* STYLE HR (TO DIVIDE TITLE FROM CONTENT) */
 #hdr-frm-chk-cep > hr{
-    width: 400px;
+    width: 480px;
     
     border: 1px solid var(--smooth-blue);
 }
