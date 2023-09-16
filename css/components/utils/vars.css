@@ -1,3 +1,7 @@
+
+/* MAIN VARIABLES CSS */
+/* ///// ///// */
+
 :root{
 
     --cold: #F4EEFF;
@@ -9,3 +13,4 @@
 
     --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray));
 }
+/* ///// ///// */
