@@ -14,7 +14,11 @@
 /* ///// ///// */
 
 /* CENTRALIZE MAIN_HEADER (MAIN_HEADER) */
-#main-con:first-child{
+/* #main-con:first-child{
     justify-content: flex-start;
-}
+} */
+/* ///// ///// */
+
+/* CENTRALIZE FIRST PANEL_FORM_CHECK_CEP (PNL_FRM_CHK_CEP) */
+
 /* ///// ///// */
