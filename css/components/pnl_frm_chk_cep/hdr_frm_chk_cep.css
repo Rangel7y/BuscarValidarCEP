@@ -20,9 +20,11 @@
     text-align: center;
 
     font-size: 30px;
-    font-weight: 700;
+    /* font-weight: 700; */
 
     color: var(--navy);
+
+    font-family: 'Zyphyte', sans-serif;
 }
 /* ///// ///// */
 
