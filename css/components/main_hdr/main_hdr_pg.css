@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; 
+    /* flex-direction: column;  */
     
     width: 100%;
     height: 100px;
@@ -21,6 +21,7 @@
 
     border-radius: 0px 0px 30% 30%;
 
+    gap: 2px;
 }
 /* ///// ///// */
 
@@ -35,19 +36,22 @@
 
     color: var(--smooth-blue);
 
-    z-index: 1;
+    /* z-index: 1; */
 }
 /* ///// ///// */
 
 /* ICON_HEADER (IMAGE) */
 #main-hdr-pg > img{
+
     width: 64px;
     height: 64px;
 
-    position: absolute;
+    background-color: var(--navy);
 
-    /* top: 40px; */
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
 
-    z-index: 0;
+    border-radius: 50% 20% / 10% 40%;
+
+    opacity: 0.7;
 }
 /* ///// ///// */
