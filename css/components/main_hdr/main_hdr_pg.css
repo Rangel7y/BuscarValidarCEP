@@ -23,3 +23,22 @@
 
 }
 /* ///// ///// */
+
+/* MAIN_TITLE_HEADER (MAIN_TITLE_HDR) */
+#main-title-hdr{
+    /* text-align: center; */
+
+    font-family: 'Kanit', sans-serif;
+
+    /* font-size: 60px; */
+    /* font-weight: 700; */
+}
+/* ///// ///// */
+
+/* ICON_HEADER (IMAGE) */
+#main-hdr-pg > img{
+    position: absolute;
+
+    top: 40px;
+}
+/* ///// ///// */
