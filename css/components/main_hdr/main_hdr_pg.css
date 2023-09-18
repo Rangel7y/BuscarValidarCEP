@@ -1,0 +1,14 @@
+
+/* MAIN_HEADER_CONTENT (DIV CONTENT) */
+/* ///// ///// */
+
+/* MAIN_HEADER_CONTENT (HEADER) */
+#main-hdr-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    
+    height: 80px;
+}
+/* ///// ///// */
