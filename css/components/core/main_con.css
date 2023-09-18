@@ -12,3 +12,9 @@
     gap: 10px;
 }
 /* ///// ///// */
+
+/* CENTRALIZE MAIN_HEADER (MAIN_HEADER) */
+#main-con:first-child{
+    justify-content: flex-start;
+}
+/* ///// ///// */
