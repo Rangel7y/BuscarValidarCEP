@@ -15,10 +15,12 @@
     position: absolute;
     top: 0;
 
+    background-color: var(--navy);
+
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
-    
-    border: 5px solid var(--gray-blue);
-    border-radius: 0px 0px 50% 50%;
+
+   /*  border: 2px solid var(--gray-blue); */
+    border-radius: 0px 0px 30% 30%;
 
 }
 /* ///// ///// */
