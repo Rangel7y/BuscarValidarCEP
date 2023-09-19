@@ -11,6 +11,6 @@
     --navy: #424874;
     --smooth-navy: #4f568a;
 
-    --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray));
+    --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray), var(--smooth-blue));
 }
 /* ///// ///// */
