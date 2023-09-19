@@ -21,10 +21,11 @@
     /* position: absolute; */
 
     font-size: 15px;
-    font-weight: 700;
+    /* font-weight: 700; */
 
     color: var(--navy);
 
     /* top: 30px; */
+    font-family: 'Maven Pro', sans-serif;
 }
 /* ///// ///// */
