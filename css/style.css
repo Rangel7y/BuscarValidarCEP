@@ -3,10 +3,9 @@
 /* --- --- */
 /* IMPORT - MAIN_HEADER_FONT (CDNFONTS_FONT) */
 @import url("https://fonts.cdnfonts.com/css/story-night");
-/* https://www.cdnfonts.com/zyphyte.font (VER DPS)*/
 /* --- --- */
 /* IMPORT - OTHERS TEXT (CDNFONTS_FONT) */
-@import url("https://fonts.cdnfonts.com/css/zyphyte");
+@import url("https://fonts.cdnfonts.com/css/tomato-round-condensed-oblique");
 /* --- --- */
 /* IMPORT - VARIABLES (COLORS ETC...) CSS */
 @import '/css/components/utils/vars.css';
@@ -16,7 +15,7 @@
 /*  */
 /* IMPORT - MAIN CONTENT (ALL CONTENT) CSS */
 @import '/css/components/core/main_cnt.css';
-@import '/css/components/main_hdr/main_hdr_pg.css';
+@import '/css/components/main_hdr/main_hdr_pg.css'; /* HEADER */
 /*  */
 /* ///// ALL CONTENT OF PANEL PNL_FRM_CHK_CEP ///// */
 /* ///// /////*/
