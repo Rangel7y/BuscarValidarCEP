@@ -70,7 +70,7 @@ const checkCEP = async(cepId) =>{
             dataCep[c]['localidade'] + dataCep[c]['uf'] + 
             dataCep[c]['bairro'] + dataCep[c]['logradouro'];
 
-            let 
+            /* let  */
         }
 /*         //
         resultCep01.textContent = dataCep['cep'];
