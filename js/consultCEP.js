@@ -8,7 +8,7 @@ const inpChkCep = document.getElementById("inp-chk-cep");
 //
 
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
-const itmResChkd = document.getElementById('div-cnt-res-chkd');
+const itmResChkd = document.getElementById('itm-cnt-res-chkd');
 //
 
 //-- DEFAULT DATA  --//
