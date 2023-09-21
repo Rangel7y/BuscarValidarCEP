@@ -2,14 +2,14 @@
 /* ITEM_RESULT_CHECKED (DIV RESULT CONTENT) */
 /* ///// ///// */
 
-/* ITEM_RESULT_CHECKED (DIV) */
+/* ITEM_CONTENT_RESULT_CHECKED (DIV) */
 #itm-cnt-res-chkd{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    width: 350px;
+    width: 450px;
     height: 400px;
     
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
@@ -18,3 +18,22 @@
     border-radius: 0.5rem;
 }
 /* ///// ///// */
+
+/* ITEM_UL_RESULT_CHECKED (ITM_UL_RES_CHKD LIST RESULT) */
+#itm-ul-res-chkd{
+    /* display: flex; */
+
+    list-style: none;
+}
+/* ///// ///// */
+
+
+#itm-ul-res-chkd > li{
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 12px;
+}
+
