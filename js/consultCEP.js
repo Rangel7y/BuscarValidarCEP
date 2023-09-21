@@ -14,10 +14,9 @@ const itmResChkd = document.getElementById('itm-res-chkd');
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
 //
-
 // --- --- //
 
-//-- FUNCTION TO GET API DATA --//
+//-- FUNCTION TO TRY_CONNECTION WITH API (CHECK CEP ID) --//
 const checkCepOnAPI = async(cepId) =>{
     const APIResponse = await fetch(`https://viacep.com.br/ws/${cepId}/json/`);
 
@@ -28,14 +27,50 @@ const checkCepOnAPI = async(cepId) =>{
 }
 //
 
-//-- FUNCTION CALL FUNCTION GET API DATA --//
+//-- BUTTON/INPUT FORM_CONTENT_CHECK_CEP --//
+inpChkCep.addEventListener('input', (event) => {
+    // Remove any non-numeric characters from the input
+    event.target.value = event.target.value.replace(/\D/g, '');
+});
+frmCntChkCep.addEventListener('submit',(event) =>{
+    event.preventDefault();
+
+    let searchInput = inpChkCep.value.trim();
+    if(/^\d{8}$/.test(searchInput)){
+        checkCEP(inpChkCep.value);
+    }
+    else{
+        showBoxResult(false);
+
+        console.error("Digite o número do CEP para buscar!");
+    }
+});
+//
+
+//-- FUNCTION TO REMOVE PANEL RESULT FROM PAGE --//
+function showBoxResult(canShow) {
+    if(canShow){    
+        itmResChkd.classList.add("visible");
+        return;
+    }
+    itmResChkd.classList.remove("visible");
+}
+//
+
+//-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_CEP --//
 const checkCEP = async(cepId) =>{
     const dataCep = await checkCepOnAPI(cepId);
 
     if(!("erro" in dataCep)){
 
         showBoxResult(true);
-        //
+
+        for(var c = 0; c < dataCep.length; c++){
+            let address = dataCep[c]['cep'] + dataCep[c]['ddd'] +
+            dataCep[c]['localidade'] + dataCep[c]['uf'] + 
+            dataCep[c]['bairro'] + dataCep[c]['logradouro'];
+        }
+/*         //
         resultCep01.textContent = dataCep['cep'];
         //
         resultCep02.textContent = dataCep['ddd'];
@@ -47,7 +82,7 @@ const checkCEP = async(cepId) =>{
         resultCep05.textContent = dataCep['bairro'];
         //
         resultCep06.textContent = dataCep['logradouro'];
-        //
+        // */
 
 
         console.log(dataCep);
@@ -55,35 +90,5 @@ const checkCEP = async(cepId) =>{
     else{
         console.error("Erro ao procurar pelo CEP fornecido!");
     }
-}
-//
-
-//-- BUTTON INPUT FORM --//
-inputSearchCep.addEventListener('input', (event) => {
-    // Remove any non-numeric characters from the input
-    event.target.value = event.target.value.replace(/\D/g, '');
-});
-frmCntChkCep.addEventListener('submit',(event) =>{
-    event.preventDefault();
-
-    let searchInput = inputSearchCep.value.trim();
-    if(/^\d{8}$/.test(searchInput)){
-        checkCEP(inputSearchCep.value);
-    }
-    else{
-        showBoxResult(false);
-
-        console.error("Digite o número do CEP para buscar!");
-    }
-});
-//
-
-//-- REMOVE RESULT PANEL FROM PAGE --//
-function showBoxResult(canShow) {
-    if(canShow){    
-        itmResChkd.classList.add("visible");
-        return;
-    }
-    itmResChkd.classList.remove("visible");
 }
 //
