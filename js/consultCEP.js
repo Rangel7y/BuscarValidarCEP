@@ -8,7 +8,7 @@ const inpChkCep = document.getElementById("inp-chk-cep");
 //
 
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
-const itmResChkd = document.getElementById('itm-res-chkd');
+const itmResChkd = document.getElementById('div-cnt-res-chkd');
 //
 
 //-- DEFAULT DATA  --//
@@ -69,6 +69,8 @@ const checkCEP = async(cepId) =>{
             let address = dataCep[c]['cep'] + dataCep[c]['ddd'] +
             dataCep[c]['localidade'] + dataCep[c]['uf'] + 
             dataCep[c]['bairro'] + dataCep[c]['logradouro'];
+
+            let 
         }
 /*         //
         resultCep01.textContent = dataCep['cep'];
