@@ -39,7 +39,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             
             sectionContainer = document.createElement('section');
             sectionContainer.setAttribute('id','panel-result-container');
-            resultsContainer.appendChild(sectionContainer);
+            itmResChkd.appendChild(sectionContainer);
             
             sidebox = document.createElement('div');
             sidebox.setAttribute('class','side-box result-side-box');
@@ -93,9 +93,9 @@ form2Content.addEventListener('submit',(event) =>{
 /* REMOVE RESULT PANEL FROM PAGE */
 function showBoxResult(canShow) {
     if(canShow){    
-        resultsContainer.classList.add("visible");
+        itmResChkd.classList.add("visible");
         return;
     }
-    resultsContainer.classList.remove("visible");
+    itmResChkd.classList.remove("visible");
 }
 /* --- --- */
