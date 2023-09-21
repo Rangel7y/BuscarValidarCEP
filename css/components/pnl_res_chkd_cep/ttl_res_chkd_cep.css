@@ -10,9 +10,6 @@
     flex-direction: column;
 
     height: 100px;
-
-    /* position: absolute;
-    top: 0; */
 }
 /* ///// ///// */
 
@@ -21,9 +18,10 @@
     text-align: center;
 
     font-size: 30px;
-    font-weight: 700;
 
     color: var(--navy);
+
+    font-family: 'Tomato Round Condensed Oblique', sans-serif;
 }
 /* ///// ///// */
 
