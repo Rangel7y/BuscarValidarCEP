@@ -7,15 +7,8 @@ const frmCntChkCep = document.getElementById("frm-cnt-chk-cep");
 const inpChkCep = document.getElementById("inp-chk-cep");
 //
 
-//-- RESULT CEP --//
-const resultCep01 = document.getElementById("resultCep-01"); 
-const resultCep02 = document.getElementById("resultCep-02");
-const resultCep03 = document.getElementById("resultCep-03");
-const resultCep04 = document.getElementById("resultCep-04");
-const resultCep05 = document.getElementById("resultCep-05");
-const resultCep06 = document.getElementById("resultCep-06");
-
-const resultsContainer = document.getElementById('results-container');
+//-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
+const itmResChkd = document.getElementById('itm-res-chkd');
 //
 
 //-- DEFAULT DATA  --//
@@ -25,7 +18,7 @@ const appCepId = '45993135';
 // --- --- //
 
 //-- FUNCTION TO GET API DATA --//
-const findCEP = async(cepId) =>{
+const checkCepOnAPI = async(cepId) =>{
     const APIResponse = await fetch(`https://viacep.com.br/ws/${cepId}/json/`);
 
     if(APIResponse.status == 200){
@@ -36,8 +29,8 @@ const findCEP = async(cepId) =>{
 //
 
 //-- FUNCTION CALL FUNCTION GET API DATA --//
-const getCEP = async(cepId) =>{
-    const dataCep = await findCEP(cepId);
+const checkCEP = async(cepId) =>{
+    const dataCep = await checkCepOnAPI(cepId);
 
     if(!("erro" in dataCep)){
 
@@ -75,7 +68,7 @@ frmCntChkCep.addEventListener('submit',(event) =>{
 
     let searchInput = inputSearchCep.value.trim();
     if(/^\d{8}$/.test(searchInput)){
-        getCEP(inputSearchCep.value);
+        checkCEP(inputSearchCep.value);
     }
     else{
         showBoxResult(false);
@@ -88,9 +81,9 @@ frmCntChkCep.addEventListener('submit',(event) =>{
 //-- REMOVE RESULT PANEL FROM PAGE --//
 function showBoxResult(canShow) {
     if(canShow){    
-        resultsContainer.classList.add("visible");
+        itmResChkd.classList.add("visible");
         return;
     }
-    resultsContainer.classList.remove("visible");
+    itmResChkd.classList.remove("visible");
 }
 //
