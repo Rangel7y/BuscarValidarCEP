@@ -4,7 +4,14 @@
 
 /* PANEL_RESULT_CHECKE_CEP */
 #pnl-res-chkd-cep{
+/*     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+
     width: 500px;
     height: 600px;
+
+    /* position: relative; */
 }
 /* ///// ///// */
