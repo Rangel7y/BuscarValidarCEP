@@ -1,9 +1,12 @@
 
 //-- GET DOCUMENT ELEMENTS  --//
-//-- FORM CONTENT --//
-const form1Content = document.getElementById("form1-content");
-const inputSearchCep = document.getElementById("input-form1");
+// --- --- //
+
+//-- FORM_CONTENT_CHECK_CEP (FRM_CNT_CHK_CEP) --//
+const frmCntChkCep = document.getElementById("frm-cnt-chk-cep");
+const inpChkCep = document.getElementById("inp-chk-cep");
 //
+
 //-- RESULT CEP --//
 const resultCep01 = document.getElementById("resultCep-01"); 
 const resultCep02 = document.getElementById("resultCep-02");
@@ -18,6 +21,8 @@ const resultsContainer = document.getElementById('results-container');
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
 //
+
+// --- --- //
 
 //-- FUNCTION TO GET API DATA --//
 const findCEP = async(cepId) =>{
@@ -65,7 +70,7 @@ inputSearchCep.addEventListener('input', (event) => {
     // Remove any non-numeric characters from the input
     event.target.value = event.target.value.replace(/\D/g, '');
 });
-form1Content.addEventListener('submit',(event) =>{
+frmCntChkCep.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     let searchInput = inputSearchCep.value.trim();
