@@ -101,6 +101,78 @@ const checkCEP = async(cepId) =>{
             ttlLblResCidade.setAttribute('for', 'Cidade');
             ttlLblResCidade.setAttribute('class','ttl-lbl-res-chkd');
             ttlLblResCidade.innerText = "CIDADE";
+            divRes1.appendChild(ttlLblResCidade);
+
+            //
+            styH3ResCidade = document.createElement('h3');
+            divRes1.appendChild(styH3ResCidade);
+            styH3ResCidade.setAttribute('name','Cidade');
+            styH3ResCidade.setAttribute('class','sty-h3-itm-res-chkd');
+
+            spnH3ResCidade = document.createElement('span');
+            styH3ResCidade.appendChild(spnH3ResCidade);
+
+            divRes2 = document.createElement('div');
+            liRes.appendChild(divRes2);
+
+            ttlLblResBairro = document.createElement('label');
+            ttlLblResBairro.setAttribute('for', 'Bairro');
+            ttlLblResBairro.setAttribute('class','ttl-lbl-res-chkd');
+            ttlLblResBairro.innerText = "BAIRRO";
+            divRes2.appendChild(ttlLblResBairro);
+
+            styH3ResBairro = document.createElement('h3');
+            divRes2.appendChild(styH3ResBairro);
+            styH3ResBairro.setAttribute('name','Bairro');
+            styH3ResBairro.setAttribute('class','sty-h3-itm-res-chkd');
+
+            spnH3ResBairro = document.createElement('span');
+            styH3ResBairro.appendChild(spnH3ResBairro);
+
+            ttlLblResEndereco = document.createElement('label');
+            ttlLblResEndereco.setAttribute('for', 'Endereco');
+            ttlLblResEndereco.setAttribute('class','ttl-lbl-res-chkd');
+            ttlLblResEndereco.innerText = "ENDEREÇO";
+            divRes2.appendChild(ttlLblResEndereco);
+
+            styH3ResEndereco = document.createElement('h3');
+            divRes2.appendChild(styH3ResEndereco);
+            styH3ResEndereco.setAttribute('name','Endereco');
+            styH3ResEndereco.setAttribute('class','sty-h3-itm-res-chkd');
+
+            spnH3ResEndereco = document.createElement('span');
+            styH3ResEndereco.appendChild(spnH3ResEndereco);
+
+            divRes3 = document.createElement('div');
+            liRes.appendChild(divRes3);
+
+            ttlLblResEstado = document.createElement('label');
+            ttlLblResEstado.setAttribute('for', 'Estado');
+            ttlLblResEstado.setAttribute('class','ttl-lbl-res-chkd');
+            ttlLblResEstado.innerText = "ESTADO";
+            divRes3.appendChild(ttlLblResEstado);
+
+            styH3ResEstado = document.createElement('h3');
+            divRes3.appendChild(styH3ResEstado);
+            styH3ResEstado.setAttribute('name','Estado');
+            styH3ResEstado.setAttribute('class','sty-h3-itm-res-chkd');
+
+            spnH3ResEstado = document.createElement('span');
+            styH3ResEstado.appendChild(spnH3ResEstado);
+
+            ttlLblResDDD = document.createElement('label');
+            ttlLblResDDD.setAttribute('for', 'DDD');
+            ttlLblResDDD.setAttribute('class','ttl-lbl-res-chkd');
+            ttlLblResDDD.innerText = "DDD";
+            divRes3.appendChild(ttlLblResDDD);
+
+            styH3ResDDD = document.createElement('h3');
+            divRes3.appendChild(styH3ResDDD);
+            styH3ResDDD.setAttribute('name','DDD');
+            styH3ResDDD.setAttribute('class','sty-h3-itm-res-chkd');
+
+            spnH3ResDDD = document.createElement('span');
+            styH3ResDDD.appendChild(spnH3ResDDD);            
         }
 
         console.log(dataCep);
