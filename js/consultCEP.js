@@ -11,6 +11,15 @@ const inpChkCep = document.getElementById('inp-chk-cep');
 const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //
 
+//-- ITEMS_RESULT (SPAN) --//
+const itmResCep = document.getElementById('itm-res-cep');
+const itmResCidade = document.getElementById('itm-res-cidade');
+const itmResBairro = document.getElementById('itm-res-bairro');
+const itmResEndereco = document.getElementById('itm-res-endereco');
+const itmResEstado = document.getElementById('itm-res-estado');
+const itmResDDD = document.getElementById('itm-res-ddd');
+//
+
 //-- DEFAULT DATA  --//
 const appCepId = '45993135';
 //
