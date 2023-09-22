@@ -63,28 +63,21 @@ const checkCEP = async(cepId) =>{
 
     if(!("erro" in dataCep)){
 
-        /* showBoxResult(true);
+        /* showBoxResult(true); */
 
         for(var c = 0; c < dataCep.length; c++){
             let address = dataCep[c]['cep'] + dataCep[c]['ddd'] +
             dataCep[c]['localidade'] + dataCep[c]['uf'] + 
             dataCep[c]['bairro'] + dataCep[c]['logradouro'];
 
-        } */
-/*         //
-        resultCep01.textContent = dataCep['cep'];
-        //
-        resultCep02.textContent = dataCep['ddd'];
-        //
-        resultCep03.textContent = dataCep['localidade'];
-        //
-        resultCep04.textContent = dataCep['uf'];
-        //
-        resultCep05.textContent = dataCep['bairro'];
-        //
-        resultCep06.textContent = dataCep['logradouro'];
-        // */
+            let liRes, divRes1, ttlLblResCep, styH3ResCep,
+                ttlLblResCidade,styH3ResCidade,divRes2,ttlLblResBairro,
+                styH3ResBairro,ttlLblResEndereco,styH3ResEndereco,
+                divRes3,ttlLblResEstado,styH3ResEstado,ttlLblResDDD,
+                styH3ResDDD;
 
+            
+        }
 
         console.log(dataCep);
     }
