@@ -27,36 +27,6 @@ const checkCepOnAPI = async(cepId) =>{
 }
 //
 
-//-- BUTTON/INPUT FORM_CONTENT_CHECK_CEP --//
-inpChkCep.addEventListener('input', (event) => {
-    // Remove any non-numeric characters from the input
-    event.target.value = event.target.value.replace(/\D/g, '');
-});
-frmCntChkCep.addEventListener('submit',(event) =>{
-    event.preventDefault();
-
-    let searchInput = inpChkCep.value.trim();
-    if(/^\d{8}$/.test(searchInput)){
-        checkCEP(inpChkCep.value);
-    }
-    else{
-        showBoxResult(false);
-
-        console.error("Digite o número do CEP para buscar!");
-    }
-});
-//
-
-//-- FUNCTION TO REMOVE PANEL RESULT FROM PAGE --//
-function showBoxResult(canShow) {
-    if(canShow){    
-        itmResChkd.classList.add("visible");
-        return;
-    }
-    itmResChkd.classList.remove("visible");
-}
-//
-
 //-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_CEP --//
 const checkCEP = async(cepId) =>{
     const dataCep = await checkCepOnAPI(cepId);
@@ -182,3 +152,35 @@ const checkCEP = async(cepId) =>{
     }
 }
 //
+
+//-- BUTTON/INPUT FORM_CONTENT_CHECK_CEP --//
+inpChkCep.addEventListener('input', (event) => {
+    // Remove any non-numeric characters from the input
+    event.target.value = event.target.value.replace(/\D/g, '');
+});
+frmCntChkCep.addEventListener('submit',(event) =>{
+    event.preventDefault();
+
+    let searchInput = inpChkCep.value.trim();
+    if(/^\d{8}$/.test(searchInput)){
+        checkCEP(inpChkCep.value);
+    }
+    else{
+        /* showBoxResult(false); */
+
+        console.error("Digite o número do CEP para buscar!");
+    }
+});
+//
+
+//-- FUNCTION TO REMOVE PANEL RESULT FROM PAGE --//
+function showBoxResult(canShow) {
+    if(canShow){    
+        itmResChkd.classList.add("visible");
+        return;
+    }
+    itmResChkd.classList.remove("visible");
+}
+//
+
+
