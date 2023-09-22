@@ -36,14 +36,31 @@
 #itm-ul-res-chkd > li{
     display: flex;
     align-items: center;
-
-    gap: 10px;
+    justify-content: space-around;
 
     font-size: 12px;
+
+    width: 90%;
+
+    border: 2px solid var(--gray-blue);
+
 }
 /* ///// ///// */
 
-/* ITEM_UL_RESULT_CHECKED (LI) */
+/* ITEM_UL_RESULT_CHECKED (LI > DIV) */
 #itm-ul-res-chkd > li > div{
-    width: 65px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
+
+    gap: 8px;
+}
+/* ///// ///// */
+
+.ttl-lbl-res-chkd{
+    margin-bottom: -8px;
+
+    font-weight: 700;
 }
