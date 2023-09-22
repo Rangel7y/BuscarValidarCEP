@@ -63,15 +63,14 @@ const checkCEP = async(cepId) =>{
 
     if(!("erro" in dataCep)){
 
-        showBoxResult(true);
+        /* showBoxResult(true);
 
         for(var c = 0; c < dataCep.length; c++){
             let address = dataCep[c]['cep'] + dataCep[c]['ddd'] +
             dataCep[c]['localidade'] + dataCep[c]['uf'] + 
             dataCep[c]['bairro'] + dataCep[c]['logradouro'];
 
-            /* let  */
-        }
+        } */
 /*         //
         resultCep01.textContent = dataCep['cep'];
         //
