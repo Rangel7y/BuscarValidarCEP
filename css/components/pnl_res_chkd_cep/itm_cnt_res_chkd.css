@@ -19,15 +19,13 @@
 }
 /* ///// ///// */
 
-/* ITEM_UL_RESULT_CHECKED (ITM_UL_RES_CHKD LIST RESULT) */
+/* ITEM_UL_RESULT_CHECKED (UL) */
 #itm-ul-res-chkd{
-    /* display: flex; */
-
     list-style: none;
 }
 /* ///// ///// */
 
-
+/* ITEM_UL_RESULT_CHECKED (LI) */
 #itm-ul-res-chkd > li{
     display: flex;
     align-items: center;
@@ -36,4 +34,4 @@
 
     font-size: 12px;
 }
-
+/* ///// ///// */
