@@ -8,7 +8,7 @@ const inpChkCep = document.getElementById("inp-chk-cep");
 //
 
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
-const itmResChkd = document.getElementById('itm-cnt-res-chkd');
+const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //
 
 //-- DEFAULT DATA  --//
@@ -76,7 +76,18 @@ const checkCEP = async(cepId) =>{
                 divRes3,ttlLblResEstado,styH3ResEstado,ttlLblResDDD,
                 styH3ResDDD;
 
-            
+            liRes = document.createElement('li'); 
+            itmUlResChkd.appendChild(liRes);
+
+            divRes1 = document.createElement('div');
+            liRes.appendChild(divRes1);
+
+
+            ttlLblResCep = document.createElement('label');
+            ttlLblResCep.setAttribute('for', 'Cep');
+            ttlLblResCep.setAttribute('class','ttl-lbl-res-chkd');
+            ttlLblResCep.innerText = "CEP";
+            divRes1.appendChild(ttlLblResCep);
         }
 
         console.log(dataCep);
