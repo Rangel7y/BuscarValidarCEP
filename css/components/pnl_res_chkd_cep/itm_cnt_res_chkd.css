@@ -50,17 +50,28 @@
 /* ITEM_UL_RESULT_CHECKED (LI > DIV) */
 #itm-ul-res-chkd > li > div{
     display: flex;
-    align-items: center;
     flex-direction: column;
 
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
 
-    gap: 8px;
+    gap: 5px;
 }
 /* ///// ///// */
 
+/* ITEM_UL_RESULT_CHECKED (LABEL) */
 .ttl-lbl-res-chkd{
     margin-bottom: -8px;
 
     font-weight: 700;
+
+    color: var(--smooth-navy);
 }
+/* ///// ///// */
+
+/* ITEM_UL_RESULT_CHECKED (H3) */
+.sty-h3-itm-res-chkd{
+    /* font-weight: 700; */
+
+    color: var(--navy);
+}
+/* ///// ///// */
