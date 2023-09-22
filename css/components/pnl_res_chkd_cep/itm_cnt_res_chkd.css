@@ -37,12 +37,9 @@
     display: none;
 }
 
-/* #itm-li-res-chkd.visible{
-    display: block;
-} */
 
 /* ITEM_UL_RESULT_CHECKED (LI) */
-#itm-ul-res-chkd > li{
+#itm-ul-res-chkd > li.visible{
     display: flex;
     align-items: center;
     justify-content: space-around;

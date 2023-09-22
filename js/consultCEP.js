@@ -8,7 +8,7 @@ const inpChkCep = document.getElementById('inp-chk-cep');
 //
 
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
-const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
+const itmLiResChkd = document.getElementById('itm-li-res-chkd');
 //
 
 //-- ITEMS_RESULT (SPAN) --//
@@ -24,6 +24,16 @@ const itmResDDD = document.getElementById('itm-res-ddd');
 const appCepId = '45993135';
 //
 // --- --- //
+
+//-- FUNCTION TO REMOVE PANEL RESULT FROM PAGE --//
+function showBoxResult(canShow) {
+    if(canShow){    
+        itmLiResChkd.classList.add("visible");
+        return;
+    }
+    itmLiResChkd.classList.remove("visible");
+}
+//
 
 //-- FUNCTION TO TRY_CONNECTION WITH API (CHECK CEP ID) --//
 const checkCepOnAPI = async(cepId) =>{
@@ -42,7 +52,14 @@ const checkCEP = async(cepId) =>{
 
     if(!("erro" in dataCep)){
 
-        /* showBoxResult(true); */
+        showBoxResult(true);
+
+        itmResCep.innerText = dataCep.cep;
+        itmResCidade.innerText = dataCep.localidade;
+        itmResBairro.innerText = dataCep.bairro;
+        itmResEndereco.innerText = dataCep.logradouro;
+        itmResEstado.innerText = dataCep.uf;
+        itmResDDD.innerText = dataCep.ddd;
 
         console.log(dataCep);
     }
@@ -70,16 +87,6 @@ frmCntChkCep.addEventListener('submit',(event) =>{
         console.error("Digite o número do CEP para buscar!");
     }
 });
-//
-
-//-- FUNCTION TO REMOVE PANEL RESULT FROM PAGE --//
-function showBoxResult(canShow) {
-    if(canShow){    
-        itmResChkd.classList.add("visible");
-        return;
-    }
-    itmResChkd.classList.remove("visible");
-}
 //
 
 
