@@ -70,11 +70,11 @@ const checkCEP = async(cepId) =>{
             dataCep[c]['localidade'] + dataCep[c]['uf'] + 
             dataCep[c]['bairro'] + dataCep[c]['logradouro'];
 
-            let liRes, divRes1, ttlLblResCep, styH3ResCep,
-                ttlLblResCidade,styH3ResCidade,divRes2,ttlLblResBairro,
-                styH3ResBairro,ttlLblResEndereco,styH3ResEndereco,
-                divRes3,ttlLblResEstado,styH3ResEstado,ttlLblResDDD,
-                styH3ResDDD;
+            let liRes, divRes1, ttlLblResCep, styH3ResCep,spnH3ResCep,
+                ttlLblResCidade,styH3ResCidade,spnH3ResCidade,divRes2,ttlLblResBairro,
+                styH3ResBairro,spnH3ResBairro,ttlLblResEndereco,styH3ResEndereco,spnH3ResEndereco,
+                divRes3,ttlLblResEstado,styH3ResEstado,spnH3ResEstado,ttlLblResDDD,
+                styH3ResDDD,spnH3ResDDD;
 
             liRes = document.createElement('li'); 
             itmUlResChkd.appendChild(liRes);
@@ -88,6 +88,19 @@ const checkCEP = async(cepId) =>{
             ttlLblResCep.setAttribute('class','ttl-lbl-res-chkd');
             ttlLblResCep.innerText = "CEP";
             divRes1.appendChild(ttlLblResCep);
+
+            styH3ResCep = document.createElement('h3');
+            divRes1.appendChild(styH3ResCep);
+            styH3ResCep.setAttribute('name','Cep');
+            styH3ResCep.setAttribute('class','sty-h3-itm-res-chkd');
+
+            spnH3ResCep = document.createElement('span');
+            styH3ResCep.appendChild(spnH3ResCep);
+
+            ttlLblResCidade = document.createElement('label');
+            ttlLblResCidade.setAttribute('for', 'Cidade');
+            ttlLblResCidade.setAttribute('class','ttl-lbl-res-chkd');
+            ttlLblResCidade.innerText = "CIDADE";
         }
 
         console.log(dataCep);
