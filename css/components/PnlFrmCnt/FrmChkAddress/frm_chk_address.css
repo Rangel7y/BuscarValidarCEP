@@ -41,6 +41,16 @@
 }
 /* /// /// */
 
+/* STYLE_LABEL (LABEL) */
+#inp-btn-chk-address > div > label{
+    font-size: 0.9em;
+    font-weight: 700;
+
+    color: var(--navy);
+
+}
+/* /// /// */
+
 /* STYLE_INPUT_CHECK_ADDRESS (INPUT) */
 .sty-inp-chk-address{
     width: 280px;
@@ -102,12 +112,17 @@
 
     cursor: pointer;
 
-    /* text-align: center; */
+    text-align: center;
 
     font-size: 20px;
     font-weight: 600;
 
-    color: var(--gray-blue);
+    color: var(--light-gray);
+}
+/* ON HOVER */
+#inp-btn-chk-address > button:hover{
+    background-color: var(--smooth-navy);
+    border: 2px solid var(--navy);
 }
 /* /// /// */
 
@@ -116,6 +131,6 @@ ion-icon{
     width: 24px;
     height: 24px;
 
-    color: var(--cold);
+    color: var(--light-gray);
 }
 /* ///// ///// */
