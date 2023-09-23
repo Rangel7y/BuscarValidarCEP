@@ -3,7 +3,7 @@
 /* ///// ///// */
 
 /* HEADER_FORM_CHECK_CEP */
-#ttl-frm-chk-cep{
+#ttl-pnl-frm{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@
 /* ///// ///// */
 
 /* STYLE H1 (TITLE PANEL_PAGE) */
-#ttl-frm-chk-cep > h1{
+#ttl-pnl-frm > h1{
     text-align: center;
 
     font-size: 30px;
@@ -28,7 +28,7 @@
 /* ///// ///// */
 
 /* STYLE HR (TO DIVIDE TITLE FROM CONTENT) */
-#ttl-frm-chk-cep > hr{
+#ttl-pnl-frm > hr{
     width: 480px;
     
     border: 1px solid var(--smooth-blue);
