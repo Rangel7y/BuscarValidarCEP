@@ -39,6 +39,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
                 styH3ResDDD,spnH3ResDDD;
 
             liRes = document.createElement('li'); 
+            liRes.setAttribute('id','itm-li-r-res-chkd'); /* LI (RELATIVE) */
             itmUlResChkd.appendChild(liRes);
 
             divRes1 = document.createElement('div');
