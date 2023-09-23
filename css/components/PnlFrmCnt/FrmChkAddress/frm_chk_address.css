@@ -1,0 +1,80 @@
+
+/* FORM_CHECK_ADDRESS (DISABLED) */
+#frm-chk-address{
+    display: none;
+}
+/* /// /// */
+
+/* FORM_CHECK_ADDRESS (ACTIVED) */
+#frm-chk-address{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 500px;
+    height: 300px;
+}
+/* /// /// */
+
+/* INPUT_BUTTON_CHECK_ADDRESS (DIV) */
+#inp-btn-chk-address{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+
+    /* width: 100%;
+    height: 100%; */
+
+    gap: 10px;
+}
+/* /// /// */
+
+/* INPUT_BUTTON_CHECK_ADDRESS (DIV: LABEL/INPUT) */
+#inp-btn-chk-address > div{
+    display: flex;
+    flex-direction: column;
+
+    /* width: 100%; */
+    
+}
+/* /// /// */
+
+/* STYLE_INPUT_CHECK_ADDRESS (INPUT) */
+.sty-inp-chk-address{
+    width: 280px;
+    height: 40px;
+}
+/* /// /// */
+
+/* INPUT_BUTTON_CHECK_ADDRESS (SUBMIT BUTTON) */
+#inp-btn-chk-address > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 280px;
+    height: 40px;
+
+    background-color: var(--navy);
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
+
+    border: 2px solid var(--gray-blue);
+    border-radius: 0px 0.5rem 0.5rem 0px;
+
+    transition: all 300ms ease, backgroud 200ms ease-in-out;
+
+    cursor: pointer;
+}
+/* /// /// */
+
+/* ION-ICON (ICON BUTTON) */
+ion-icon{
+    width: 32px;
+    height: 32px;
+
+    color: var(--cold);
+}
+/* ///// ///// */
