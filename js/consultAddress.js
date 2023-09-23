@@ -1,6 +1,6 @@
 
 /* GET PANEL FORM TO FILL INFOS */
-const form2Content = document.getElementById('form2-content');
+const frmChkAddress = document.getElementById('frm-chk-address');
 const inputFillAll = document.querySelectorAll('.input-find-cep');
 const inputFillUf = document.querySelector('.input-fill-uf');
 const inputFillCidade = document.querySelector('.input-fill-cidade');
@@ -145,7 +145,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
     }
 }
 
-form2Content.addEventListener('submit',(event) =>{
+frmChkAddress.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     getInfoFilled(inputFillUf.value,inputFillCidade.value,inputFillRua.value); 
