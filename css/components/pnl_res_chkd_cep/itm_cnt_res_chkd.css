@@ -33,13 +33,33 @@
 }
 /* ///// ///// */
 
-#itm-li-res-chkd{
+/* ITEM_UL_LI_RES_CHECKED (LI FIXED AND LI RELATIVE DISABLED) */
+#itm-li-f-res-chkd, #itm-li-r-res-chkd{
     display: none;
 }
+/* ///// ///// */
+
+/* ITEM_UL_RESULT_CHECKED (LI FIXED ACTIVED) */
+#itm-li-f-res-chkd.visible{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    font-size: 12px;
+
+    width: 90%;
+    height: 100%;
+
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
+
+    border: 2px solid var(--gray-blue);
+    border-radius: 0.5rem;
+}
+/* ///// ///// */
 
 
-/* ITEM_UL_RESULT_CHECKED (LI) */
-#itm-ul-res-chkd > li.visible{
+/* ITEM_UL_RESULT_CHECKED (LI RELATIVE) */
+#itm-li-r-res-chkd.visible{
     display: flex;
     align-items: center;
     justify-content: space-around;
