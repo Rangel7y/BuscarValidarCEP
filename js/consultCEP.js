@@ -3,12 +3,12 @@
 // --- --- //
 
 //-- FORM_CONTENT_CHECK_CEP (FRM_CNT_CHK_CEP) --//
-const frmCntChkCep = document.getElementById('frm-cnt-chk-cep');
+const frmCntChkCep = document.getElementById('frm-chk-cep');
 const inpChkCep = document.getElementById('inp-chk-cep');
 //
 
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
-const itmLiResChkd = document.getElementById('itm-li-res-chkd');
+const itmLiFResChkd = document.getElementById('itm-li-f-res-chkd');
 //
 
 //-- ITEMS_RESULT (SPAN) --//
@@ -28,10 +28,10 @@ const appCepId = '45993135';
 //-- FUNCTION TO REMOVE PANEL RESULT FROM PAGE --//
 function showBoxResult(canShow) {
     if(canShow){    
-        itmLiResChkd.classList.add("visible");
+        itmLiFResChkd.classList.add("visible");
         return;
     }
-    itmLiResChkd.classList.remove("visible");
+    itmLiFResChkd.classList.remove("visible");
 }
 //
 
