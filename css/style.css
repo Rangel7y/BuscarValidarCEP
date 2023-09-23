@@ -20,13 +20,13 @@
 /* ///// ALL CONTENT OF PANEL PnlFrmCnt ///// */
 /* ///// /////*/
 /* IMPORT - STYLE PANEL (CHECK AND RESULT) CSS */
-@import '/css/components/PnlFrmCnt/sty_pnl_chk_res.css';
+@import '/css/components/PnlFrmCnt/sty_pnl_frm_res.css';
 /*  */
 /* IMPORT - PANEL_FORMS_CONTENT */
 @import '/css/components/PnlFrmCnt/pnl_frm_cnt.css';
 /*  */
 /* IMPORT - HEADER_FORM_CHECK_CEP  CSS */
-@import '/css/components/PnlFrmCnt/ttl_frm_chk_cep.css';
+@import '/css/components/PnlFrmCnt/ttl_pnl_frm.css';
 /*  */
 /* IMPORT - SWITCH CONTENT (TOGGLE MODE) CSS */
 @import '/css/components/PnlFrmCnt/sw_frm_mode.css';
@@ -48,10 +48,10 @@
 /* ///// ALL CONTENT OF PANEL PnlResCnt /////*/
 /* ///// /////*/
 /* IMPORT - PANEL_RESULT_CHECKED_CEP (CONTENT) CSS */
-@import '/css/components/PnlResCnt/PnlResCnt.css';
+@import '/css/components/PnlResCnt/pnl_res_cep_address.css';
 /*  */
 /* IMPORT - DIV_RESULT_CHECKED_CEP (TITLE) CSS */
-@import '/css/components/PnlResCnt/ttl_res_chkd_cep.css';
+@import '/css/components/PnlResCnt/ttl_pnl_res.css';
 /*  */
 /* IMPORT - SECTION_RESULT_CHECKED (SECTION) */
 @import '/css/components/PnlResCnt/sec_res_chkd.css';

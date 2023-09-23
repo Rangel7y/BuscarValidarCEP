@@ -3,7 +3,7 @@
 /* ///// ///// */
 
 /* HDR_RES_CHKD_CEP (HEADER) */
-#ttl-res-chkd-cep{
+#ttl-pnl-res{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@
 /* ///// ///// */
 
 /* STYLE H1 (TITLE PANEL_PAGE) */
-#ttl-res-chkd-cep > h1{
+#ttl-pnl-res > h1{
     text-align: center;
 
     font-size: 30px;
@@ -26,7 +26,7 @@
 /* ///// ///// */
 
 /* STYLE HR (TO DIVIDE TITLE FROM CONTENT) */
-#ttl-res-chkd-cep > hr{
+#ttl-pnl-res > hr{
     width: 380px;
 
     border: 1px solid var(--smooth-blue);
