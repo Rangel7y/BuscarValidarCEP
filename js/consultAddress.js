@@ -147,9 +147,8 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
             spnH3ResDDD = document.createElement('span');
             spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
-
-            console.log(dataCep);
         }
+        console.log(dataCep);
     }
     else{
         console.error("Erro ao procurar pelo CEP fornecido!");
