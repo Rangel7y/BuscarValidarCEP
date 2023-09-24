@@ -10,6 +10,10 @@ const inpChkEndereco = document.getElementById('inp-chk-endereco');
 const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //
 
+/* BUTTON_SWITCH_MODE */
+// const swFrmM
+// 
+
 /* REMOVE RESULT PANEL FROM PAGE */
 function showBoxResult(canShow, teste) {
     if(canShow){    
@@ -163,3 +167,5 @@ frmChkAddress.addEventListener('submit',(event) =>{
     getInfoFilled(inpChkUf.value,inpChkCidade.value,inpChkEndereco.value); 
 });
 /* --- --- */
+
+
