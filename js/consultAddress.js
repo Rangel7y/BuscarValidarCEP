@@ -10,10 +10,6 @@ const inpChkEndereco = document.getElementById('inp-chk-endereco');
 const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //
 
-//-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
-/* const itmLiRResChkd = document.getElementById('itm-li-r-res-chkd'); */
-//
-
 /* REMOVE RESULT PANEL FROM PAGE */
 function showBoxResult(canShow, teste) {
     if(canShow){    
@@ -55,7 +51,6 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
             divRes1 = document.createElement('div');
             liRes.appendChild(divRes1);
             showBoxResult(true,liRes);
-
 
             ttlLblResCep = document.createElement('label');
             ttlLblResCep.setAttribute('for', 'Cep');
