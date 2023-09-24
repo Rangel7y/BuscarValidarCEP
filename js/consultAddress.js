@@ -34,7 +34,6 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
     const dataCep = await getAPIFilled(uf,cidade,endereco);
 
     if(!("erro" in dataCep)){
-        /* showBoxResult(true); */
   
         for(var c = 0; c < dataCep.length; c++){
             
