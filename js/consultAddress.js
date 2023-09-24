@@ -49,7 +49,6 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
 
             divRes1 = document.createElement('div');
             liRes.appendChild(divRes1);
-            showBoxResult(true,liRes);
 
             ttlLblResCep = document.createElement('label');
             ttlLblResCep.setAttribute('for', 'Cep');
@@ -147,7 +146,12 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
             spnH3ResDDD = document.createElement('span');
             spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
+
+            showBoxResult(true,liRes);
         }
+        /* if(dataCep.length >= 3){
+            itmUlResChkd.style.overflow = "auto";
+        } */
         console.log(dataCep);
     }
     else{
