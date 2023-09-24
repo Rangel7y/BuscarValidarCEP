@@ -11,16 +11,17 @@ const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //
 
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
-const itmLiRResChkd = document.getElementById('itm-li-r-res-chkd');
+/* const itmLiRResChkd = document.getElementById('itm-li-r-res-chkd'); */
 //
 
 /* REMOVE RESULT PANEL FROM PAGE */
-function showBoxResult(canShow) {
+function showBoxResult(canShow, teste) {
     if(canShow){    
-        itmLiRResChkd.classList.add("visible");
+        
+        teste.classList.add("visible");
         return;
     }
-    itmLiRResChkd.classList.remove("visible");
+    teste.classList.remove("visible");
 }
 /* --- --- */
 
@@ -37,7 +38,7 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
     const dataCep = await getAPIFilled(uf,cidade,endereco);
 
     if(!("erro" in dataCep)){
-        showBoxResult(true);
+        /* showBoxResult(true); */
   
         for(var c = 0; c < dataCep.length; c++){
             
@@ -53,6 +54,7 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
 
             divRes1 = document.createElement('div');
             liRes.appendChild(divRes1);
+            showBoxResult(true,liRes);
 
 
             ttlLblResCep = document.createElement('label');
