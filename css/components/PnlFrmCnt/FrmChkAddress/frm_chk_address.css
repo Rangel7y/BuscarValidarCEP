@@ -6,7 +6,7 @@
 /* /// /// */
 
 /* FORM_CHECK_ADDRESS (ACTIVED) */
-#frm-chk-address.visible{
+#frm-chk-address{
     display: flex;
     align-items: center;
     justify-content: center;
