@@ -1,11 +1,9 @@
 
-/* GET PANEL FORM TO FILL INFOS */
+/* FORM_CHECK_ADDRESS_INFOS (FORM_INPUTS) */
 const frmChkAddress = document.getElementById('frm-chk-address');
-const inputFillAll = document.querySelectorAll('.input-find-cep');
-const inputFillUf = document.querySelector('.input-fill-uf');
-const inputFillCidade = document.querySelector('.input-fill-cidade');
-/* const inputFillBairro = document.querySelector('.input-fill-bairro'); */
-const inputFillRua = document.querySelector('.input-fill-rua');
+const inpChkUf = document.querySelector('inp-chk-uf');
+const inpChkCidade = document.querySelector('inp-chk-cidade');
+const inpChkEndereco = document.querySelector('inp-chk-endereco');
 /* --- --- */
 
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
@@ -17,21 +15,18 @@ const getAPIFilled = async(uf,cidade,rua) =>{
     const APIResponse = await fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${rua}/json/`);
 
     if(APIResponse.status == 200){
-        const data = await APIResponse.json();
-        return data;
+        const dataCep = await APIResponse.json();
+        return dataCep;
     }
 }
 const getInfoFilled = async(uf,cidade,rua) =>{
-    const data = await getAPIFilled(uf,cidade,rua);
+    const dataCep = await getAPIFilled(uf,cidade,rua);
 
-    if(!("erro" in data)){
+    if(!("erro" in dataCep)){
         showBoxResult(true);
   
         for(var c = 0; c < dataCep.length; c++){
-            let address = dataCep[c]['cep'] + dataCep[c]['ddd'] +
-            dataCep[c]['localidade'] + dataCep[c]['uf'] + 
-            dataCep[c]['bairro'] + dataCep[c]['logradouro'];
-
+            
             let liRes, divRes1, ttlLblResCep, styH3ResCep,spnH3ResCep,
                 ttlLblResCidade,styH3ResCidade,spnH3ResCidade,divRes2,ttlLblResBairro,
                 styH3ResBairro,spnH3ResBairro,ttlLblResEndereco,styH3ResEndereco,spnH3ResEndereco,
@@ -58,6 +53,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             styH3ResCep.setAttribute('class','sty-h3-itm-res-chkd');
 
             spnH3ResCep = document.createElement('span');
+            spnH3ResCep.innerText = dataCep[c]['cep'];
             styH3ResCep.appendChild(spnH3ResCep);
 
             ttlLblResCidade = document.createElement('label');
@@ -73,6 +69,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             styH3ResCidade.setAttribute('class','sty-h3-itm-res-chkd');
 
             spnH3ResCidade = document.createElement('span');
+            spnH3ResCidade.innerText = dataCep[c]['localidade'];
             styH3ResCidade.appendChild(spnH3ResCidade);
 
             divRes2 = document.createElement('div');
@@ -90,6 +87,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             styH3ResBairro.setAttribute('class','sty-h3-itm-res-chkd');
 
             spnH3ResBairro = document.createElement('span');
+            spnH3ResBairro.innerText = dataCep[c]['bairro'];
             styH3ResBairro.appendChild(spnH3ResBairro);
 
             ttlLblResEndereco = document.createElement('label');
@@ -104,6 +102,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             styH3ResEndereco.setAttribute('class','sty-h3-itm-res-chkd');
 
             spnH3ResEndereco = document.createElement('span');
+            spnH3ResEndereco.innerText = dataCep[c]['logradouro'];
             styH3ResEndereco.appendChild(spnH3ResEndereco);
 
             divRes3 = document.createElement('div');
@@ -121,6 +120,7 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             styH3ResEstado.setAttribute('class','sty-h3-itm-res-chkd');
 
             spnH3ResEstado = document.createElement('span');
+            spnH3ResEstado.innerText = dataCep[c]['uf'];
             styH3ResEstado.appendChild(spnH3ResEstado);
 
             ttlLblResDDD = document.createElement('label');
@@ -135,10 +135,11 @@ const getInfoFilled = async(uf,cidade,rua) =>{
             styH3ResDDD.setAttribute('class','sty-h3-itm-res-chkd');
 
             spnH3ResDDD = document.createElement('span');
+            spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
-        }
 
-        console.log(data);
+            console.log(dataCep);
+        }
     }
     else{
         console.error("Erro ao procurar pelo CEP fornecido!");
@@ -148,16 +149,16 @@ const getInfoFilled = async(uf,cidade,rua) =>{
 frmChkAddress.addEventListener('submit',(event) =>{
     event.preventDefault();
 
-    getInfoFilled(inputFillUf.value,inputFillCidade.value,inputFillRua.value); 
+    getInfoFilled(inpChkUf.value,inpChkCidade.value,inpChkEndereco.value); 
 });
 /* --- --- */
 
 /* REMOVE RESULT PANEL FROM PAGE */
 function showBoxResult(canShow) {
     if(canShow){    
-        itmResChkd.classList.add("visible");
+        frmChkAddress.classList.add("visible");
         return;
     }
-    itmResChkd.classList.remove("visible");
+    frmChkAddress.classList.remove("visible");
 }
 /* --- --- */
