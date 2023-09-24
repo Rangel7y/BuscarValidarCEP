@@ -9,7 +9,7 @@
 /* ///// ///// */
 
 /* FORM_CONTENT_CHECK_CEP (ACTIVED) */
-#frm-chk-cep.visible{
+#frm-chk-cep{
     display: flex;
     align-items: center;
     justify-content: center;
