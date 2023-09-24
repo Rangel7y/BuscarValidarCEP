@@ -1,23 +1,26 @@
 
 /* FORM_CHECK_ADDRESS_INFOS (FORM_INPUTS) */
 const frmChkAddress = document.getElementById('frm-chk-address');
-const inpChkUf = document.querySelector('inp-chk-uf');
-const inpChkCidade = document.querySelector('inp-chk-cidade');
-const inpChkEndereco = document.querySelector('inp-chk-endereco');
+const inpChkUf = document.getElementById('inp-chk-uf');
+const inpChkCidade = document.getElementById('inp-chk-cidade');
+const inpChkEndereco = document.getElementById('inp-chk-endereco');
 /* --- --- */
 
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
 const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //
 
+//-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
+const itmLiRResChkd = document.getElementById('itm-li-r-res-chkd');
+//
 
 /* REMOVE RESULT PANEL FROM PAGE */
 function showBoxResult(canShow) {
     if(canShow){    
-        frmChkAddress.classList.add("visible");
+        itmLiRResChkd.classList.add("visible");
         return;
     }
-    frmChkAddress.classList.remove("visible");
+    itmLiRResChkd.classList.remove("visible");
 }
 /* --- --- */
 
@@ -33,10 +36,8 @@ const getAPIFilled = async(uf,cidade,endereco) =>{
 const getInfoFilled = async(uf,cidade,endereco) =>{
     const dataCep = await getAPIFilled(uf,cidade,endereco);
 
-    console.log("Teste");
-
     if(!("erro" in dataCep)){
-        /* showBoxResult(true); */
+        showBoxResult(true);
   
         for(var c = 0; c < dataCep.length; c++){
             
