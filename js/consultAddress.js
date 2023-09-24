@@ -10,8 +10,8 @@ const inpChkEndereco = document.getElementById('inp-chk-endereco');
 const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //
 
-/* BUTTON_SWITCH_MODE */
-// const swFrmM
+/* BUTTON_SWITCH_MODE (SWITCH) */
+const swFrmMd = document.getElementById('sw-frm-md');
 // 
 
 /* REMOVE RESULT PANEL FROM PAGE */
@@ -168,4 +168,8 @@ frmChkAddress.addEventListener('submit',(event) =>{
 });
 /* --- --- */
 
+swFrmMd.addEventListener('submit',(event) =>{
+    event.preventDefault();
 
+    console.log("teste");
+})
