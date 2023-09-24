@@ -168,8 +168,8 @@ frmChkAddress.addEventListener('submit',(event) =>{
 });
 /* --- --- */
 
-swFrmMd.addEventListener('submit',(event) =>{
+swFrmMd.addEventListener('click',(event) =>{
     event.preventDefault();
 
     console.log("teste");
-})
+});
