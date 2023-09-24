@@ -3,7 +3,7 @@
 /* ///// ///// */
 
 /* SWITCH_CONTENT_CHK (DIV CONTENT) */
-#sw-frm-mode{
+#sw-frm-md{
     position: absolute;
 
     width: 64px;
@@ -16,7 +16,7 @@
 
     cursor: pointer;
 }
-#sw-frm-mode:hover{
+#sw-frm-md:hover{
     transform: scale(1.1);
 }
 /* ///// ///// */
@@ -58,7 +58,7 @@
 
 
 /* SWITCH_SPAN */
-#sw-frm-mode > span{
+#sw-frm-md > span{
     display: block;
 
     width: 50px;

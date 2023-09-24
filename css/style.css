@@ -29,7 +29,7 @@
 @import '/css/components/PnlFrmCnt/ttl_pnl_frm.css';
 /*  */
 /* IMPORT - SWITCH CONTENT (TOGGLE MODE) CSS */
-@import '/css/components/PnlFrmCnt/sw_frm_mode.css';
+@import '/css/components/PnlFrmCnt/sw_frm_md.css';
 /*  */
 /* IMPORT - SECTION_FORM_CHECK_CEP (SECTION CONTENT) */
 @import '/css/components/PnlFrmCnt/sec_frm_chk.css';
