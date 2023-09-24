@@ -149,9 +149,7 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
 
             showBoxResult(true,liRes);
         }
-        /* if(dataCep.length >= 3){
-            itmUlResChkd.style.overflow = "auto";
-        } */
+
         console.log(dataCep);
     }
     else{
