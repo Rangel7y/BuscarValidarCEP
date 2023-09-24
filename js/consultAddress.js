@@ -10,20 +10,33 @@ const inpChkEndereco = document.querySelector('inp-chk-endereco');
 const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //
 
+
+/* REMOVE RESULT PANEL FROM PAGE */
+function showBoxResult(canShow) {
+    if(canShow){    
+        frmChkAddress.classList.add("visible");
+        return;
+    }
+    frmChkAddress.classList.remove("visible");
+}
+/* --- --- */
+
 /* GET API FILLED INFOS */
-const getAPIFilled = async(uf,cidade,rua) =>{
-    const APIResponse = await fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${rua}/json/`);
+const getAPIFilled = async(uf,cidade,endereco) =>{
+    const APIResponse = await fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${endereco}/json/`);
 
     if(APIResponse.status == 200){
         const dataCep = await APIResponse.json();
         return dataCep;
     }
 }
-const getInfoFilled = async(uf,cidade,rua) =>{
-    const dataCep = await getAPIFilled(uf,cidade,rua);
+const getInfoFilled = async(uf,cidade,endereco) =>{
+    const dataCep = await getAPIFilled(uf,cidade,endereco);
+
+    console.log("Teste");
 
     if(!("erro" in dataCep)){
-        showBoxResult(true);
+        /* showBoxResult(true); */
   
         for(var c = 0; c < dataCep.length; c++){
             
@@ -151,14 +164,4 @@ frmChkAddress.addEventListener('submit',(event) =>{
 
     getInfoFilled(inpChkUf.value,inpChkCidade.value,inpChkEndereco.value); 
 });
-/* --- --- */
-
-/* REMOVE RESULT PANEL FROM PAGE */
-function showBoxResult(canShow) {
-    if(canShow){    
-        frmChkAddress.classList.add("visible");
-        return;
-    }
-    frmChkAddress.classList.remove("visible");
-}
 /* --- --- */
