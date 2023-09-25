@@ -14,14 +14,14 @@ const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 const swFrmMd = document.getElementById('sw-frm-md');
 // 
 
-/* REMOVE RESULT PANEL FROM PAGE */
-function showBoxResult(canShow, teste) {
-    if(canShow){    
+/* SHOW/HIDE ITEM FROM PAGE */
+function showHideItmPg(typeShowHide, itmShowHide) {
+    if(typeShowHide){    
         
-        teste.classList.add("visible");
+        itmShowHide.classList.add("visible");
         return;
     }
-    teste.classList.remove("visible");
+    itmShowHide.classList.remove("visible");
 }
 /* --- --- */
 
@@ -151,7 +151,7 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
             spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
 
-            showBoxResult(true,liRes);
+            showItmPg(true,liRes);
         }
 
         console.log(dataCep);
@@ -171,5 +171,5 @@ frmChkAddress.addEventListener('submit',(event) =>{
 swFrmMd.addEventListener('click',(event) =>{
     event.preventDefault();
 
-    console.log("teste");
+    console.log("itmShowHide");
 });
