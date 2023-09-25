@@ -151,7 +151,7 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
             spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
 
-            showItmPg(true,liRes);
+            showHideItmPg(true,liRes);
         }
 
         console.log(dataCep);
