@@ -61,8 +61,7 @@ const checkCEP = async(cepId) =>{
 
     if(!("erro" in dataCep)){
 
-
-        showHideItmPg(itmLiFResChkd, flex);
+        showHideItmPg(itmLiFResChkd, "flex");
 
         itmResCep.innerText = dataCep.cep;
         itmResCidade.innerText = dataCep.localidade;
@@ -208,7 +207,7 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
             spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
 
-            showHideItmPg(true,liRes);
+            showHideItmPg(liRes, "flex");
         }
 
         console.log(dataCep);
@@ -233,7 +232,7 @@ frmChkCep.addEventListener('submit',(event) =>{
         checkCEP(inpChkCep.value);
     }
     else{
-        showHideItmPg(itmLiFResChkd, flex);
+        showHideItmPg(itmLiFResChkd, "flex");
 
         console.error("Digite o número do CEP para buscar!");
     }
@@ -252,14 +251,24 @@ swFrmMd.addEventListener('click',(event) =>{
     event.preventDefault();
 
     if(currentTypeSwFrmMd == typeSwFrmMd["typeFrmChkCep"]){
-        /* frmChkCep */
+        
+        showHideItmPg(frmChkCep, "none");
+        showHideItmPg(frmChkAddress, "flex");
+
+        currentTypeSwFrmMd = typeSwFrmMd["typeFrmChkAddress"];
+    }
+    else if(currentTypeSwFrmMd == typeSwFrmMd["typeFrmChkAddress"]){
         const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
+
+        showHideItmPg(frmChkAddress, "none");
+        showHideItmPg(frmChkCep, "flex");
 
         itmLiRResChkd.forEach(element => {
             element.remove();
+            console.log("Teste");
         });
 
-        currentTypeSwFrmMd = typeSwFrmMd["typeFrmChkAddress"];
+        currentTypeSwFrmMd = typeSwFrmMd["typeFrmChkCep"];
     }
 });
 
