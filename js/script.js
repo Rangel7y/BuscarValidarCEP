@@ -32,16 +32,24 @@ const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 //-- BUTTON_SWITCH_MODE (SWITCH) --//
 const swFrmMd = document.getElementById('sw-frm-md');
 //  
-
-const typeSwFrmMd = [
-    "typeFrmChkCep",
-    "typeFrmChkAddress"
-];
-let currentTypeSwFrmMd = typeSwFrmMd["typeFrmChkCep"];
+//-- TYPES_SWITCH_FORM_MODE --//
+const typeSwFrmMd = {
+    typeFrmChkCep: "typeFrmChkCep",
+    typeFrmChkAddress: "typeFrmChkAddress"
+};
+let currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkCep;
+//
 
 /* SHOW/HIDE ITEM FROM PAGE */
-function showHideItmPg(itmShowHide, typeItmDisplay) {
-    itmShowHide.style.display = typeItmDisplay
+function showHideItmPg(itmShowHide, typeItmDisplay, typeEffectFade) {
+    if(typeEffectFade === "in") {
+        itmShowHide.style.transition = 'opacity 0.5s ease-in-out';
+        itmShowHide.style.opacity = '1';
+    }else if (typeEffectFade === "out") {
+        itmShowHide.style.transition = 'opacity 0.5s ease-in-out';
+        itmShowHide.style.opacity = '0';
+    }
+    itmShowHide.style.display = typeItmDisplay;
 }
 /* --- --- */
 
@@ -250,26 +258,27 @@ frmChkAddress.addEventListener('submit',(event) =>{
 swFrmMd.addEventListener('click',(event) =>{
     event.preventDefault();
 
-    if(currentTypeSwFrmMd == typeSwFrmMd["typeFrmChkCep"]){
+    if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkCep){
         
-        showHideItmPg(frmChkCep, "none");
-        showHideItmPg(frmChkAddress, "flex");
+        showHideItmPg(frmChkCep, "none","out");
+        setTimeout(() => {
+            showHideItmPg(frmChkAddress, 'flex', 'in');
+        }, 150);
 
-        currentTypeSwFrmMd = typeSwFrmMd["typeFrmChkAddress"];
+        currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkAddress;
     }
-    else if(currentTypeSwFrmMd == typeSwFrmMd["typeFrmChkAddress"]){
-        const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
+    else if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkAddress){
+        
+        showHideItmPg(frmChkAddress, "none","out");
+        setTimeout(() => {
+            showHideItmPg(frmChkCep, 'flex', 'in');
+            const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
+            itmLiRResChkd.forEach(element => {
+                element.remove();
+                console.log('Teste');
+            });
+        }, 150);
 
-        showHideItmPg(frmChkAddress, "none");
-        showHideItmPg(frmChkCep, "flex");
-
-        itmLiRResChkd.forEach(element => {
-            element.remove();
-            console.log("Teste");
-        });
-
-        currentTypeSwFrmMd = typeSwFrmMd["typeFrmChkCep"];
+        currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkCep;
     }
-});
-
-
+})
