@@ -40,6 +40,11 @@ const typeSwFrmMd = {
 let currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkCep;
 //
 
+// -- TITLE_PANEL_FORM_CONTENT (TITLE H1) -- //
+const ttlPnlFrm = document.getElementById('ttl-pnl-frm');
+//
+
+
 /* SHOW/HIDE ITEM FROM PAGE */
 function showHideItmPg(itmShowHide, typeItmDisplay, typeEffectFade) {
     itmShowHide.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
@@ -269,6 +274,8 @@ swFrmMd.addEventListener('click',(event) =>{
             showHideItmPg(frmChkAddress, 'flex', 'in');
         }, 180);
 
+        ttlPnlFrm.innerText = "CONSULTAR ENDEREÇO";
+
         currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkAddress;
     }
     else if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkAddress){
@@ -279,9 +286,10 @@ swFrmMd.addEventListener('click',(event) =>{
             const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
             itmLiRResChkd.forEach(element => {
                 element.remove();
-                console.log('Teste');
             });
         }, 180);
+
+        ttlPnlFrm.innerText = "VALIDAR CEP";
 
         currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkCep;
     }
