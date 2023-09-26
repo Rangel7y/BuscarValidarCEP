@@ -2,15 +2,9 @@
 /* FORM_CONTENT_CHECK_CEP (FRM_CNT_CHK_CEP)*/
 /* ///// ///// */
 
-/* FORM_CONTENT_CHECK_CEP (DISABLED) */
+/* FORM_CONTENT_CHECK_CEP */
 #frm-chk-cep{
     display: none;
-}
-/* ///// ///// */
-
-/* FORM_CONTENT_CHECK_CEP (ACTIVED) */
-#frm-chk-cep.visible{
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
