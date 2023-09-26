@@ -14,14 +14,3 @@
 
 }
 /* ///// ///// */
-
-/* STYLE_LABEL (LABEL) */
-#frm-chk-cep > label{
-    width: 380px;
-
-    font-size: 0.9em;
-    font-weight: 700;
-
-    color: var(--navy);
-}
-/* /// /// */
