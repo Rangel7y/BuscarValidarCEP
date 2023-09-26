@@ -4,7 +4,7 @@
 //-- GET DOCUMENT ELEMENTS  --//
 // --- --- //
 //-- FORM_CONTENT_CHECK_CEP (FRM_CNT_CHK_CEP) --//
-const frmCntChkCep = document.getElementById('frm-chk-cep');
+const frmChkCep = document.getElementById('frm-chk-cep');
 const inpChkCep = document.getElementById('inp-chk-cep');
 //
 //-- ITEMS_RESULT_CHECKED (ITM_RES_CHKD) 
@@ -33,16 +33,15 @@ const itmUlResChkd = document.getElementById('itm-ul-res-chkd');
 const swFrmMd = document.getElementById('sw-frm-md');
 //  
 
-
+const typeSwFrmMd = [
+    "typeFrmChkCep",
+    "typeFrmChkAddress"
+];
+let currentTypeSwFrmMd = typeSwFrmMd["typeFrmChkCep"];
 
 /* SHOW/HIDE ITEM FROM PAGE */
-function showHideItmPg(typeShowHide, itmShowHide) {
-    if(typeShowHide){    
-        
-        itmShowHide.classList.add("visible");
-        return;
-    }
-    itmShowHide.classList.remove("visible");
+function showHideItmPg(itmShowHide, typeItmDisplay) {
+    itmShowHide.style.display = typeItmDisplay
 }
 /* --- --- */
 
@@ -62,7 +61,8 @@ const checkCEP = async(cepId) =>{
 
     if(!("erro" in dataCep)){
 
-        showHideItmPg(true,itmLiFResChkd);
+
+        showHideItmPg(itmLiFResChkd, flex);
 
         itmResCep.innerText = dataCep.cep;
         itmResCidade.innerText = dataCep.localidade;
@@ -105,6 +105,7 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
 
             liRes = document.createElement('li'); 
             liRes.setAttribute('id','itm-li-r-res-chkd'); /* LI (RELATIVE) */
+            liRes.setAttribute('class', 'itm-li-r-res-chkd-del') /* LI (CLASS USED TO DELETE WHEN SW_BTN) */
             itmUlResChkd.appendChild(liRes);
 
             divRes1 = document.createElement('div');
@@ -224,7 +225,7 @@ inpChkCep.addEventListener('input', (event) => {
     event.target.value = event.target.value.replace(/\D/g, '');
 });
 //-- BUTTON FORM_CHECK_CEP --//
-frmCntChkCep.addEventListener('submit',(event) =>{
+frmChkCep.addEventListener('submit',(event) =>{
     event.preventDefault();
 
     let searchInput = inpChkCep.value.trim();
@@ -232,7 +233,7 @@ frmCntChkCep.addEventListener('submit',(event) =>{
         checkCEP(inpChkCep.value);
     }
     else{
-        showHideItmPg(false, itmLiFResChkd);
+        showHideItmPg(itmLiFResChkd, flex);
 
         console.error("Digite o número do CEP para buscar!");
     }
@@ -250,7 +251,16 @@ frmChkAddress.addEventListener('submit',(event) =>{
 swFrmMd.addEventListener('click',(event) =>{
     event.preventDefault();
 
-    if()
+    if(currentTypeSwFrmMd == typeSwFrmMd["typeFrmChkCep"]){
+        /* frmChkCep */
+        const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
+
+        itmLiRResChkd.forEach(element => {
+            element.remove();
+        });
+
+        currentTypeSwFrmMd = typeSwFrmMd["typeFrmChkAddress"];
+    }
 });
 
 
