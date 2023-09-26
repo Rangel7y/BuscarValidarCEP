@@ -44,6 +44,12 @@ let currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkCep;
 const ttlPnlFrm = document.getElementById('ttl-pnl-frm');
 //
 
+// -- SECTION_TEXT1DESCRIPTION_FORM_CHECK (TEXT1 H2)
+const secTxt1FrmChk = document.getElementById('sec-text1-frm-chk');
+//
+// -- SECTION_TEXT2DESCRIPTION_FORM_CHECK (TEXT2 H2)
+const secTxt2FrmChk = document.getElementById('sec-text2-frm-chk');
+//
 
 /* SHOW/HIDE ITEM FROM PAGE */
 function showHideItmPg(itmShowHide, typeItmDisplay, typeEffectFade) {
