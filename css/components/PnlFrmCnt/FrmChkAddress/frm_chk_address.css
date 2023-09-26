@@ -1,13 +1,7 @@
 
-/* FORM_CHECK_ADDRESS (DISABLED) */
+/* FORM_CHECK_ADDRESS */
 #frm-chk-address{
     display: none;
-}
-/* /// /// */
-
-/* FORM_CHECK_ADDRESS (ACTIVED) */
-#frm-chk-address{
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
