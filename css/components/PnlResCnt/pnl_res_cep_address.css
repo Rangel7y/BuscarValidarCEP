@@ -1,9 +1,12 @@
 
-/* PANEL_RESULT_CHECKED_CEP (RESULT CONTENT) */
+/* PANEL_RESULT_CEP_ANDDRESS (PANEL CONTENT) */
 /* ///// ///// */
 
-/* PANEL_RESULT_CHECKE_CEP */
+/* PANEL_RESULT_CEP_ANDDRESS (PANEL) */
 #pnl-res-cep-address{
+    display: none;
+    flex-direction: column;
+
     width: 500px;
     height: 600px;
 }
