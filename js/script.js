@@ -92,17 +92,9 @@ const checkCepOnAPI = async(cepId) =>{
 //
 //-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_CEP --//
 const checkCEP = async(cepId) =>{
-    /* if(cepId == currentReqCep){
-        return console.log("ERROR");
-    } */
-
     const dataCep = await checkCepOnAPI(cepId);
 
     if(!("erro" in dataCep)){
-
-        currentReqCep = dataCep.cep;
-        console.log(currentReqCep);
-
         showHideItmPg(pnlResCepAddress,"flex","in");
         showHideItmPg(itmLiFResChkd, "flex","in");
 
@@ -133,18 +125,10 @@ const getAPIFilled = async(uf,cidade,endereco) =>{
 //
 //-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_ADDRESS --//
 const getInfoFilled = async(uf,cidade,endereco) =>{
-    
-    if(uf == currentReqUf && cidade == currentReqCidade && endereco == currentReqEndereco){
-        return;
-    }
 
     const dataCep = await getAPIFilled(uf,cidade,endereco);
 
     if(!("erro" in dataCep)){
-  
-        currentReqUf = dataCep.uf;
-        currentReqCidade = dataCep.localidade;
-        currentReqEndereco = dataCep.logradouro;
 
         for(var c = 0; c < dataCep.length; c++){
             
@@ -281,11 +265,14 @@ frmChkCep.addEventListener('submit',(event) =>{
 
     let searchInput = inpChkCep.value.trim();
     if(/^\d{8}$/.test(searchInput)){
-        if(inpChkCep.value == currentReqCep.replace(/\D/g, '')){
+        if(inpChkCep.value == currentReqCep){
+            console.log(currentReqCep);
             return;
         }
 
         checkCEP(inpChkCep.value);
+
+        currentReqCep = inpChkCep.value;
     }
     else{
         showHideItmPg(itmLiFResChkd, "flex");
@@ -299,7 +286,15 @@ frmChkCep.addEventListener('submit',(event) =>{
 frmChkAddress.addEventListener('submit',(event) =>{
     event.preventDefault();
 
+    if(inpChkUf.value == currentReqUf && inpChkCidade.value == currentReqCidade && inpChkEndereco.value == currentReqEndereco){
+        return;
+    }
+
     getInfoFilled(inpChkUf.value,inpChkCidade.value,inpChkEndereco.value); 
+
+    currentReqUf = inpChkUf.value;
+    currentReqCidade = inpChkCidade.value;
+    currentReqEndereco = inpChkEndereco.value;
 });
 //
 //-- BUTTON FORM_CHECK_ADDRES --//
