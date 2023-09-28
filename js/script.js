@@ -88,6 +88,18 @@ const checkCepOnAPI = async(cepId) =>{
         const dataCep = await APIResponse.json();
         return dataCep;
     }
+    /* const APIResponse = await fetch(`https://viacep.com.br/ws/${cepId}/json/`);
+
+    if (APIResponse.status === 200) {
+        const dataCep = await APIResponse.json();
+        return dataCep;
+    } else if (APIResponse.status === 400) {
+        // A resposta é um Bad Request (400)
+        throw new Error("CEP inválido. Por favor, insira um CEP válido.");
+    } else {
+        // Se for outro código de status, você pode tratar de maneira apropriada
+        throw new Error("Erro ao buscar o CEP. Tente novamente mais tarde.");
+    } */
 }
 //
 //-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_CEP --//
@@ -114,21 +126,23 @@ const checkCEP = async(cepId) =>{
 //
 
 //-- FUNCTION TO TRY_CONNECTION WITH API (CHECK_ADDRESS) --//
-const getAPIFilled = async(uf,cidade,endereco) =>{
+const checkAPIAddress = async(uf,cidade,endereco) =>{
     const APIResponse = await fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${endereco}/json/`);
 
     if(APIResponse.status == 200){
         const dataCep = await APIResponse.json();
         return dataCep;
     }
-}
+}   
 //
 //-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_ADDRESS --//
-const getInfoFilled = async(uf,cidade,endereco) =>{
+const checkAddress = async(uf,cidade,endereco) =>{
 
-    const dataCep = await getAPIFilled(uf,cidade,endereco);
+    const dataCep = await checkAPIAddress(uf,cidade,endereco);
 
     if(!("erro" in dataCep)){
+
+        showHideItmPg(pnlResCepAddress,"flex","in");
 
         for(var c = 0; c < dataCep.length; c++){
             
@@ -243,13 +257,10 @@ const getInfoFilled = async(uf,cidade,endereco) =>{
             spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
 
-            showHideItmPg(liRes, "flex");
+            showHideItmPg(liRes, "flex", "in");
         }
 
         console.log(dataCep);
-    }
-    else{
-        console.error("Erro ao procurar pelo CEP fornecido!");
     }
 }
 //
@@ -260,41 +271,51 @@ inpChkCep.addEventListener('input', (event) => {
     event.target.value = event.target.value.replace(/\D/g, '');
 });
 //-- BUTTON FORM_CHECK_CEP --//
-frmChkCep.addEventListener('submit',(event) =>{
+frmChkCep.addEventListener('submit', async (event) =>{
     event.preventDefault();
 
     let searchInput = inpChkCep.value.trim();
-    if(/^\d{8}$/.test(searchInput)){
-        if(inpChkCep.value == currentReqCep){
-            console.log(currentReqCep);
-            return;
+    if (/^\d{8}$/.test(searchInput)) {
+        try {
+            if (inpChkCep.value == currentReqCep) {
+                throw new Error("Já foi feita uma busca com esse CEP.");
+            }
+
+            const dataCep = await checkCepOnAPI(inpChkCep.value);
+            // Faça algo com os dados do CEP
+            console.log("Dados do CEP:", dataCep);
+        } catch (error) {
+            showHideItmPg(itmLiFResChkd, "flex");
+            console.error("Erro ao buscar CEP:", error.message);
+            // Mostre uma mensagem de erro ao usuário
         }
-
-        checkCEP(inpChkCep.value);
-
-        currentReqCep = inpChkCep.value;
-    }
-    else{
+    } else {
         showHideItmPg(itmLiFResChkd, "flex");
-
-        console.error("Digite o número do CEP para buscar!");
+        console.error("Digite um número de CEP válido!");
+        // Mostre uma mensagem de erro ao usuário
     }
 });
 //
 
 //-- INPUTS FORM_CHECK_ADDRES --//
-frmChkAddress.addEventListener('submit',(event) =>{
+frmChkAddress.addEventListener('submit', async (event) =>{
     event.preventDefault();
 
-    if(inpChkUf.value == currentReqUf && inpChkCidade.value == currentReqCidade && inpChkEndereco.value == currentReqEndereco){
-        return;
+    try {
+        if (inpChkUf.value == currentReqUf && inpChkCidade.value == currentReqCidade && inpChkEndereco.value == currentReqEndereco) {
+            return;
+        }
+
+        await checkAddress(inpChkUf.value, inpChkCidade.value, inpChkEndereco.value);
+
+        currentReqUf = inpChkUf.value;
+        currentReqCidade = inpChkCidade.value;
+        currentReqEndereco = inpChkEndereco.value;
+
+    } catch (error) {
+        ResetItmLiRResChkd();
+        console.error("Erro ao procurar pelo ENDEREÇO fornecido:", error.message);
     }
-
-    getInfoFilled(inpChkUf.value,inpChkCidade.value,inpChkEndereco.value); 
-
-    currentReqUf = inpChkUf.value;
-    currentReqCidade = inpChkCidade.value;
-    currentReqEndereco = inpChkEndereco.value;
 });
 //
 //-- BUTTON FORM_CHECK_ADDRES --//
@@ -333,6 +354,7 @@ swFrmMd.addEventListener('click',(event) =>{
     }
 });
 
+// -- FUNCTION TO APPLY TRANSITION ON ITEM PAGE
 function applyTransition(element, className) {
     element.classList.add(className);
     // Adicione um evento de transição para remover a classe após a transição
@@ -340,3 +362,31 @@ function applyTransition(element, className) {
       element.classList.remove(className);
     }, { once: true });
 }
+//
+
+// -- FUNCTION TO RESET VALUES FROM ITEMS_LI_F_RESULT_CHECKED -- //
+function ResetItmLiFResChkd(){
+    itmResCep.innerText = "";
+    itmResCidade.innerText = "";
+    itmResBairro.innerText = "";
+    itmResEndereco.innerText = "";
+    itmResEstado.innerText = "";
+    itmResDDD.innerText = "";   
+}
+//
+
+// -- FUNCTION TO RESET VALUES FROM ITEMS_LI_R_RESULT_CHECKED -- //
+function ResetItmLiRResChkd(){
+    const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
+    itmLiRResChkd.forEach(element => {
+        element.remove();
+    });
+
+    /* itmResCep.innerText = "";
+    itmResCidade.innerText = "";
+    itmResBairro.innerText = "";
+    itmResEndereco.innerText = "";
+    itmResEstado.innerText = "";
+    itmResDDD.innerText = "";   */ 
+}
+//
