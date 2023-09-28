@@ -88,18 +88,6 @@ const checkCepOnAPI = async(cepId) =>{
         const dataCep = await APIResponse.json();
         return dataCep;
     }
-    /* const APIResponse = await fetch(`https://viacep.com.br/ws/${cepId}/json/`);
-
-    if (APIResponse.status === 200) {
-        const dataCep = await APIResponse.json();
-        return dataCep;
-    } else if (APIResponse.status === 400) {
-        // A resposta é um Bad Request (400)
-        throw new Error("CEP inválido. Por favor, insira um CEP válido.");
-    } else {
-        // Se for outro código de status, você pode tratar de maneira apropriada
-        throw new Error("Erro ao buscar o CEP. Tente novamente mais tarde.");
-    } */
 }
 //
 //-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_CEP --//
@@ -118,9 +106,6 @@ const checkCEP = async(cepId) =>{
         itmResDDD.innerText = dataCep.ddd;
 
         console.log(dataCep);
-    }
-    else{
-        console.error("Erro ao procurar pelo CEP fornecido!");
     }
 }
 //
@@ -276,21 +261,23 @@ frmChkCep.addEventListener('submit', async (event) =>{
 
     let searchInput = inpChkCep.value.trim();
     if (/^\d{8}$/.test(searchInput)) {
-        try {
-            if (inpChkCep.value == currentReqCep) {
-                throw new Error("Já foi feita uma busca com esse CEP.");
-            }
+        if (inpChkCep.value == currentReqCep) {
+            console.error("Já foi feita uma busca com esse CEP.");
+            return;
+        }
 
-            const dataCep = await checkCepOnAPI(inpChkCep.value);
-            // Faça algo com os dados do CEP
-            console.log("Dados do CEP:", dataCep);
+        try { 
+            await checkCEP(inpChkCep.value);
+
+            currentReqCep = inpChkCep.value;
+
         } catch (error) {
-            showHideItmPg(itmLiFResChkd, "flex");
-            console.error("Erro ao buscar CEP:", error.message);
+            ResetItmLiFResChkd();
+            console.error("Erro ao procurar pelo CEP fornecido:", error.message);
             // Mostre uma mensagem de erro ao usuário
         }
     } else {
-        showHideItmPg(itmLiFResChkd, "flex");
+        ResetItmLiFResChkd();
         console.error("Digite um número de CEP válido!");
         // Mostre uma mensagem de erro ao usuário
     }
@@ -366,6 +353,10 @@ function applyTransition(element, className) {
 
 // -- FUNCTION TO RESET VALUES FROM ITEMS_LI_F_RESULT_CHECKED -- //
 function ResetItmLiFResChkd(){
+    if(pnlResCepAddress.style.display == "flex"){
+        showHideItmPg(pnlResCepAddress,"none","out");
+    }
+
     itmResCep.innerText = "";
     itmResCidade.innerText = "";
     itmResBairro.innerText = "";
