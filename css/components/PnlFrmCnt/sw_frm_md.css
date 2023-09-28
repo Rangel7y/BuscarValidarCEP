@@ -4,6 +4,8 @@
 
 /* SWITCH_CONTENT_CHK (DIV CONTENT) */
 #sw-frm-md{
+    display: flex;
+
     position: absolute;
 
     width: 64px;
@@ -34,7 +36,7 @@
     width: 24px;
     height: 24px;
     
-    left: -1px;
+    left: 0px;
     top: 38%;
 
     cursor: pointer;
