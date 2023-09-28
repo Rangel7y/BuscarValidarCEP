@@ -320,6 +320,8 @@ swFrmMd.addEventListener('click',(event) =>{
 
         ttlPnlFrm.innerText = "CONSULTAR ENDEREÇO";
 
+        
+
         currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkAddress;
     }
     else if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkAddress){
