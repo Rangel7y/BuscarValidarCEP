@@ -18,7 +18,7 @@
 } */
 
 .help-tip:before{
-	content:'?';
+	content:' ';
 	font-weight: bold;
 	color:#fff;
 }
@@ -33,17 +33,28 @@
 
 .help-tip p{
 	display: none;
+
 	text-align: left;
-	background-color: #1E2021;
+
+	background-color: var(--navy);
+
 	padding: 20px;
-	width: 300px;
+
+    max-width: 300px;
+	min-width: 64px;
+
     height: auto;
 	position: absolute;
-	border-radius: 3px;
-	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+	border-radius: 10px;
+	box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
+    
 	right: -4px;
-	color: #FFF;
+
+	color: var(--cold);
+
 	font-size: 13px;
+
 	line-height: 1.4;
 
     word-wrap: break-word;
