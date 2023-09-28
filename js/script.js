@@ -312,6 +312,8 @@ swFrmMd.addEventListener('click',(event) =>{
     if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkCep){
         
         showHideItmPg(frmChkCep, "none","out");
+        ResetItmLiFResChkd();
+
         setTimeout(() => {
             showHideItmPg(frmChkAddress, 'flex', 'in');
         }, 180);
@@ -323,6 +325,8 @@ swFrmMd.addEventListener('click',(event) =>{
     else if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkAddress){
         
         showHideItmPg(frmChkAddress, "none","out");
+        ResetItmLiRResChkd();
+
         setTimeout(() => {
             showHideItmPg(frmChkCep, "flex", "in");
             const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
@@ -330,10 +334,6 @@ swFrmMd.addEventListener('click',(event) =>{
                 element.remove();
             });
         }, 180);
-
-        if(pnlResCepAddress.style.display == "flex"){
-            showHideItmPg(pnlResCepAddress,"none","out");
-        }
 
         ttlPnlFrm.innerText = "VALIDAR CEP";
 
@@ -355,29 +355,26 @@ function applyTransition(element, className) {
 function ResetItmLiFResChkd(){
     if(pnlResCepAddress.style.display == "flex"){
         showHideItmPg(pnlResCepAddress,"none","out");
-    }
 
-    itmResCep.innerText = "";
-    itmResCidade.innerText = "";
-    itmResBairro.innerText = "";
-    itmResEndereco.innerText = "";
-    itmResEstado.innerText = "";
-    itmResDDD.innerText = "";   
+        itmResCep.innerText = "";
+        itmResCidade.innerText = "";
+        itmResBairro.innerText = "";
+        itmResEndereco.innerText = "";
+        itmResEstado.innerText = "";
+        itmResDDD.innerText = "";  
+    } 
 }
 //
 
 // -- FUNCTION TO RESET VALUES FROM ITEMS_LI_R_RESULT_CHECKED -- //
 function ResetItmLiRResChkd(){
-    const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
-    itmLiRResChkd.forEach(element => {
-        element.remove();
-    });
+    if(pnlResCepAddress.style.display == "flex"){
+        showHideItmPg(pnlResCepAddress,"none","out");
 
-    /* itmResCep.innerText = "";
-    itmResCidade.innerText = "";
-    itmResBairro.innerText = "";
-    itmResEndereco.innerText = "";
-    itmResEstado.innerText = "";
-    itmResDDD.innerText = "";   */ 
+        const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
+        itmLiRResChkd.forEach(element => {
+            element.remove();
+        });
+    }
 }
 //
