@@ -51,6 +51,18 @@ const secTxt1FrmChk = document.getElementById('sec-text1-frm-chk');
 const secTxt2FrmChk = document.getElementById('sec-text2-frm-chk');
 //
 
+// -- PANEL_RESULT_CEP_ADDRESS -- //
+const pnlResCepAddress = document.getElementById('pnl-res-cep-address');
+// 
+
+// -- BLOCK FLOOD REQUESTS -- //
+let currentReqCep = "";
+let currentReqUf = "";
+let currentReqCidade = "";
+let currentReqEndereco = "";
+//
+
+
 /* SHOW/HIDE ITEM FROM PAGE */
 function showHideItmPg(itmShowHide, typeItmDisplay, typeEffectFade) {
     itmShowHide.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
@@ -80,11 +92,19 @@ const checkCepOnAPI = async(cepId) =>{
 //
 //-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_CEP --//
 const checkCEP = async(cepId) =>{
+    /* if(cepId == currentReqCep){
+        return console.log("ERROR");
+    } */
+
     const dataCep = await checkCepOnAPI(cepId);
 
     if(!("erro" in dataCep)){
 
-        showHideItmPg(itmLiFResChkd, "flex");
+        currentReqCep = dataCep.cep;
+        console.log(currentReqCep);
+
+        showHideItmPg(pnlResCepAddress,"flex","in");
+        showHideItmPg(itmLiFResChkd, "flex","in");
 
         itmResCep.innerText = dataCep.cep;
         itmResCidade.innerText = dataCep.localidade;
@@ -113,10 +133,19 @@ const getAPIFilled = async(uf,cidade,endereco) =>{
 //
 //-- FUNCTION TO GET RESULT TRY_CONNECTION AND SHOW RESULT DATA_ADDRESS --//
 const getInfoFilled = async(uf,cidade,endereco) =>{
+    
+    if(uf == currentReqUf && cidade == currentReqCidade && endereco == currentReqEndereco){
+        return;
+    }
+
     const dataCep = await getAPIFilled(uf,cidade,endereco);
 
     if(!("erro" in dataCep)){
   
+        currentReqUf = dataCep.uf;
+        currentReqCidade = dataCep.localidade;
+        currentReqEndereco = dataCep.logradouro;
+
         for(var c = 0; c < dataCep.length; c++){
             
             let liRes, divRes1, ttlLblResCep, styH3ResCep,spnH3ResCep,
@@ -252,6 +281,10 @@ frmChkCep.addEventListener('submit',(event) =>{
 
     let searchInput = inpChkCep.value.trim();
     if(/^\d{8}$/.test(searchInput)){
+        if(inpChkCep.value == currentReqCep.replace(/\D/g, '')){
+            return;
+        }
+
         checkCEP(inpChkCep.value);
     }
     else{
@@ -288,12 +321,16 @@ swFrmMd.addEventListener('click',(event) =>{
         
         showHideItmPg(frmChkAddress, "none","out");
         setTimeout(() => {
-            showHideItmPg(frmChkCep, 'flex', 'in');
+            showHideItmPg(frmChkCep, "flex", "in");
             const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
             itmLiRResChkd.forEach(element => {
                 element.remove();
             });
         }, 180);
+
+        if(pnlResCepAddress.style.display == "flex"){
+            showHideItmPg(pnlResCepAddress,"none","out");
+        }
 
         ttlPnlFrm.innerText = "VALIDAR CEP";
 
