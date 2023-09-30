@@ -15,7 +15,7 @@
 /*  */
 /* IMPORT - MAIN CONTENT (ALL CONTENT) CSS */
 @import '/css/components/core/main_cnt.css';
-@import '/css/components/main_hdr/main_hdr_pg.css'; /* HEADER */
+@import '/css/components/main_hdr/hdr.css'; /* HEADER */
 /*  */
 /* ///// ALL CONTENT OF PANEL PnlFrmCnt ///// */
 /* ///// /////*/
