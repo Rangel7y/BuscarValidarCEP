@@ -3,7 +3,7 @@
 /* ///// ///// */
 
 /* MAIN_HEADER_CONTENT (HEADER) */
-#main-hdr-pg{
+#hdr-pg{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +25,7 @@
 /* ///// ///// */
 
 /* MAIN_TITLE_HEADER (MAIN_TITLE_HDR) */
-#main-title-hdr{
+#title-hdr{
     text-align: center;
 
     font-family: 'Story Night', sans-serif;
@@ -37,7 +37,7 @@
 /* ///// ///// */
 
 /* ICON_HEADER (IMAGE) */
-#main-hdr-pg > img{
+#hdr-pg > img{
 
     width: 64px;
     height: 64px;
