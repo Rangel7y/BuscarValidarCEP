@@ -18,8 +18,6 @@ const itmResEndereco = document.getElementById('itm-res-endereco');
 const itmResEstado = document.getElementById('itm-res-estado');
 const itmResDDD = document.getElementById('itm-res-ddd');
 //
-// --- --- //
-//
 //-- FORM_CHECK_ADDRESS_INFOS (FORM_INPUTS) --//
 const frmChkAddress = document.getElementById('frm-chk-address');
 const inpChkUf = document.getElementById('inp-chk-uf');
@@ -53,7 +51,13 @@ const secTxt2FrmChk = document.getElementById('sec-txt2-frm-chk');
 
 // -- PANEL_RESULT_CEP_ADDRESS -- //
 const pnlResCepAddress = document.getElementById('pnl-res-cep-address');
-// 
+//
+
+// -- ICON_SWITCH_MODE --//
+const swImg = document.getElementById('sw-img');
+//
+
+// --- --- // 
 
 // -- BLOCK FLOOD REQUESTS -- //
 let currentReqCep = "";
@@ -388,6 +392,8 @@ function ResetItmLiRResChkd(){
 function UpdateTxtPg(){
     switch(currentTypeSwFrmMd){
         case typeSwFrmMd.typeFrmChkCep:
+            swImg.src = './assets/icons8-marcador-de-mapa-40.png';
+
             ttlPnlFrm.innerText = "VALIDAR CEP";
 
             secTxt1FrmChk.innerText = "Nossa ferramenta 'Validar CEP' permite que você verifique a validade e existência de um CEP no sistema postal, além de fornecer informações detalhadas sobre o endereço correspondente. É uma solução eficiente para garantir a precisão dos dados, essencial em e-commerce e logística.";
@@ -396,6 +402,8 @@ function UpdateTxtPg(){
 
             break;
         case typeSwFrmMd.typeFrmChkAddress:
+            swImg.src = './assets/icons8-busca-40.png';
+
             ttlPnlFrm.innerText = "CONSULTAR ENDEREÇO";
 
             secTxt1FrmChk.innerText = "Nossa ferramenta 'Consultar Endereço' permite que você obtenha informações detalhadas de um endereço informando o Estado (UF), Cidade e nome da Rua. É uma maneira rápida e eficaz de acessar dados precisos sobre o local desejado, útil em várias situações cotidianas.";
