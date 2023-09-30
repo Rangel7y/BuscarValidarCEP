@@ -9,8 +9,9 @@
     justify-content: center;
     flex-direction: column;
 
-    height: 500px;
+    height: 480px;
 
+    padding: 20px 0;
 }
 /* ///// ///// */
 
