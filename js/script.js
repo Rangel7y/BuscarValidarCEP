@@ -392,12 +392,15 @@ function UpdateTxtPg(){
 
             secTxt1FrmChk.innerText = "Nossa ferramenta 'Validar CEP' permite que você verifique a validade e existência de um CEP no sistema postal, além de fornecer informações detalhadas sobre o endereço correspondente. É uma solução eficiente para garantir a precisão dos dados, essencial em e-commerce e logística.";
 
+            secTxt2FrmChk.innerHTML = `Caso queira voltar ao modo de 'Validar CEP', <a href="#" onclick="SwMd()">clique aqui</a> para fazer a troca.`;
 
             break;
         case typeSwFrmMd.typeFrmChkAddress:
             ttlPnlFrm.innerText = "CONSULTAR ENDEREÇO";
 
             secTxt1FrmChk.innerText = "Nossa ferramenta 'Consultar Endereço' permite que você obtenha informações detalhadas de um endereço informando o Estado (UF), Cidade e nome da Rua. É uma maneira rápida e eficaz de acessar dados precisos sobre o local desejado, útil em várias situações cotidianas.";
+
+            secTxt2FrmChk.innerHTML = `Caso queira voltar ao modo de 'Consultar Endereço', <a href="#" onclick="SwMd()">clique aqui</a> para fazer a troca.`;
             break;
         default:
             break;
