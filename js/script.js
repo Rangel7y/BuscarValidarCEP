@@ -310,6 +310,12 @@ frmChkAddress.addEventListener('submit', async (event) =>{
 swFrmMd.addEventListener('click',(event) =>{
     event.preventDefault();
 
+    SwMd();
+});
+//
+
+// -- FUNCTION TO SWITCH MODE --//
+function SwMd(){
     if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkCep){
         
         ShowHideItmPg(frmChkCep, "none","out");
@@ -337,7 +343,8 @@ swFrmMd.addEventListener('click',(event) =>{
         currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkCep;
     }
     UpdateTxtPg();
-});
+}
+//
 
 // -- FUNCTION TO APPLY TRANSITION ON ITEM PAGE
 function ApplyTransition(element, className) {
@@ -377,6 +384,7 @@ function ResetItmLiRResChkd(){
 }
 //
 
+// -- FUNCTION TO UPDATE TEXTS FROM PAGE --//
 function UpdateTxtPg(){
     switch(currentTypeSwFrmMd){
         case typeSwFrmMd.typeFrmChkCep:
@@ -389,9 +397,10 @@ function UpdateTxtPg(){
         case typeSwFrmMd.typeFrmChkAddress:
             ttlPnlFrm.innerText = "CONSULTAR ENDEREÇO";
 
-            secTxt1FrmChk.innerText = "";
+            secTxt1FrmChk.innerText = "Nossa ferramenta 'Consultar Endereço' permite que você obtenha informações detalhadas de um endereço informando o Estado (UF), Cidade e nome da Rua. É uma maneira rápida e eficaz de acessar dados precisos sobre o local desejado, útil em várias situações cotidianas.";
             break;
         default:
             break;
     }
 }
+//
