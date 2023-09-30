@@ -14,8 +14,8 @@
 
     margin: 8px;
 
-    top: 0;
-    right: 0;
+    top: 0px;
+    right: 0px;
 
     cursor: pointer;
     
@@ -32,6 +32,9 @@
 }
 #sw-frm-md:hover{
     transform: scale(1.1);  
+
+    background-color: var(--smooth-navy);
+    border: 2px solid var(--navy);
 }
 /* ///// ///// */
 
@@ -43,12 +46,12 @@
     justify-content: center;
 
     position: relative;
-    transform: translateY(-10%);
+    /* transform: translateY(-50%); */
     
     width: 24px;
-    height: 24px;
+    height: 100%;
     
-    left: -1px;
+    left: 0px;
     top: 0px;
 
     background: var(--smooth-navy);
