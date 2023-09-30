@@ -34,22 +34,24 @@
 .help-tip p{
 	display: none;
 
+	position: absolute;
+
 	text-align: left;
 
 	background-color: var(--navy);
 
 	padding: 20px;
 
-    max-width: 300px;
 	min-width: 64px;
+    max-width: 300px;
 
     height: auto;
-	position: absolute;
 
 	border-radius: 10px;
 	box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px, rgb(0 0 0  / 10%) 0px 8px 16px;
     
-	right: -4px;
+	right: 0px;
+    top: 30px;
 
 	color: var(--cold);
 
