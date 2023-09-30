@@ -45,10 +45,10 @@ const ttlPnlFrm = document.getElementById('ttl-pnl-frm');
 //
 
 // -- SECTION_TEXT1DESCRIPTION_FORM_CHECK (TEXT1 H2)
-const secTxt1FrmChk = document.getElementById('sec-text1-frm-chk');
+const secTxt1FrmChk = document.getElementById('sec-txt1-frm-chk');
 //
 // -- SECTION_TEXT2DESCRIPTION_FORM_CHECK (TEXT2 H2)
-const secTxt2FrmChk = document.getElementById('sec-text2-frm-chk');
+const secTxt2FrmChk = document.getElementById('sec-txt2-frm-chk');
 //
 
 // -- PANEL_RESULT_CEP_ADDRESS -- //
@@ -62,9 +62,10 @@ let currentReqCidade = "";
 let currentReqEndereco = "";
 //
 
+UpdateTxtPg();
 
 /* SHOW/HIDE ITEM FROM PAGE */
-function showHideItmPg(itmShowHide, typeItmDisplay, typeEffectFade) {
+function ShowHideItmPg(itmShowHide, typeItmDisplay, typeEffectFade) {
     itmShowHide.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
 
     if(typeEffectFade === "in") {
@@ -95,8 +96,8 @@ const checkCEP = async(cepId) =>{
     const dataCep = await checkCepOnAPI(cepId);
 
     if(!("erro" in dataCep)){
-        showHideItmPg(pnlResCepAddress,"flex","in");
-        showHideItmPg(itmLiFResChkd, "flex","in");
+        ShowHideItmPg(pnlResCepAddress,"flex","in");
+        ShowHideItmPg(itmLiFResChkd, "flex","in");
 
         itmResCep.innerText = dataCep.cep;
         itmResCidade.innerText = dataCep.localidade;
@@ -127,7 +128,7 @@ const checkAddress = async(uf,cidade,endereco) =>{
 
     if(!("erro" in dataCep)){
 
-        showHideItmPg(pnlResCepAddress,"flex","in");
+        ShowHideItmPg(pnlResCepAddress,"flex","in");
 
         for(var c = 0; c < dataCep.length; c++){
             
@@ -242,7 +243,7 @@ const checkAddress = async(uf,cidade,endereco) =>{
             spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
 
-            showHideItmPg(liRes, "flex", "in");
+            ShowHideItmPg(liRes, "flex", "in");
         }
 
         console.log(dataCep);
@@ -311,40 +312,35 @@ swFrmMd.addEventListener('click',(event) =>{
 
     if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkCep){
         
-        showHideItmPg(frmChkCep, "none","out");
+        ShowHideItmPg(frmChkCep, "none","out");
         ResetItmLiFResChkd();
 
         setTimeout(() => {
-            showHideItmPg(frmChkAddress, 'flex', 'in');
+            ShowHideItmPg(frmChkAddress, 'flex', 'in');
         }, 180);
-
-        ttlPnlFrm.innerText = "CONSULTAR ENDEREÇO";
-
-        
 
         currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkAddress;
     }
     else if(currentTypeSwFrmMd == typeSwFrmMd.typeFrmChkAddress){
         
-        showHideItmPg(frmChkAddress, "none","out");
+        ShowHideItmPg(frmChkAddress, "none","out");
         ResetItmLiRResChkd();
 
         setTimeout(() => {
-            showHideItmPg(frmChkCep, "flex", "in");
+            ShowHideItmPg(frmChkCep, "flex", "in");
             const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
             itmLiRResChkd.forEach(element => {
                 element.remove();
             });
         }, 180);
 
-        ttlPnlFrm.innerText = "VALIDAR CEP";
-
         currentTypeSwFrmMd = typeSwFrmMd.typeFrmChkCep;
     }
+    UpdateTxtPg();
 });
 
 // -- FUNCTION TO APPLY TRANSITION ON ITEM PAGE
-function applyTransition(element, className) {
+function ApplyTransition(element, className) {
     element.classList.add(className);
     // Adicione um evento de transição para remover a classe após a transição
     element.addEventListener('transitionend', () => {
@@ -356,7 +352,7 @@ function applyTransition(element, className) {
 // -- FUNCTION TO RESET VALUES FROM ITEMS_LI_F_RESULT_CHECKED -- //
 function ResetItmLiFResChkd(){
     if(pnlResCepAddress.style.display == "flex"){
-        showHideItmPg(pnlResCepAddress,"none","out");
+        ShowHideItmPg(pnlResCepAddress,"none","out");
 
         itmResCep.innerText = "";
         itmResCidade.innerText = "";
@@ -371,7 +367,7 @@ function ResetItmLiFResChkd(){
 // -- FUNCTION TO RESET VALUES FROM ITEMS_LI_R_RESULT_CHECKED -- //
 function ResetItmLiRResChkd(){
     if(pnlResCepAddress.style.display == "flex"){
-        showHideItmPg(pnlResCepAddress,"none","out");
+        ShowHideItmPg(pnlResCepAddress,"none","out");
 
         const itmLiRResChkd = document.querySelectorAll('.itm-li-r-res-chkd-del');
         itmLiRResChkd.forEach(element => {
@@ -380,3 +376,22 @@ function ResetItmLiRResChkd(){
     }
 }
 //
+
+function UpdateTxtPg(){
+    switch(currentTypeSwFrmMd){
+        case typeSwFrmMd.typeFrmChkCep:
+            ttlPnlFrm.innerText = "VALIDAR CEP";
+
+            secTxt1FrmChk.innerText = "Nossa ferramenta 'Validar CEP' permite que você verifique a validade e existência de um CEP no sistema postal, além de fornecer informações detalhadas sobre o endereço correspondente. É uma solução eficiente para garantir a precisão dos dados, essencial em e-commerce e logística.";
+
+
+            break;
+        case typeSwFrmMd.typeFrmChkAddress:
+            ttlPnlFrm.innerText = "CONSULTAR ENDEREÇO";
+
+            secTxt1FrmChk.innerText = "";
+            break;
+        default:
+            break;
+    }
+}
