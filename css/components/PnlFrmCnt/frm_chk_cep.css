@@ -5,7 +5,6 @@
 /* FORM_CONTENT_CHECK_CEP */
 #frm-chk-cep{
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
 
