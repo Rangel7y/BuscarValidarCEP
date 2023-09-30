@@ -100,8 +100,6 @@ const checkCEP = async(cepId) =>{
     const dataCep = await checkCepOnAPI(cepId);
 
     if(!("erro" in dataCep)){
-        ShowHideItmPg(pnlResCepAddress,"flex","in");
-        ShowHideItmPg(itmLiFResChkd, "flex","in");
 
         itmResCep.innerText = dataCep.cep;
         itmResCidade.innerText = dataCep.localidade;
@@ -109,6 +107,8 @@ const checkCEP = async(cepId) =>{
         itmResEndereco.innerText = dataCep.logradouro;
         itmResEstado.innerText = dataCep.uf;
         itmResDDD.innerText = dataCep.ddd;
+
+        ShowHideItmPg(pnlResCepAddress, "flex","in");
 
         console.log(dataCep);
     }
@@ -132,7 +132,7 @@ const checkAddress = async(uf,cidade,endereco) =>{
 
     if(!("erro" in dataCep)){
 
-        ShowHideItmPg(pnlResCepAddress,"flex","in");
+        /* ShowHideItmPg(pnlResCepAddress,"flex","in"); */
 
         for(var c = 0; c < dataCep.length; c++){
             
@@ -370,7 +370,9 @@ function ResetItmLiFResChkd(){
         itmResBairro.innerText = "";
         itmResEndereco.innerText = "";
         itmResEstado.innerText = "";
-        itmResDDD.innerText = "";  
+        itmResDDD.innerText = "";
+        
+        currentReqCep = "";
     } 
 }
 //
@@ -384,6 +386,11 @@ function ResetItmLiRResChkd(){
         itmLiRResChkd.forEach(element => {
             element.remove();
         });
+
+        currentReqCep = "";
+        currentReqUf = "";
+        currentReqCidade = "";
+        currentReqEndereco = "";
     }
 }
 //
