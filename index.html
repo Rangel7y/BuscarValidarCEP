@@ -21,12 +21,11 @@
 
         <div id="pnl-frm-cnt" class="sty-pnl-frm-res">
             <div id="ttl-pnl-frm-cnt">
-                <div id="sw-frm-md" class="help-tip">
+                <div id="sw-frm-md" title="Alternar entre os modos de validação de CEP e consulta de ENDEREÇO">
                     <button id="sw-btn">
                         <img src="/assets/icons8-Endereço-64.png" alt="Ícone para Alternar Modo de Validação" id="sw-img">
                     </button>
                     <!-- <span></span> -->
-                    <p>Esta função permite alternar entre os modos de validação de CEP e consulta de CEP através do endereço fornecido.</p>
                 </div>
 
                 <h1><span id="ttl-pnl-frm">VALIDAR CEP</span></h1>
@@ -34,9 +33,10 @@
             </div>
 
             <section id="sec-frm-chk">
-                <h2><span id="sec-txt1-frm-chk"></span></h2>
+                <p><span id="sec-txt1-frm-chk"></span></p>
 
                 <form id="frm-chk-cep">
+                    <p>Insira o número do CEP que deseja validar:</p>
                     <div id="inp-btn-chk-cep">
                         <input id="inp-chk-cep" type="search" maxlength="8" placeholder="Digite o número do CEP aqui..." required>
                         <button><img src="/assets/icons8-marcador-65.png" alt="Ícone de Busca"></button>
@@ -67,7 +67,11 @@
                     </div>
                 </form>
 
-                <h2><span id="sec-txt2-frm-chk"></span></h2>
+                <h2>
+                    <span id="sec-txt2-frm-chk">
+                        <button id="link-consultar-endereco">Não sabe seu CEP?</button>
+                    </span>
+                </h2>
             </section>
         </div>
 
