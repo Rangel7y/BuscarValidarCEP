@@ -109,6 +109,7 @@ const checkCEP = async(cepId) =>{
         itmResDDD.innerText = dataCep.ddd;
 
         ShowHideItmPg(pnlResCepAddress, "flex","in");
+        ShowHideItmPg(itmLiFResChkd, "flex","in");
 
         console.log(dataCep);
     }
@@ -247,6 +248,7 @@ const checkAddress = async(uf,cidade,endereco) =>{
             spnH3ResDDD.innerText =  dataCep[c]['ddd'];
             styH3ResDDD.appendChild(spnH3ResDDD); 
 
+            ShowHideItmPg(pnlResCepAddress, "flex","in");
             ShowHideItmPg(liRes, "flex", "in");
         }
 
