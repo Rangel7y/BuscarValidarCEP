@@ -1,57 +1,46 @@
-/* IMPORT - BODY_FONT (GOOGLE_FONT) */
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');  
-/* --- --- */
-
-/* IMPORT - MAIN_HEADER_FONT (CDNFONTS_FONT) */
-@import url('https://fonts.cdnfonts.com/css/story-night'); 
-/* --- --- */
-
-/* IMPORT - OTHERS TEXT (CDNFONTS_FONT) */
-@import url('https://fonts.cdnfonts.com/css/maven-pro');
-/* --- --- */
 
 /* IMPORT - VARIABLES (COLORS ETC...) CSS */
-@import '/css/components/utils/vars.css';
+@use 'components/utils/vars';
 /* --- --- */
 
 /* IMPORT - BODY PAGE AND BODY RESET (BOTH INCLUDE) CSS */
-@import '/css/components/core/body_pg.css';
+@use 'components/core/_body_pg';
 /*  */
 
 /* IMPORT - MAIN CONTENT (ALL CONTENT) CSS */
-@import '/css/components/core/main_cnt.css';
-@import '/css/components/core/hdr.css'; /* HEADER */
+@use 'components/core/_main_cnt';
+@use 'components/core/_hdr'; /* HEADER */
 /*  */
 
 
 /* ///// ALL CONTENT OF PANEL PnlFrmCnt ///// */
 /* ///// /////*/
 /* IMPORT - PANEL_FORMS_CONTENT */
-@import '/css/components/PnlFrmCnt/pnl_frm_cnt.css';
+@use 'components/PnlFrmCnt/_pnl_frm_cnt';
 /*  */
 
 /* IMPORT - HEADER_FORM_CHECK_CEP  CSS */
-@import '/css/components/PnlFrmCnt/ttl_pnl_frm_cnt.css';
+@use 'components/PnlFrmCnt/_ttl_pnl_frm_cnt';
 /*  */
 
 /* IMPORT - SWITCH CONTENT (TOGGLE MODE) CSS */
-@import '/css/components/PnlFrmCnt/sw_frm_md.css';
+@use 'components/PnlFrmCnt/_sw_frm_md';
 /*  */
 
 /* IMPORT - SECTION_FORM_CHECK_CEP (SECTION CONTENT) */
-@import '/css/components/PnlFrmCnt/sec_frm_chk.css';
+@use 'components/PnlFrmCnt/_sec_frm_chk';
 /*  */
 
 /* IMPORT - FORM_CHECK_CEP CSS */
-@import '/css/components/PnlFrmCnt/frm_chk_cep.css';
+@use 'components/PnlFrmCnt/_frm_chk_cep';
 /*  */
 
 /* IMPORT - INPUT_BUTTON_CONTENT_CHECK_CEP (INPUT AND BUTTON) CSS */
-@import '/css/components/PnlFrmCnt/inp_btn_chk_cep.css';
+@use 'components/PnlFrmCnt/_inp_btn_chk_cep';
 /*  */
 
 /* IMPORT - FORM_CHECK_ADDRESS */
-@import '/css/components/PnlFrmCnt/FrmChkAddress/frm_chk_address.css';
+@use 'components/PnlFrmCnt/FrmChkAddress/_frm_chk_address';
 /*  */
 /* ///// /////*/
 /* ///// /////*/
@@ -60,15 +49,15 @@
 /* ///// ALL CONTENT OF PANEL PnlResCnt /////*/
 /* ///// /////*/
 /* IMPORT - PANEL_RESULT_CHECKED_CEP (CONTENT) CSS */
-@import '/css/components/PnlResCnt/pnl_res_cep_address.css';
+@use 'components/PnlResCnt/_pnl_res_cep_address';
 /*  */
 
 /* IMPORT - DIV_RESULT_CHECKED_CEP (TITLE) CSS */
-@import '/css/components/PnlResCnt/ttl_pnl_res.css';
+@use 'components/PnlResCnt/_ttl_pnl_res';
 /*  */
 
 /* IMPORT - ITEMS_RESULT_CHECKED (DIV) */
-@import '/css/components/PnlResCnt/itm_cnt_res_chkd.css';
+@use 'components/PnlResCnt/_itm_cnt_res_chkd';
 /*  */
 /* ///// /////*/
 /* ///// /////*/

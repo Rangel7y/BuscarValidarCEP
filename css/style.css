@@ -1,3 +1,4 @@
+/* IMPORT - VARIABLES (COLORS ETC...) CSS */
 /* IMPORT - BODY_FONT (GOOGLE_FONT) */
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
 /* --- --- */
@@ -6,52 +7,553 @@
 /* --- --- */
 /* IMPORT - OTHERS TEXT (CDNFONTS_FONT) */
 @import url("https://fonts.cdnfonts.com/css/maven-pro");
-/* --- --- */
-/* IMPORT - VARIABLES (COLORS ETC...) CSS */
-@import '/css/components/utils/vars.css';
+/* MAIN VARIABLES CSS */
+/* ///// ///// */
+:root {
+  --cold: #F4EEFF;
+  --light-gray: #DCD6F7;
+  --gray-blue: #A6B1E1;
+  --smooth-blue: #b6c0ec;
+  --navy: #424874;
+  --smooth-navy: #4f568a;
+  --background-page: linear-gradient(to bottom, var(--cold),var(--light-gray), var(--smooth-blue));
+}
+
+/* ///// ///// */ 
 /* --- --- */
 /* IMPORT - BODY PAGE AND BODY RESET (BOTH INCLUDE) CSS */
-@import '/css/components/core/body_pg.css';
+/* --- --- */
+/* BODY RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxanium", cursive;
+}
+
+/* --- --- */
+/* BODY PAGE */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background-page);
+}
+
+/*  */
 /*  */
 /* IMPORT - MAIN CONTENT (ALL CONTENT) CSS */
-@import '/css/components/core/main_cnt.css';
-@import '/css/components/core/hdr.css'; /* HEADER */
+/* MAIN CONTAINER - ALL CONTENT FROM PAGE */
+#main-ctn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+/* ///// ///// */
+/* MAIN_HEADER_CONTENT (DIV CONTENT) */
+/* ///// ///// */
+/* MAIN_HEADER_CONTENT (HEADER) */
+#hdr-pg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background-color: var(--smooth-navy);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border-radius: 0px 0px 30% 30%;
+  gap: 2px;
+}
+
+/* ///// ///// */
+/* MAIN_TITLE_HEADER (MAIN_TITLE_HDR) */
+#title-hdr {
+  text-align: center;
+  font-family: "Story Night", sans-serif;
+  font-size: 60px;
+  color: var(--smooth-blue);
+}
+
+/* ///// ///// */
+/* ICON_HEADER (IMAGE) */
+#hdr-pg > img {
+  width: 64px;
+  height: 64px;
+  background-color: var(--navy);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border-radius: 50% 20%/10% 40%;
+  opacity: 0.7;
+}
+
+/* ///// ///// */
+/* HEADER */
 /*  */
 /* ///// ALL CONTENT OF PANEL PnlFrmCnt ///// */
 /* ///// /////*/
 /* IMPORT - PANEL_FORMS_CONTENT */
-@import '/css/components/PnlFrmCnt/pnl_frm_cnt.css';
+/* PANEL_FORM_CHECK_CEP (CONTENT FORM) */
+/* ///// ///// */
+/* PANEL_FORM_CHECK_CEP */
+#pnl-frm-cnt {
+  width: 700px;
+  height: 580px;
+  background-color: var(--light-gray);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border-radius: 10px;
+}
+
+/* ///// ///// */
 /*  */
 /* IMPORT - HEADER_FORM_CHECK_CEP  CSS */
-@import '/css/components/PnlFrmCnt/ttl_pnl_frm_cnt.css';
+/* HEADER_CONTENT (HDR_FRM_CHK_CEP */
+/* ///// ///// */
+/* HEADER_FORM_CHECK_CEP */
+#ttl-pnl-frm-cnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  position: relative;
+}
+
+/* ///// ///// */
+/* STYLE H1 (TITLE PANEL_PAGE) */
+#ttl-pnl-frm-cnt > h1 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--navy);
+  font-family: "Tomato Round Condensed Oblique", sans-serif;
+}
+
+/* ///// ///// */
+/* STYLE HR (TO DIVIDE TITLE FROM CONTENT) */
+#ttl-pnl-frm-cnt > hr {
+  width: 480px;
+  border: 1px solid var(--smooth-blue);
+}
+
+/* ///// ///// */
 /*  */
 /* IMPORT - SWITCH CONTENT (TOGGLE MODE) CSS */
-@import '/css/components/PnlFrmCnt/sw_frm_md.css';
+/* BUTTON SWITCH ALL CONTENT  */
+/* ///// ///// */
+/* SWITCH_CONTENT_CHK (DIV CONTENT) */
+#sw-frm-md {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  width: 48px;
+  height: 40px;
+  margin: 8px;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-color: var(--light-gray);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border: 2px solid var(--smooth-blue);
+  border-radius: 30px;
+  /* transition: all 300ms ease, backgroud 200ms ease-in-out; */
+  animation: animSwImg 1.5s infinite ease-in-out;
+}
+
+#sw-frm-md:hover {
+  transform: scale(1.1);
+}
+
+/* ///// ///// */
+/* SWITCH_BUTTON_CHK (BUTTTON CONTENT) */
+#sw-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  height: 100%;
+}
+
+/* ///// ///// */
+/* SWITCH_IMAGE (ITEM IMAGE) */
+#sw-img {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+/* ///// ///// */
+@keyframes animSwImg {
+  50% {
+    transform: translateY(-10%);
+  }
+}
 /*  */
 /* IMPORT - SECTION_FORM_CHECK_CEP (SECTION CONTENT) */
-@import '/css/components/PnlFrmCnt/sec_frm_chk.css';
+/* SECTION_CONTENT_FORM (SEC_FRM_CHK_CEP */
+/* ///// ///// */
+/* SECTION_FORM_CHECK_CEP */
+#sec-frm-chk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 480px;
+  padding: 20px 0;
+}
+
+/* ///// ///// */
+/* STYLE H2 TITLE_SECTION */
+#sec-frm-chk > p {
+  padding: 0 20px;
+  text-align: start;
+  word-break: break-word;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  font-family: "Maven Pro", sans-serif;
+}
+
+/* ///// ///// */
 /*  */
 /* IMPORT - FORM_CHECK_CEP CSS */
-@import '/css/components/PnlFrmCnt/frm_chk_cep.css';
+/* FORM_CONTENT_CHECK_CEP (FRM_CNT_CHK_CEP)*/
+/* ///// ///// */
+/* FORM_CONTENT_CHECK_CEP */
+#frm-chk-cep {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  height: 200px;
+}
+
+/* ///// ///// */
+#frm-chk-cep > p {
+  text-align: center;
+  /* left: 0px; */
+}
+
 /*  */
 /* IMPORT - INPUT_BUTTON_CONTENT_CHECK_CEP (INPUT AND BUTTON) CSS */
-@import '/css/components/PnlFrmCnt/inp_btn_chk_cep.css';
+/* INPUT_BUTTON_CONTENT_CHECK_CEP (INP_BTN_CNT_CHK_CEP) */
+/* ///// ///// */
+/* INPUT_BUTTON_CHECK_CEP (DIV) */
+#inp-btn-chk-cep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ///// ///// */
+/* INPUT_CHECK_CEP (INPUT) */
+#inp-chk-cep {
+  width: 280px;
+  height: 50px;
+  font-size: 0.9em;
+  font-weight: 700;
+  background-color: var(--cold);
+  color: var(--navy);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border: none;
+  outline: none;
+  border: 2px solid var(--gray-blue);
+  border-radius: 0.5rem 0px 0px 0.5rem;
+  padding: 1em;
+  transition: all 300ms ease, backgroud 200ms ease-in-out;
+}
+
+/* ON HOVER */
+#inp-chk-cep:hover {
+  background-color: var(--smooth-blue);
+  border: 2px solid var(--smooth-navy);
+}
+
+/* ON FOCUS */
+#inp-chk-cep:focus {
+  background-color: var(--smooth-blue);
+  border: 2px solid var(--smooth-navy);
+}
+
+/* PLACEHOLDER(TEXT) */
+#inp-chk-cep::-moz-placeholder {
+  color: var(--navy);
+  opacity: 0.85;
+}
+#inp-chk-cep::placeholder {
+  color: var(--navy);
+  opacity: 0.85;
+}
+
+/* ///// ///// */
+/* INPUT_BUTTON_CONTENT_CHECK_CEP (GET BUTTON) */
+#inp-btn-chk-cep > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100px;
+  height: 50px;
+  background-color: var(--navy);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border: 2px solid var(--gray-blue);
+  border-radius: 0px 0.5rem 0.5rem 0px;
+  transition: all 300ms ease, backgroud 200ms ease-in-out;
+  cursor: pointer;
+}
+
+/* ON HOVER */
+#inp-btn-chk-cep > button:hover {
+  background-color: var(--smooth-navy);
+  border: 2px solid var(--navy);
+}
+
+/* ///// ///// */
+/* ION-ICON (ICON FROM BUTTON SUBMIT) */
+img {
+  width: 50px;
+  height: 50px;
+  color: var(--cold);
+  /* opacity: 0.75; */
+}
+
+/* ///// ///// */
 /*  */
 /* IMPORT - FORM_CHECK_ADDRESS */
-@import '/css/components/PnlFrmCnt/FrmChkAddress/frm_chk_address.css';
+/* FORM_CHECK_ADDRESS */
+#frm-chk-address {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  height: 300px;
+}
+
+/* /// /// */
+/* INPUT_BUTTON_CHECK_ADDRESS (DIV) */
+#inp-btn-chk-address {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  /* width: 100%;
+  height: 100%; */
+  gap: 10px;
+}
+
+/* /// /// */
+/* INPUT_BUTTON_CHECK_ADDRESS (DIV: LABEL/INPUT) */
+#inp-btn-chk-address > div {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+/* /// /// */
+/* STYLE_LABEL (LABEL) */
+#inp-btn-chk-address > div > label {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* /// /// */
+/* STYLE_INPUT_CHECK_ADDRESS (INPUT) */
+.sty-inp-chk-address {
+  width: 280px;
+  height: 40px;
+  font-size: 0.9em;
+  font-weight: 700;
+  background-color: var(--cold);
+  color: var(--navy);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border: none;
+  outline: none;
+  border: 2px solid var(--gray-blue);
+  border-radius: 0.5rem;
+  padding: 1em;
+  transition: all 300ms ease, backgroud 200ms ease-in-out;
+}
+
+/* ON HOVER */
+.sty-inp-chk-address:hover {
+  background-color: var(--smooth-blue);
+  border: 2px solid var(--smooth-navy);
+}
+
+/* ON FOCUS */
+.sty-inp-chk-address:focus {
+  background-color: var(--smooth-blue);
+  border: 2px solid var(--smooth-navy);
+}
+
+/* PLACEHOLDER(TEXT) */
+.sty-inp-chk-address::-moz-placeholder {
+  color: var(--navy);
+  opacity: 0.85;
+}
+.sty-inp-chk-address::placeholder {
+  color: var(--navy);
+  opacity: 0.85;
+}
+
+/* /// /// */
+/* INPUT_BUTTON_CHECK_ADDRESS (SUBMIT BUTTON) */
+#inp-btn-chk-address > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 40px;
+  background-color: var(--navy);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border: 2px solid var(--gray-blue);
+  border-radius: 0.5rem;
+  transition: all 300ms ease, backgroud 200ms ease-in-out;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 580;
+  font-family: "Tomato Round Condensed Oblique", sans-serif;
+  color: var(--light-gray);
+}
+
+/* ON HOVER */
+#inp-btn-chk-address > button:hover {
+  background-color: var(--smooth-navy);
+  border: 2px solid var(--navy);
+}
+
+/* /// /// */
+/* ION-ICON (ICON BUTTON) */
+ion-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--light-gray);
+}
+
+/* ///// ///// */
 /*  */
 /* ///// /////*/
 /* ///// /////*/
 /* ///// ALL CONTENT OF PANEL PnlResCnt /////*/
 /* ///// /////*/
 /* IMPORT - PANEL_RESULT_CHECKED_CEP (CONTENT) CSS */
-@import '/css/components/PnlResCnt/pnl_res_cep_address.css';
+/* PANEL_RESULT_CEP_ANDDRESS (PANEL CONTENT) */
+/* ///// ///// */
+/* PANEL_RESULT_CEP_ANDDRESS (PANEL) */
+#pnl-res-cep-address {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 700px;
+  height: 500px;
+}
+
+/* ///// ///// */
 /*  */
 /* IMPORT - DIV_RESULT_CHECKED_CEP (TITLE) CSS */
-@import '/css/components/PnlResCnt/ttl_pnl_res.css';
+/* HEADER_RESULT_CHECKED_CEP (ALL CONTENT) */
+/* ///// ///// */
+/* HDR_RES_CHKD_CEP (HEADER) */
+#ttl-pnl-res {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+}
+
+/* ///// ///// */
+/* STYLE H1 (TITLE PANEL_PAGE) */
+#ttl-pnl-res > h1 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--navy);
+  font-family: "Tomato Round Condensed Oblique", sans-serif;
+}
+
+/* ///// ///// */
+/* STYLE HR (TO DIVIDE TITLE FROM CONTENT) */
+#ttl-pnl-res > hr {
+  width: 380px;
+  border: 1px solid var(--smooth-blue);
+}
+
+/* ///// ///// */
 /*  */
 /* IMPORT - ITEMS_RESULT_CHECKED (DIV) */
-@import '/css/components/PnlResCnt/itm_cnt_res_chkd.css';
+/* ITEM_RESULT_CHECKED (DIV RESULT CONTENT) */
+/* ///// ///// */
+/* ITEM_CONTENT_RESULT_CHECKED (DIV) */
+#itm-cnt-res-chkd {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 450px;
+}
+
+/* ///// ///// */
+/* ITEM_UL_RESULT_CHECKED (UL) */
+#itm-ul-res-chkd {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  overflow-y: auto;
+  width: 100%;
+  max-height: 380px;
+  gap: 5px;
+}
+
+/* ///// ///// */
+/* ITEM_UL_RESULT_CHECKED (LI) */
+#itm-ul-res-chkd > li {
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  width: 90%;
+  height: 80px;
+  background-color: var(--light-gray);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  border: 2px solid var(--gray-blue);
+  border-radius: 0.5rem;
+  padding: 5px 0;
+}
+
+/* ///// ///// */
+/* ITEM_UL_RESULT_CHECKED (LI > DIV) */
+#itm-ul-res-chkd > li > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+}
+
+/* ///// ///// */
+/* ITEM_UL_RESULT_CHECKED (H4) */
+.ttl-lbl-res-chkd {
+  margin-bottom: -8px;
+  font-weight: 700;
+  color: var(--smooth-navy);
+}
+
+/* ///// ///// */
+/* ITEM_UL_RESULT_CHECKED (H3) */
+.sty-h3-itm-res-chkd {
+  /* font-weight: 700; */
+  color: var(--navy);
+}
+
+/* ///// ///// */
 /*  */
 /* ///// /////*/
 /* ///// /////*//*# sourceMappingURL=style.css.map */
