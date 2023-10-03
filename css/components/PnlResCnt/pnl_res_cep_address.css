@@ -5,6 +5,8 @@
 /* PANEL_RESULT_CEP_ANDDRESS (PANEL) */
 #pnl-res-cep-address{
     display: none;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 
     width: 700px;
