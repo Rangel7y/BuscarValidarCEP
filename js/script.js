@@ -133,8 +133,6 @@ const checkAddress = async(uf,cidade,endereco) =>{
 
     if(!("erro" in dataCep)){
 
-        /* ShowHideItmPg(pnlResCepAddress,"flex","in"); */
-
         for(var c = 0; c < dataCep.length; c++){
             
             let liRes, divRes1, ttlLblResCep, styH3ResCep,spnH3ResCep,
