@@ -364,6 +364,9 @@ function ApplyTransition(element, className) {
 
 // -- FUNCTION TO RESET VALUES FROM ITEMS_LI_F_RESULT_CHECKED -- //
 function ResetItmLiFResChkd(){
+
+    inpChkCep.value = "";
+
     if(pnlResCepAddress.style.display == "flex"){
         ShowHideItmPg(pnlResCepAddress,"none","out");
 
@@ -381,6 +384,11 @@ function ResetItmLiFResChkd(){
 
 // -- FUNCTION TO RESET VALUES FROM ITEMS_LI_R_RESULT_CHECKED -- //
 function ResetItmLiRResChkd(){
+
+    inpChkUf.value = "";
+    inpChkCidade.value = "";
+    inpChkEndereco.value = "";
+
     if(pnlResCepAddress.style.display == "flex"){
         ShowHideItmPg(pnlResCepAddress,"none","out");
 
